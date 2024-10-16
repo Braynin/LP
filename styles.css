@@ -76,6 +76,10 @@ body {
   margin-right: 10px;
 }
 /*Main*/
+h3 {
+  padding: 30px;
+  text-align: center;
+}
 .product-container {
   width: 1080px;
   display: flex;
