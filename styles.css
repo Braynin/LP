@@ -124,12 +124,16 @@ body {
   color: #f8f9fa;
 }
 /*Main*/
+
+#contenido {
+  align-items: center;
+}
 h3 {
   padding: 30px;
   text-align: center;
 }
 .product-container {
-  width: 1080px;
+  max-width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
