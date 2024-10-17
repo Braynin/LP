@@ -128,6 +128,7 @@ const productos = [
     id: "21",
     nombre: "El derecho a la prueba en la investigación preparatoria",
     imagen: "url_de_imagen_1",
+    precioMenor: "S/. 130",
   },
 ];
 
