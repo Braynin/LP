@@ -190,6 +190,37 @@ h3 {
   font-weight: 700;
   color: #428f13;
 }
+/* SALES */
+
+.sales-block {
+  margin: 20px 0;
+  justify-content: center;
+}
+.sales-title {
+  margin: 10px;
+  text-align: center;
+  font-size: 40px;
+}
+.cart-section {
+  display: flex;
+  justify-content: space-evenly;
+}
+#productscart,
+#total {
+  width: 400px;
+  min-height: 200px;
+  padding: 10px;
+  background-color: #eaeaea;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.products {
+  padding: 10px;
+  margin: 10px;
+  background-color: white;
+}
 
 /*footer*/
 .footer {
