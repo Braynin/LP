@@ -27,7 +27,6 @@ body {
   border: 1px solid black;
 }
 .whatsapp-span {
-  color: white;
   font-weight: bold;
   font-size: 15px;
   margin-right: 5px;
@@ -35,23 +34,24 @@ body {
 
 .mensajes {
   position: absolute;
-  top: 100%;
-  width: 100%;
-  animation: scrollMessages 6s linear infinite;
+  display: flex;
+  max-width: 100%;
+  animation: scrollMessages 10s linear infinite;
 }
 
 .mensaje {
-  text-align: center;
-  padding: 10px 0;
+  padding: 10px 20px;
   font-size: 20px;
+  white-space: nowrap;
+  color: white;
 }
 
 @keyframes scrollMessages {
   0% {
-    top: 100%;
+    transform: translateX(300%); /* Comienza fuera a la derecha */
   }
   100% {
-    top: -300%;
+    transform: translateX(-300%); /* Termina fuera a la izquierda */
   }
 }
 
