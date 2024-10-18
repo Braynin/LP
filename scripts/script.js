@@ -175,11 +175,6 @@ productos.forEach((producto) => {
 
   productsContainer.appendChild(card);
 });
-// OFERTAS
-
-// Crear el bloque de ventas
-const salesBlock = document.createElement("div");
-salesBlock.className = "sales-block";
 
 // Array de ofertas
 const ofertas = [
