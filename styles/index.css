@@ -1,3 +1,4 @@
+/*GENERALES*/
 * {
   padding: 0;
   margin: 0;
@@ -11,8 +12,6 @@ body {
   height: 100%;
   width: 100%;
   overflow-x: hidden;
-  font-family: "Poppins", sans-serif;
-  font-size: 14px;
   color: #333333;
   background-color: #f3f3f3;
   scroll-behavior: smooth;
@@ -22,8 +21,10 @@ main {
   max-width: 1200px;
   margin: 0 auto;
 }
+
 /*Header*/
-#header-a {
+
+#container-messages {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,55 +35,54 @@ main {
   overflow: hidden;
   border: 1px solid black;
 }
-.whatsapp-span {
-  font-weight: bold;
-  font-size: 15px;
-  margin-right: 5px;
-}
-
-.mensajes {
+.messages {
   position: absolute;
   display: flex;
   max-width: 100%;
   animation: scrollMessages 10s linear infinite;
 }
-
-.mensaje {
+.message {
   padding: 10px 20px;
-  font-size: 20px;
+  font-size: 16px;
   white-space: nowrap;
   color: white;
+  text-transform: uppercase;
+}
+
+.message-iconwsp {
+  margin-right: 10px;
+  height: 20px;
 }
 
 @keyframes scrollMessages {
   0% {
-    transform: translateX(300%); /* Comienza fuera a la derecha */
+    transform: translateX(200%); /* Comienza fuera a la derecha */
   }
   100% {
-    transform: translateX(-300%); /* Termina fuera a la izquierda */
+    transform: translateX(-200%); /* Termina fuera a la izquierda */
   }
 }
 
-#header-b {
+#container-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 17px;
   background-color: white;
 }
-.logo {
+.header-logo {
   width: 10rem;
   margin-right: 10px;
 }
 
-.buscador {
+.header-search {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px;
 }
 
-.header-input {
+.search-input {
   width: 200px;
   height: 30px;
   border-radius: 5px;
@@ -141,7 +141,7 @@ h3 {
   padding: 30px;
   text-align: center;
 }
-.sales-title {
+.subtitle {
   text-align: center;
   padding: 30px;
   font-size: 40px;
