@@ -1,8 +1,9 @@
 const productsContainer = document.getElementById("products");
 const librosContainer = document.getElementById("tarjetas-libros");
 const preventaContainer = document.getElementById("tarjetas-preventa");
+const contenedorOfertas = document.getElementById("contenedor-ofertas");
 
-const productos = [
+export const productos = [
   {
     id: "1",
     nombre: "Código Penal Tapa Dura",
@@ -156,84 +157,78 @@ const productos = [
 // Generar tarjetas de productos
 
 productos.forEach((producto) => {
+  // Crear un nuevo elemento para cada producto
   const card = document.createElement("a");
-  card.className = "product-card";
+  card.classList.add("product-card");
   card.href = `./details.html?id=${producto.id}`;
 
   card.innerHTML = `
-    <img class="product-img" src="${producto.imagen}" alt="${producto.nombre}" />
-    <div class="product-info">
-      <span class="product-title">${producto.nombre}</span>
-      <div class="product-price-block">
-        <span class="product-price">${producto.precioMenor}</span>
-      </div>
-       <div class="product-impuesto">
-        <span class="product-igv">${producto.igv}</span>
-      </div>
-    </div>
-  `;
-
-  productsContainer.appendChild(card);
-});
-// OFERTAS
-
-// Crear el bloque de ventas
-const salesBlock = document.createElement("div");
-salesBlock.className = "sales-block";
-
-// Array de ofertas
-const ofertas = [
-  {
-    title: "Kindle Paperwhite",
-    description: "Black",
-    price: "100000",
-    discount: "50% Off",
-    imgSrc: "https://i.postimg.cc/2ymFtsTn/kindle2.jpg",
-    link: "./details.html",
-  },
-  {
-    title: "Kindle Paperwhite",
-    description: "Black",
-    price: "100000",
-    discount: "50% Off",
-    imgSrc: "https://i.postimg.cc/2ymFtsTn/kindle2.jpg",
-    link: "./details.html",
-  },
-  {
-    title: "Kindle Paperwhite",
-    description: "Black",
-    price: "100000",
-    discount: "50% Off",
-    imgSrc: "https://i.postimg.cc/2ymFtsTn/kindle2.jpg",
-    link: "./details.html",
-  },
-];
-
-// Crear el contenido HTML usando innerHTML
-let productosHTML = "";
-
-ofertas.forEach((product) => {
-  productosHTML += `
-    <a class="card-ofertas" href="${product.link}">
-      <img class="product-img" src="${product.imgSrc}" alt="${product.title}" />
+      <img class="product-img" src="${producto.imagen}" alt="${producto.nombre}" />
       <div class="product-info">
-        <span class="product-title">${product.title}</span>
-        <span class="product-description">${product.description}</span>
+        <span class="product-title">${producto.nombre}</span>
         <div class="product-price-block">
-          <span class="product-price">${product.price}</span>
-          <span class="product-discount">${product.discount}</span>
+          <span class="product-price">${producto.precioMenor}</span>
         </div>
-        <div class="product-tax-policy">
-          Incluye impuesto País y percepción AFIP
+        <div class="product-impuesto">
+          <span class="product-igv">${producto.igv}</span>
         </div>
       </div>
     </a>
   `;
+
+  // Agregar el card al contenedor
+  productsContainer.appendChild(card);
 });
 
-// Asignar el HTML generado al bloque de ventas
-salesBlock.innerHTML = productosHTML;
+// Array de ofertas
+export const ofertas = [
+  {
+    id: "1",
+    nombre: "Código Penal Tapa Dura",
+    precio: "S/. 75",
+    impuesto: "Incluye IGV",
+    imagen: "assets/CODIGO PENAL.webp",
+    link: "./details.html",
+  },
+  {
+    id: "3",
+    nombre: "Código Civil Tapa Dura",
+    precio: "S/. 75",
+    impuesto: "Incluye IGV",
+    imagen: "assets/CODIGO CIVIL.webp",
+    link: "./details.html",
+  },
+  {
+    id: "7",
+    nombre: "El Defensor 2",
+    precio: "S/. 60",
+    impuesto: "Incluye IGV",
+    imagen: "assets/EL DEFENSOR 2 - VIVIENDO EL SUEÑO.webp",
+    link: "./details.html",
+  },
+];
 
-// Añadir el salesBlock al div 'contenedor-ofertas'
-const contenedorOfertas = document.getElementById("contenedor-ofertas");
-contenedorOfertas.appendChild(salesBlock);
+ofertas.forEach((product) => {
+  // Crear un nuevo elemento para la oferta
+  const card = document.createElement("a");
+  card.classList.add("product-card");
+  card.href = `${product.link}`;
+
+  // Insertar el contenido HTML en la tarjeta de la oferta
+  card.innerHTML = `
+      <img class="product-img" src="${product.imagen}" alt="${product.nombre}" />
+      <div class="product-info">
+        <span class="product-title">${product.nombre}</span>
+        <div class="product-price-block">
+          <span class="product-price">${product.precio}</span>
+        </div>
+        <div class="product-tax-policy">
+          <span class="product-discount">${product.impuesto}</span>
+        </div>
+      </div>
+ 
+  `;
+
+  // Agregar la tarjeta al contenedor de ofertas
+  contenedorOfertas.appendChild(card);
+});
