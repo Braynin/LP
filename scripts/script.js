@@ -175,3 +175,65 @@ productos.forEach((producto) => {
 
   productsContainer.appendChild(card);
 });
+// OFERTAS
+
+// Crear el bloque de ventas
+const salesBlock = document.createElement("div");
+salesBlock.className = "sales-block";
+
+// Array de ofertas
+const ofertas = [
+  {
+    title: "Kindle Paperwhite",
+    description: "Black",
+    price: "100000",
+    discount: "50% Off",
+    imgSrc: "https://i.postimg.cc/2ymFtsTn/kindle2.jpg",
+    link: "./details.html",
+  },
+  {
+    title: "Kindle Paperwhite",
+    description: "Black",
+    price: "100000",
+    discount: "50% Off",
+    imgSrc: "https://i.postimg.cc/2ymFtsTn/kindle2.jpg",
+    link: "./details.html",
+  },
+  {
+    title: "Kindle Paperwhite",
+    description: "Black",
+    price: "100000",
+    discount: "50% Off",
+    imgSrc: "https://i.postimg.cc/2ymFtsTn/kindle2.jpg",
+    link: "./details.html",
+  },
+];
+
+// Crear el contenido HTML usando innerHTML
+let productosHTML = "";
+
+ofertas.forEach((product) => {
+  productosHTML += `
+    <a class="card-ofertas" href="${product.link}">
+      <img class="product-img" src="${product.imgSrc}" alt="${product.title}" />
+      <div class="product-info">
+        <span class="product-title">${product.title}</span>
+        <span class="product-description">${product.description}</span>
+        <div class="product-price-block">
+          <span class="product-price">${product.price}</span>
+          <span class="product-discount">${product.discount}</span>
+        </div>
+        <div class="product-tax-policy">
+          Incluye impuesto País y percepción AFIP
+        </div>
+      </div>
+    </a>
+  `;
+});
+
+// Asignar el HTML generado al bloque de ventas
+salesBlock.innerHTML = productosHTML;
+
+// Añadir el salesBlock al div 'contenedor-ofertas'
+const contenedorOfertas = document.getElementById("contenedor-ofertas");
+contenedorOfertas.appendChild(salesBlock);
