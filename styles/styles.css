@@ -141,7 +141,13 @@ h3 {
   padding: 30px;
   text-align: center;
 }
-.product-container {
+.sales-title {
+  text-align: center;
+  padding: 30px;
+  font-size: 40px;
+}
+.product-container,
+#contenedor-ofertas {
   max-width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -204,37 +210,7 @@ h3 {
   font-size: 15px;
   color: #428f13;
 }
-/* SALES */
-
-.sales-block {
-  margin: 20px 0;
-  justify-content: center;
-}
-.sales-title {
-  margin: 10px;
-  text-align: center;
-  font-size: 40px;
-}
-.cart-section {
-  display: flex;
-  justify-content: space-evenly;
-}
-#productscart,
-#total {
-  width: 400px;
-  min-height: 200px;
-  padding: 10px;
-  background-color: #eaeaea;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.products {
-  padding: 10px;
-  margin: 10px;
-  background-color: white;
-}
+/* OFERTAS */
 
 /*footer*/
 .footer {
