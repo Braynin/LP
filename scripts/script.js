@@ -15,7 +15,7 @@ export const productos = [
     id: "2",
     nombre: "Código Penal Tapa Rústica",
     precioMenor: "S/. 50",
-    imagen: "assets/CODIGO PENAL.webp",
+    imagen: "assets/CP_TR3-removebg-preview.png",
     igv: "Incluye IGV",
   },
   {
@@ -29,7 +29,7 @@ export const productos = [
     id: "4",
     nombre: "Código Civil Tapa Rústica",
     precioMenor: "S/. 75",
-    imagen: "assets/CODIGO CIVIL.webp",
+    imagen: "assets/CC_TR_3-removebg-preview.png",
     igv: "Incluye IGV",
   },
   {
