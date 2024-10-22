@@ -54,6 +54,8 @@ main {
   height: 20px;
 }
 
+/*Animacion Header*/
+
 @keyframes scrollMessages {
   0% {
     transform: translateX(200%); /* Comienza fuera a la derecha */
