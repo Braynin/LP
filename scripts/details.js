@@ -5,6 +5,7 @@ console.log("ID obtenido de la URL:", idQuery);
 
 function printDetails(id) {
   const product = arrayProducts.find((product) => product.id == id);
+  console.log(product);
 
   if (!product) {
     console.error("Producto no encontrado");
@@ -13,46 +14,27 @@ function printDetails(id) {
 
   const detailsTemplate = `
         <section class="product-images-block">
-            <div class="product-images">
-            ${product.imagen
-              .map(
-                (imagen) =>
-                  `<img class="mini-img" src="${imagen}" alt="${product.nombre}" onclick="changeMini(event)" />`
-              )
-              .join("")}
-            </div>
+            
             <img
               class="big-img"
               id="big-img"
-              src="${product.imagen[2]}"
+              src="${product.imagen[0]}"
               alt="${product.nombre}"
             />
           </section>  
           <div class="product-description-block">
             <h1 class="product-title">${product.nombre}</h1>
-            <form class="product-selector">
-              <fieldset class="product-fieldset">
-                <label class="product-label" for="color">Color</label>
-                <select
-                  class="product-select"
-                  id="color"
-                >
-                ${product.colors
-                  .map((color) => `<option value="${color}">${color}</option>`)
-                  .join("")}
-                </select>
-              </fieldset>
-            </form>
+     
             <div class="product-description">
               <span class="product-label">Descripción</span>
-              <p>${product.description}</p>
+              <p></p>
             </div>
           </div>
           <div class="product-checkout-block">
             <div class="checkout-container">
               <span class="checkout-total-label">Total:</span>
-              <h2 id="price" class="checkout-total-price">$${product.price}</h2>
-              <p class="checkout-description">${product.taxPolicy}</p>
+              <h2 id="price" class="checkout-total-price">$${product.precioMenor}</h2>
+              <p class="checkout-description"></p>
               <ul class="checkout-policy-list">
                 <li>
                   <span class="policy-icon"><img src="./assets/truck.png" alt="Truck"/></span>
@@ -66,9 +48,7 @@ function printDetails(id) {
               <div class="checkout-process">
                 <div class="top">
                   <input id="quantity" type="number" min="1" value="1" onchange="changePrice(event)" />
-                  <button type="button" class="cart-btn" onclick="saveProduct(${
-                    product.id
-                  })">
+                  <button type="button" class="cart-btn" onclick="saveProduct(${product.id})">
                     Añadir al Carrito
                   </button>
                 </div>
