@@ -173,7 +173,6 @@ productos.forEach((producto) => {
           <span class="product-igv">${producto.igv}</span>
         </div>
       </div>
-    </a>
   `;
 
   // Agregar el card al contenedor
