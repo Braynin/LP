@@ -21,6 +21,10 @@ main {
   max-width: 1200px;
   margin: 0 auto;
 }
+a {
+  color: black;
+  text-decoration: none;
+}
 
 @keyframes scrollMessages {
   0% {
@@ -96,7 +100,7 @@ main {
   border-color: #000;
 }
 
-.header-social {
+.social-links {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -105,10 +109,6 @@ main {
 .header-li {
   list-style: none;
   margin-right: 10px;
-}
-.header-a {
-  color: black;
-  text-decoration: none;
 }
 
 /**Header-Nav**/
@@ -233,7 +233,7 @@ h3 {
   text-align: center;
 }
 
-.footer-container {
+#footer-container {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
