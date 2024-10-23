@@ -1,7 +1,7 @@
-const productsContainer = document.getElementById("products");
+const productsContainer = document.getElementById("products-container");
 const librosContainer = document.getElementById("tarjetas-libros");
 const preventaContainer = document.getElementById("tarjetas-preventa");
-const contenedorOfertas = document.getElementById("contenedor-ofertas");
+const contenedorOfertas = document.getElementById("offers-container");
 
 export const productos = [
   {
