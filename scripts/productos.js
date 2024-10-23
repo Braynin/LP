@@ -238,6 +238,6 @@ function printCards(arrayProductos, selector) {
   productosContainer.innerHTML = productosTemplate;
 }
 
-printCards(arrayProductos, "products");
+printCards(arrayProductos, "products-container");
 
 //TARJETA DE ORFERTAS
