@@ -48,9 +48,10 @@ function printDetails(id) {
               <div class="checkout-process">
                 <div class="top">
                   <input id="quantity" type="number" min="1" value="1" onchange="changePrice(event)" />
-                  <button type="button" class="cart-btn" onclick="saveProduct(${product.id})">
+                  <a href="https://wa.me/939613209" class="cart-btn" onclick="saveProduct(${product.id})">
                     Compra aquí
-                  </button>
+                  </a>
+
                 </div>
               </div>
             </div>
