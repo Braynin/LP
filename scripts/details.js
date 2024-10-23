@@ -27,13 +27,13 @@ function printDetails(id) {
      
             <div class="product-description">
               <span class="product-label">Descripción</span>
-              <p></p>
+              <p>${product.description}</p>
             </div>
           </div>
           <div class="product-checkout-block">
             <div class="checkout-container">
               <span class="checkout-total-label">Total:</span>
-              <h2 id="price" class="checkout-total-price">$${product.precioMenor}</h2>
+              <h2 id="price" class="checkout-total-price">${product.precioMenor}</h2>
               <p class="checkout-description"></p>
               <ul class="checkout-policy-list">
                 <li>
@@ -49,7 +49,7 @@ function printDetails(id) {
                 <div class="top">
                   <input id="quantity" type="number" min="1" value="1" onchange="changePrice(event)" />
                   <button type="button" class="cart-btn" onclick="saveProduct(${product.id})">
-                    Añadir al Carrito
+                    Compra aquí
                   </button>
                 </div>
               </div>

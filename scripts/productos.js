@@ -1,12 +1,13 @@
 //TARJETA DE PRODUCTOS
 class Products {
-  constructor(id, nombre, precioMenor, precioMayor, imagen, igv) {
+  constructor(id, nombre, precioMenor, precioMayor, imagen, igv, description) {
     this.id = id;
     this.nombre = nombre;
     this.precioMenor = precioMenor;
     this.precioMayor = precioMayor;
     this.imagen = imagen;
     this.igv = igv;
+    this.description = description;
   }
 
   get supplier() {
@@ -23,7 +24,8 @@ const product1 = new Products(
   "S/. 75",
   "",
   ["assets/CODIGO PENAL.png"],
-  "Incluye IGV"
+  "Incluye IGV",
+  "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos."
 );
 const product2 = new Products(
   "2",
@@ -31,7 +33,8 @@ const product2 = new Products(
   "S/. 50",
   "",
   ["assets/CP_TR3-removebg-preview.png"],
-  "Incluye IGV"
+  "Incluye IGV",
+  "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos."
 );
 const product3 = new Products(
   "3",
@@ -39,7 +42,8 @@ const product3 = new Products(
   "S/. 75",
   "",
   ["assets/CODIGO CIVIL.webp"],
-  "Incluye IGV"
+  "Incluye IGV",
+  "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos."
 );
 const product4 = new Products(
   "4",
@@ -47,7 +51,8 @@ const product4 = new Products(
   "S/. 75",
   "",
   ["assets/CC_TR_3-removebg-preview.png"],
-  "Incluye IGV"
+  "Incluye IGV",
+  "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos."
 );
 const product5 = new Products(
   "5",
@@ -55,7 +60,8 @@ const product5 = new Products(
   "S/. 130",
   "",
   ["url_de_imagen_1"],
-  "Incluye IGV"
+  "Incluye IGV",
+  "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos."
 );
 const product6 = new Products(
   "6",
@@ -63,7 +69,8 @@ const product6 = new Products(
   "S/. 35",
   "",
   ["assets/MINI CODIGO PENAL.webp"],
-  "Incluye IGV"
+  "Incluye IGV",
+  "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos."
 );
 const product7 = new Products(
   "7",
@@ -71,7 +78,8 @@ const product7 = new Products(
   "S/. 60",
   "",
   ["assets/EL DEFENSOR 2 - VIVIENDO EL SUEÑO.webp"],
-  "Incluye IGV"
+  "Incluye IGV",
+  "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos."
 );
 const product8 = new Products(
   "8",
@@ -79,7 +87,8 @@ const product8 = new Products(
   "S/. 100",
   "",
   ["assets/LITIGACION ORAL CIVIL.webp"],
-  "Incluye IGV"
+  "Incluye IGV",
+  "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos."
 );
 const product9 = new Products(
   "9",
@@ -87,7 +96,8 @@ const product9 = new Products(
   "S/. 140",
   "",
   ["assets/COLECCION - COMO REDACTAR UN CONTRATO.webp"],
-  "Incluye IGV"
+  "Incluye IGV",
+  "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos."
 );
 const product10 = new Products(
   "10",
@@ -95,7 +105,8 @@ const product10 = new Products(
   "S/. 80",
   "",
   ["assets/CULPABILIDAD Y NEUROCIENCIAS.webp"],
-  "Incluye IGV"
+  "Incluye IGV",
+  "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos."
 );
 const product11 = new Products(
   "11",
@@ -103,7 +114,8 @@ const product11 = new Products(
   "S/. 60",
   "",
   ["assets/DERECHO DEL CONSUMIDOR.webp"],
-  "Incluye IGV"
+  "Incluye IGV",
+  "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos."
 );
 const product12 = new Products(
   "12",
@@ -111,7 +123,8 @@ const product12 = new Products(
   "S/. 120",
   "",
   ["assets/PAD PROCEDIMIENTO ADMINISTRATIVO DISCIPLINARIO.webp"],
-  "Incluye IGV"
+  "Incluye IGV",
+  "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos."
 );
 const product13 = new Products(
   "13",
@@ -119,7 +132,8 @@ const product13 = new Products(
   "S/. 120",
   "",
   ["assets/LA CONSTITUCION EN LAS REDES.webp"],
-  "Incluye IGV"
+  "Incluye IGV",
+  "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos."
 );
 const product14 = new Products(
   "14",
@@ -127,7 +141,8 @@ const product14 = new Products(
   "S/. 150",
   "",
   ["assets/COLECCION LITIGACION EN AUDIENCIAS PREVIAS.webp"],
-  "Incluye IGV"
+  "Incluye IGV",
+  "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos."
 );
 const product15 = new Products(
   "15",
@@ -135,7 +150,8 @@ const product15 = new Products(
   "S/. 140",
   "",
   ["assets/COLECCION LITIGACION EN AUDIENCIAS PREVIAS - SIN CAJA.webp"],
-  "Incluye IGV"
+  "Incluye IGV",
+  "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos."
 );
 const product16 = new Products(
   "16",
@@ -143,7 +159,8 @@ const product16 = new Products(
   "S/. 100",
   "",
   ["assets/EL NUEVO CODIGO PROCESAL CONSTITUCIONAL.webp"],
-  "Incluye IGV"
+  "Incluye IGV",
+  "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos."
 );
 const product17 = new Products(
   "17",
@@ -151,7 +168,8 @@ const product17 = new Products(
   "S/. 100",
   "",
   ["assets/CURSO DE REDACCION ADMINISTRATIVA.webp"],
-  "Incluye IGV"
+  "Incluye IGV",
+  "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos."
 );
 const product18 = new Products(
   "18",
@@ -159,7 +177,8 @@ const product18 = new Products(
   "S/. 130",
   "",
   ["url_de_imagen_1"],
-  "Incluye IGV"
+  "Incluye IGV",
+  "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos."
 );
 const product19 = new Products(
   "19",
@@ -167,7 +186,8 @@ const product19 = new Products(
   "S/. 100",
   "",
   ["assets/MI PRIMER JUICIO DE FAMILIA.webp"],
-  "Incluye IGV"
+  "Incluye IGV",
+  "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos."
 );
 const product20 = new Products(
   "20",
@@ -175,7 +195,8 @@ const product20 = new Products(
   "S/. 60",
   "",
   ["assets/EL DEFENSOR.png"],
-  "Incluye IGV"
+  "Incluye IGV",
+  "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos."
 );
 const product21 = new Products(
   "21",
@@ -183,8 +204,8 @@ const product21 = new Products(
   "S/. 130",
   "",
   ["assets/EL DERECHO A LA PRUEBA EN LA INVESTIGACION.webp"],
-
-  "Incluye IGV"
+  "Incluye IGV",
+  "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos."
 );
 
 const arrayProducts = [
