@@ -239,5 +239,3 @@ function printCards(arrayProductos, selector) {
 }
 
 printCards(arrayProductos, "products-container");
-
-//TARJETA DE ORFERTAS
