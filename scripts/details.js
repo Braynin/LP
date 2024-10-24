@@ -33,16 +33,21 @@ function printDetails(id) {
           <div class="product-checkout-block">
             <div class="checkout-container">
               <span class="checkout-total-label">Total:</span>
-              <h2 id="price" class="checkout-total-price">${product.precioMenor}</h2>
+              <h2 id="price" class="checkout-total-price">S/.${product.precioMenor}</h2>
               <p class="checkout-description"></p>
               <ul class="checkout-policy-list">
                 <li>
-                  <span class="policy-icon"><img src="./assets/truck.png" alt="Truck"/></span>
-                  <span class="policy-desc">Agrega el producto al carrito para conocer los costos de envío</span>
+                  <a class="policy-icon" href = "#">
+                    <img class = "img-icon" src="./assets/iconPdf.png" alt="Plane"/>
+                  </a>
+                  
+                  <span class="policy-desc">Descarga el índice</span>
                 </li>
                 <li>
-                  <span class="policy-icon"><img src="./assets/plane.png" alt="Plane"/></span>
-                  <span class="policy-desc">Recibí aproximadamente entre 10 y 15 días hábiles, seleccionando envío normal</span>
+                  <span class="policy-icon" href = "#">
+                    <img class = "img-icon" src="./assets/delivery.png" alt="Plane"/>
+                  </span>
+                  <span class="policy-desc">Recibe aproximadamente entre 3 a 5 días hábiles tu pedido.</span>
                 </li>
               </ul>
               <div class="checkout-process">
@@ -71,7 +76,19 @@ function changePrice(event) {
   const quantity = event.target.value;
   const product = arrayProducts.find((product) => product.id == idQuery);
   const priceSelector = document.querySelector("#price");
-  priceSelector.innerHTML = `$${quantity * product.price}`;
+  priceSelector.innerHTML = `S/.${quantity * product.precioMenor}`;
+  console.log("Cantidad:", quantity);
+  console.log("Producto encontrado:", product);
+  console.log("Precio menor:", product ? product.precioMenor : "No encontrado");
+  console.log(quantity * product.precioMenor);
+
+  if (product && !isNaN(quantity) && !isNaN(product.precioMenor)) {
+    const totalPrice = (quantity * product.precioMenor).toFixed(2);
+    const priceSelector = document.querySelector("#price");
+    priceSelector.innerHTML = `S/.${totalPrice}`;
+  } else {
+    console.error("Error al calcular el precio.");
+  }
 }
 
 printDetails(idQuery);

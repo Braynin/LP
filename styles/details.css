@@ -148,6 +148,11 @@ h2 {
 .checkout-policy-list li .policy-icon {
   margin-right: 15px;
 }
+.img-icon {
+  width: 30px;
+  margin-right: 15px;
+  margin-bottom: 5px;
+}
 .checkout-process {
   row-gap: 20px;
 }
