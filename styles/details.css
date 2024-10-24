@@ -188,7 +188,6 @@ h2 {
 /*OFFERS*/
 #offers-container {
   max-width: 100%;
-  margin: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -201,7 +200,7 @@ h2 {
   color: #272727;
   border-radius: 15px;
   width: 260px;
-  margin: 15px;
+  margin: 65px;
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
