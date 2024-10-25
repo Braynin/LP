@@ -227,14 +227,12 @@ h3 {
 }
 
 /*Footer*/
-.footer {
+
+#footer-container {
   background-color: black;
   padding: 20px 0;
   text-align: center;
   margin-top: 30px;
-}
-
-#footer-container {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -246,39 +244,29 @@ h3 {
   margin: 10px;
 }
 
-.footer-section h4 {
+.footer-title {
   font-size: 20px;
   font-weight: 800;
   margin-bottom: 10px;
   color: white;
 }
 
-.footer-section ul {
+.footer-options {
   list-style-type: none;
   padding: 0;
 }
 
-.footer-section ul li {
+.footer-option {
   margin-bottom: 5px;
   font-size: 14px;
-}
-
-.footer-section ul li a {
   text-decoration: none;
   color: white;
 }
 
-.footer-section ul li a:hover {
+.footer-option:hover {
   text-decoration: underline;
 }
 
-.footer-section p {
-  margin: 5px 0;
-}
-.footer-section p a {
-  color: white;
-  font-size: 14px;
-}
 .social-links {
   display: flex;
   justify-content: center;

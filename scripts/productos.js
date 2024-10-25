@@ -1,4 +1,4 @@
-//TARJETA DE PRODUCTOS
+/*Classes*/
 class Products {
   constructor(id, nombre, precioMenor, precioMayor, imagen, igv, description) {
     this.id = id;
@@ -16,6 +16,8 @@ class Products {
     this._supplier = newName;
   }
 }
+
+/*Objects*/
 
 const product1 = new Products(
   "1",
@@ -207,6 +209,8 @@ const product21 = new Products(
   "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos."
 );
 
+/*Arrays*/
+
 const arrayProducts = [
   product1,
   product2,
@@ -231,6 +235,8 @@ const arrayProducts = [
   product21,
 ];
 
+/*Creators*/
+
 function createCard(product) {
   return `
   <a class = "product-card" href = "./details.html?id=${product.id}" >  
@@ -247,29 +253,21 @@ function createCard(product) {
       </a>
 `;
 }
-function printCards(arrayProducts, selector) {
-  let productsTemplate = "";
 
-  arrayProducts.forEach((product) => {
-    productsTemplate += createCard(product);
-  });
-
-  const productsContainer = document.getElementById(selector);
-  productsContainer.innerHTML = productsTemplate;
+function printPreProductsContainer() {
+  return `
+  <h2 class="content-subtitle">Libros</h2>
+        <div id="products-container"></div>
+        <h2 class="content-subtitle">Ofertas de la semana</h2>
+        <div id="offers-container"></div>
+  `;
 }
 
-printCards(arrayProducts, "products-container");
+/*Prints*/
+document.getElementById("content-container").innerHTML =
+  printPreProductsContainer();
 
-// Search
-let searchSelector = document.querySelector("#search");
-const captureText = (event) => {
-  let text = event.target.value;
-  console.log("Texto recibido:", text);
-  let filteredProducts = arrayProducts.filter((product) =>
-    product.nombre.toLowerCase().includes(text.toLowerCase())
-  );
-  console.log("Productos filtrados:", filteredProducts);
-  printCards(filteredProducts, "products-container");
-};
-
-searchSelector.addEventListener("keyup", (event) => captureText(event));
+document.getElementById("products-container").innerHTML = template(
+  arrayProducts,
+  createCard
+);

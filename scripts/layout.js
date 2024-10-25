@@ -5,7 +5,7 @@ const headerContainer = document.getElementById("header-container");
 const navContainer = document.getElementById("nav-container");
 const footerContainer = document.getElementById("footer-container");
 
-/*Clases*/
+/*Classes*/
 
 class message {
   constructor(text, linkto) {
@@ -30,8 +30,26 @@ class navOption {
 }
 
 class footerOption {
-  constructor(title) {
+  constructor(
+    title,
+    option1,
+    linkto1,
+    option2,
+    linkto2,
+    option3,
+    linkto3,
+    option4,
+    linkto4
+  ) {
     this.title = title;
+    this.option1 = option1;
+    this.linkto1 = linkto1;
+    this.option2 = option2;
+    this.linkto2 = linkto2;
+    this.option3 = option3;
+    this.linkto3 = linkto3;
+    this.option4 = option4;
+    this.linkto4 = linkto4;
   }
 }
 
@@ -143,6 +161,30 @@ const navOption2 = new navOption("Civil", "#");
 const navOption3 = new navOption("Familia", "#");
 const navOption4 = new navOption("Administrativo", "#");
 
+const footerOption1 = new footerOption(
+  "Servicio al cliente",
+  "Opiniones de clientes",
+  "#",
+  "Preguntas Frecuentes",
+  "#",
+  "Cambios y Devoluciones",
+  "#",
+  "Política de Privacidad",
+  "#"
+);
+
+const footerOption2 = new footerOption(
+  "Libros Juridicos",
+  "Libros de Civil",
+  "#",
+  "Libros de Penal",
+  "#",
+  "Packs",
+  "#",
+  "",
+  ""
+);
+
 /*Arrays*/
 
 const arrayMessages = [message1, message2, message3];
@@ -154,6 +196,8 @@ const arraySocialLinks = [
   socialLink5,
 ];
 const arrayNavOptions = [navOption1, navOption2, navOption3, navOption4];
+
+const arrayFooterOptions = [footerOption1, footerOption2];
 
 /*Functions */
 /**Creators **/
@@ -173,6 +217,31 @@ function createNavOption(option) {
   return `
 <li class="nav-option"><a class="nav-link" href="${option.linkto}">${option.text}</a></li>
 `;
+}
+
+function createFooterOption(option) {
+  return `
+<div class="footer-section">
+          <h4 class="footer-title">${option.title}</h4>
+          <ul class="footer-options">
+            <li><a class="footer-option" href="${option.linkto1}">${
+    option.option1
+  }</a></li>
+            <li><a class="footer-option" href="${option.linkto2}">${
+    option.option2
+  }</a></li>
+            <li>
+              <a class="footer-option" href="${option.linkto3}">${
+    option.option3
+  }</a>
+            </li>
+             ${
+               option.option4 && option.linkto4
+                 ? `<li><a class="footer-option" href="${option.linkto4}">${option.option4}</a></li>`
+                 : ""
+             }
+          </ul>
+        </div>`;
 }
 
 /**Template**/
@@ -217,10 +286,22 @@ function printNav(array, creator) {
   </nav> `;
 }
 
-/*Printers */
+function printFooter(array, creator) {
+  return `
+  ${template(array, creator)}
+  <div class="footer-section">
+          <h4 class="footer-title">¿Consultas?</h4>
+          <a class="footer-option" href="tel:+51997743461">+51 997 743 461</a>
+          <h4 class="footer-title">Síguenos en</h4>
+          <ul class="social-links"></ul>
+  </div>
+  `;
+}
+/*Prints */
 
 messageContainer.innerHTML = printMessage(arrayMessages, createMessage);
 headerContainer.innerHTML = printHeader();
+footerContainer.innerHTML = printFooter(arrayFooterOptions, createFooterOption);
 document.querySelectorAll(".social-links").forEach((container) => {
   container.innerHTML = template(arraySocialLinks, createSocialLink);
 });
