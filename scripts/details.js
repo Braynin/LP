@@ -77,18 +77,6 @@ function changePrice(event) {
   const product = arrayProducts.find((product) => product.id == idQuery);
   const priceSelector = document.querySelector("#price");
   priceSelector.innerHTML = `S/.${quantity * product.precioMenor}`;
-  console.log("Cantidad:", quantity);
-  console.log("Producto encontrado:", product);
-  console.log("Precio menor:", product ? product.precioMenor : "No encontrado");
-  console.log(quantity * product.precioMenor);
-
-  if (product && !isNaN(quantity) && !isNaN(product.precioMenor)) {
-    const totalPrice = (quantity * product.precioMenor).toFixed(2);
-    const priceSelector = document.querySelector("#price");
-    priceSelector.innerHTML = `S/.${totalPrice}`;
-  } else {
-    console.error("Error al calcular el precio.");
-  }
 }
 
 printDetails(idQuery);
