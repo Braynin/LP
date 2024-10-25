@@ -307,11 +307,14 @@ function printFooter(array, creator) {
   `;
 }
 
+function quitarTildes(texto) {
+  return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
 const captureText = (event) => {
-  let text = event.target.value;
-  console.log("Texto recibido:", text);
+  let text = quitarTildes(event.target.value).toLowerCase();
   let filteredProducts = arrayProducts.filter((product) =>
-    product.nombre.toLowerCase().includes(text.toLowerCase())
+    quitarTildes(product.nombre).toLowerCase().includes(text)
   );
   console.log("Productos filtrados:", filteredProducts);
   document.getElementById("products-container").innerHTML = template(

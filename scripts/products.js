@@ -21,16 +21,16 @@ class Products {
 
 const product1 = new Products(
   "1",
-  "Codigo Penal Tapa Dura",
+  "Código Penal Tapa Dura",
   "75",
   "",
-  ["assets/CODIGO PENAL.png"],
+  ["assets/CODIGO-PENAL.png"],
   "Incluye IGV",
   "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos."
 );
 const product2 = new Products(
   "2",
-  "Codigo Penal Tapa Rústica",
+  "Código Penal Tapa Rústica",
   "50",
   "",
   ["assets/CP_TR3-removebg-preview.png"],
@@ -39,7 +39,7 @@ const product2 = new Products(
 );
 const product3 = new Products(
   "3",
-  "Codigo Civil Tapa Dura",
+  "Código Civil Tapa Dura",
   "75",
   "",
   ["assets/CODIGO CIVIL.webp"],
@@ -48,7 +48,7 @@ const product3 = new Products(
 );
 const product4 = new Products(
   "4",
-  "Codigo Civil Tapa Rústica",
+  "Código Civil Tapa Rústica",
   "75",
   "",
   ["assets/CC_TR_3-removebg-preview.png"],
@@ -60,13 +60,13 @@ const product5 = new Products(
   "Detencion policial en flagrancia y proceso inmediato",
   "130",
   "",
-  ["url_de_imagen_1"],
+  ["assets/DETENCION-POLICIAL.png"],
   "Incluye IGV",
   "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos."
 );
 const product6 = new Products(
   "6",
-  "Mini codigo penal",
+  "Mini Código penal",
   "35",
   "",
   ["assets/MINI CODIGO PENAL.webp"],
@@ -156,7 +156,7 @@ const product15 = new Products(
 );
 const product16 = new Products(
   "16",
-  "El Nuevo Codigo Procesal Constitucional",
+  "El Nuevo Código Procesal Constitucional",
   "100",
   "",
   ["assets/EL NUEVO CODIGO PROCESAL CONSTITUCIONAL.webp"],
@@ -177,7 +177,7 @@ const product18 = new Products(
   "Derecho penal: parte general",
   "130",
   "",
-  ["url_de_imagen_1"],
+  ["assets/DERECHO-PENAL-PARTE-GENERAL.png"],
   "Incluye IGV",
   "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos."
 );
