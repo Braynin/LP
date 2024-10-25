@@ -171,7 +171,7 @@ h2 {
 }
 .cart-btn {
   display: inline-block;
-  /text-align: center;
+  text-align: center;
   margin: 0 auto;
   padding: 10px 20px;
   background: #ff3b3c;
