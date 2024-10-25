@@ -19,7 +19,7 @@ class Products {
 
 const product1 = new Products(
   "1",
-  "Código Penal Tapa Dura",
+  "Codigo Penal Tapa Dura",
   "75",
   "",
   ["assets/CODIGO PENAL.png"],
@@ -28,7 +28,7 @@ const product1 = new Products(
 );
 const product2 = new Products(
   "2",
-  "Código Penal Tapa Rústica",
+  "Codigo Penal Tapa Rústica",
   "50",
   "",
   ["assets/CP_TR3-removebg-preview.png"],
@@ -37,7 +37,7 @@ const product2 = new Products(
 );
 const product3 = new Products(
   "3",
-  "Código Civil Tapa Dura",
+  "Codigo Civil Tapa Dura",
   "75",
   "",
   ["assets/CODIGO CIVIL.webp"],
@@ -46,7 +46,7 @@ const product3 = new Products(
 );
 const product4 = new Products(
   "4",
-  "Código Civil Tapa Rústica",
+  "Codigo Civil Tapa Rústica",
   "75",
   "",
   ["assets/CC_TR_3-removebg-preview.png"],
@@ -55,7 +55,7 @@ const product4 = new Products(
 );
 const product5 = new Products(
   "5",
-  "Detención policial en flagrancia y proceso inmediato",
+  "Detencion policial en flagrancia y proceso inmediato",
   "130",
   "",
   ["url_de_imagen_1"],
@@ -64,7 +64,7 @@ const product5 = new Products(
 );
 const product6 = new Products(
   "6",
-  "Mini código penal",
+  "Mini codigo penal",
   "35",
   "",
   ["assets/MINI CODIGO PENAL.webp"],
@@ -82,7 +82,7 @@ const product7 = new Products(
 );
 const product8 = new Products(
   "8",
-  "Litigación Oral Civil",
+  "Litigacion Oral Civil",
   "100",
   "",
   ["assets/LITIGACION ORAL CIVIL.webp"],
@@ -91,7 +91,7 @@ const product8 = new Products(
 );
 const product9 = new Products(
   "9",
-  "Colección ¿Cómo redactar un contrato? Notas desde la práctica",
+  "Coleccion ¿Cómo redactar un contrato? Notas desde la práctica",
   "140",
   "",
   ["assets/COLECCION - COMO REDACTAR UN CONTRATO.webp"],
@@ -127,7 +127,7 @@ const product12 = new Products(
 );
 const product13 = new Products(
   "13",
-  "La Constitución en las redes",
+  "La Constitucion en las redes",
   "120",
   "",
   ["assets/LA CONSTITUCION EN LAS REDES.webp"],
@@ -136,7 +136,7 @@ const product13 = new Products(
 );
 const product14 = new Products(
   "14",
-  "Colección Litigación Oral en audiencias previas - Con caja",
+  "Coleccion Litigacion Oral en audiencias previas - Con caja",
   "150",
   "",
   ["assets/COLECCION LITIGACION EN AUDIENCIAS PREVIAS.webp"],
@@ -145,7 +145,7 @@ const product14 = new Products(
 );
 const product15 = new Products(
   "15",
-  "Colección Litigación Oral en audiencias previas - Sin caja",
+  "Coleccion Litigacion Oral en audiencias previas - Sin caja",
   "140",
   "",
   ["assets/COLECCION LITIGACION EN AUDIENCIAS PREVIAS - SIN CAJA.webp"],
@@ -154,7 +154,7 @@ const product15 = new Products(
 );
 const product16 = new Products(
   "16",
-  "El Nuevo Código Procesal Constitucional",
+  "El Nuevo Codigo Procesal Constitucional",
   "100",
   "",
   ["assets/EL NUEVO CODIGO PROCESAL CONSTITUCIONAL.webp"],
@@ -163,7 +163,7 @@ const product16 = new Products(
 );
 const product17 = new Products(
   "17",
-  "Curso de Redacción Administrativa",
+  "Curso de Redaccion Administrativa",
   "100",
   "",
   ["assets/CURSO DE REDACCION ADMINISTRATIVA.webp"],
@@ -199,7 +199,7 @@ const product20 = new Products(
 );
 const product21 = new Products(
   "21",
-  "El derecho a la prueba en la investigación preparatoria",
+  "El derecho a la prueba en la investigacion preparatoria",
   "130",
   "",
   ["assets/EL DERECHO A LA PRUEBA EN LA INVESTIGACION.webp"],
