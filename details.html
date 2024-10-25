@@ -43,6 +43,7 @@
             type="text"
             placeholder="Search"
             id="search"
+            oninput="captureText(event)"
           />
         </form>
         <ul class="header-social">
@@ -112,6 +113,7 @@
       </div>
     </header>
     <main>
+      <div class="products-container"></div>
       <div class="details-container">
         <div id="details" class="columns-container"></div>
         <h2 class="content-subtitle">Ofertas de la semana</h2>

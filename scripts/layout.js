@@ -272,6 +272,7 @@ function printHeader() {
             type="text"
             placeholder="Buscar"
             id="search"
+            oninput="captureText(event)"
           />
   </form>
   <ul class="social-links"></ul>
