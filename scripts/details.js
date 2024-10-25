@@ -77,18 +77,6 @@ function changePrice(event) {
   const product = arrayProducts.find((product) => product.id == idQuery);
   const priceSelector = document.querySelector("#price");
   priceSelector.innerHTML = `S/.${quantity * product.precioMenor}`;
-  console.log("Cantidad:", quantity);
-  console.log("Producto encontrado:", product);
-  console.log("Precio menor:", product ? product.precioMenor : "No encontrado");
-  console.log(quantity * product.precioMenor);
-
-  if (product && !isNaN(quantity) && !isNaN(product.precioMenor)) {
-    const totalPrice = (quantity * product.precioMenor).toFixed(2);
-    const priceSelector = document.querySelector("#price");
-    priceSelector.innerHTML = `S/.${totalPrice}`;
-  } else {
-    console.error("Error al calcular el precio.");
-  }
 }
 
 printDetails(idQuery);
@@ -114,3 +102,17 @@ function saveProduct(id) {
     localStorage.setItem("cart", JSON.stringify(arrayAnterior));
   }
 }
+
+// Search
+let searchSelector = document.querySelector("#search");
+const captureText = (event) => {
+  let text = event.target.value;
+  console.log("Texto recibido:", text);
+  let filteredProducts = arrayProducts.filter((product) =>
+    product.nombre.toLowerCase().includes(text.toLowerCase())
+  );
+  console.log("Productos filtrados:", filteredProducts);
+  printCards(filteredProducts, "products-container");
+};
+
+searchSelector.addEventListener("keyup", (event) => captureText(event));
