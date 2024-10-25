@@ -23,9 +23,10 @@ class socialLink {
 }
 
 class navOption {
-  constructor(text, linkto) {
+  constructor(text, linkto, section) {
     this.text = text;
     this.linkto = linkto;
+    this.section = section;
   }
 }
 
@@ -156,10 +157,11 @@ const socialLink5 = new socialLink(
               </svg>`
 );
 
-const navOption1 = new navOption("Penal", "#");
-const navOption2 = new navOption("Civil", "#");
-const navOption3 = new navOption("Familia", "#");
-const navOption4 = new navOption("Administrativo", "#");
+const navOption1 = new navOption("Penal", "#", "penal");
+const navOption2 = new navOption("Civil", "#", "civil");
+const navOption3 = new navOption("Familia", "#", "familia");
+const navOption4 = new navOption("Administrativo", "#", "administrativo");
+const navOption5 = new navOption("Constitucional", "#", "constitucional");
 
 const footerOption1 = new footerOption(
   "Servicio al cliente",
@@ -195,7 +197,13 @@ const arraySocialLinks = [
   socialLink4,
   socialLink5,
 ];
-const arrayNavOptions = [navOption1, navOption2, navOption3, navOption4];
+const arrayNavOptions = [
+  navOption1,
+  navOption2,
+  navOption3,
+  navOption4,
+  navOption5,
+];
 
 const arrayFooterOptions = [footerOption1, footerOption2];
 
@@ -215,7 +223,7 @@ function createSocialLink(socialLink) {
 
 function createNavOption(option) {
   return `
-<li class="nav-option"><a class="nav-link" href="${option.linkto}">${option.text}</a></li>
+<li class="nav-option"><a class="nav-link" href="${option.linkto}" data-section="${option.section}" >${option.text}</a></li>
 `;
 }
 
@@ -307,3 +315,5 @@ document.querySelectorAll(".social-links").forEach((container) => {
   container.innerHTML = template(arraySocialLinks, createSocialLink);
 });
 navContainer.innerHTML = printNav(arrayNavOptions, createNavOption);
+
+// FILTER NAV
