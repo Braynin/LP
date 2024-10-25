@@ -102,3 +102,15 @@ function saveProduct(id) {
     localStorage.setItem("cart", JSON.stringify(arrayAnterior));
   }
 }
+// const captureText = (event) => {
+//   let text = event.target.value;
+//   console.log("Texto recibido:", text);
+//   let filteredProducts = arrayProducts.filter((product) =>
+//     product.nombre.toLowerCase().includes(text.toLowerCase())
+//   );
+//   console.log("Productos filtrados:", filteredProducts);
+//   document.getElementById("products-container").innerHTML = template(
+//     filteredProducts,
+//     createCard
+//   );
+// };
