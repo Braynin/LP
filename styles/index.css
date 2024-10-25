@@ -35,6 +35,10 @@ a {
   }
 }
 
+footer {
+  width: 100%;
+}
+
 /*Header*/
 
 /**Header-messages**/
@@ -230,13 +234,13 @@ h3 {
 
 #footer-container {
   background-color: black;
-  padding: 20px 0;
+  padding: 20px 0px;
   text-align: center;
   margin-top: 30px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  max-width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
