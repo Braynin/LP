@@ -235,7 +235,7 @@ const arrayProducts = [
   product21,
 ];
 
-/*Creators*/
+/*Create Cards*/
 
 function createCard(product) {
   return `
@@ -253,38 +253,3 @@ function createCard(product) {
       </a>
 `;
 }
-
-function printPreProductsContainer() {
-  return `
-  <h2 class="content-subtitle">Libros</h2>
-        <div id="products-container"></div>
-        <h2 class="content-subtitle">Ofertas de la semana</h2>
-        <div id="offers-container"></div>
-  `;
-}
-
-/*Prints*/
-document.getElementById("content-container").innerHTML =
-  printPreProductsContainer();
-
-document.getElementById("products-container").innerHTML = template(
-  arrayProducts,
-  createCard
-);
-
-// Search
-let searchSelector = document.querySelector("#search");
-const captureText = (event) => {
-  let text = event.target.value;
-  console.log("Texto recibido:", text);
-  let filteredProducts = arrayProducts.filter((product) =>
-    product.nombre.toLowerCase().includes(text.toLowerCase())
-  );
-  console.log("Productos filtrados:", filteredProducts);
-  document.getElementById("products-container").innerHTML = template(
-    filteredProducts,
-    createCard
-  );
-};
-
-searchSelector.addEventListener("keyup", (event) => captureText(event));

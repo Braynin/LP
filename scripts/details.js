@@ -1,18 +1,17 @@
+/*Id Capturer*/
+
 const query = location.search;
 const params = new URLSearchParams(query);
 const idQuery = params.get("id");
-console.log("ID obtenido de la URL:", idQuery);
 
+/*Containers*/
+
+const detailsSelector = document.getElementById("details-container");
+
+/* Functions */
 function printDetails(id) {
   const product = arrayProducts.find((product) => product.id == id);
-  console.log(product);
-
-  if (!product) {
-    console.error("Producto no encontrado");
-    return;
-  }
-
-  const detailsTemplate = `
+  return `
         <section class="product-images-block">
             
             <img
@@ -62,8 +61,6 @@ function printDetails(id) {
             </div>
           </div>
     `;
-  const detailsSelector = document.querySelector("#details");
-  detailsSelector.innerHTML = detailsTemplate;
 }
 
 function changeMini(event) {
@@ -78,8 +75,6 @@ function changePrice(event) {
   const priceSelector = document.querySelector("#price");
   priceSelector.innerHTML = `S/.${quantity * product.precioMenor}`;
 }
-
-printDetails(idQuery);
 
 function saveProduct(id) {
   const found = arrayProducts.find((each) => each.id == id);
@@ -102,15 +97,7 @@ function saveProduct(id) {
     localStorage.setItem("cart", JSON.stringify(arrayAnterior));
   }
 }
-// const captureText = (event) => {
-//   let text = event.target.value;
-//   console.log("Texto recibido:", text);
-//   let filteredProducts = arrayProducts.filter((product) =>
-//     product.nombre.toLowerCase().includes(text.toLowerCase())
-//   );
-//   console.log("Productos filtrados:", filteredProducts);
-//   document.getElementById("products-container").innerHTML = template(
-//     filteredProducts,
-//     createCard
-//   );
-// };
+
+/*Prints*/
+
+detailsSelector.innerHTML = printDetails(idQuery);

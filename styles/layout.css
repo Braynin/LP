@@ -144,92 +144,6 @@ footer {
 .nav-link:hover {
   color: #f8f9fa;
 }
-/*Main*/
-
-#content-container {
-  align-items: center;
-}
-h3 {
-  padding: 30px;
-  text-align: center;
-}
-.content-subtitle {
-  text-align: center;
-  padding: 30px;
-  font-size: 40px;
-}
-#products-container {
-  max-width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-#offers-container {
-  max-width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-/**Product-Offers Card**/
-.product-card {
-  display: flex;
-  flex-direction: column;
-  background-color: #ebeaea;
-  color: #272727;
-  border-radius: 15px;
-  width: 260px;
-  margin: 15px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-.product-card :hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 8px (0, 0, 0, 0.2);
-}
-.product-img {
-  object-fit: cover;
-  object-position: center center;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-}
-.product-info {
-  padding: 20px;
-  box-sizing: border-box;
-}
-.product-title {
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 25px;
-  word-wrap: break-word;
-  display: block;
-}
-.product-description {
-  font-size: 12px;
-  font-weight: 400;
-  color: #383838;
-  margin-bottom: 5px;
-}
-.product-price-block {
-  display: flex;
-  margin: 5px 0;
-  justify-content: space-between;
-  align-items: center;
-}
-.product-price-block .product-price {
-  font-size: 20px;
-  font-weight: 700;
-}
-.product-price-block .product-discount {
-  font-size: 12px;
-  font-weight: 700;
-  color: #428f13;
-}
-.product-price {
-  font-size: 15px;
-  color: #428f13;
-}
 
 /*Footer*/
 
@@ -277,7 +191,7 @@ h3 {
   gap: 10px;
 }
 
-.social-links a img {
-  width: 24px;
-  height: 24px;
+.footer-section ul li a {
+  text-decoration: none;
+  color: white;
 }

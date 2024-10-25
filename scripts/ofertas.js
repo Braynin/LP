@@ -1,4 +1,8 @@
-//TARJETA DE ORFERTAS
+/*Conteiners*/
+
+OffersContainer = document.getElementById("offers-container");
+
+/*Classes*/
 class Offers {
   constructor(id, nombre, precio, impuesto, imagen, link) {
     this.id = id;
@@ -16,6 +20,9 @@ class Offers {
     this._supplier = newName;
   }
 }
+
+/*Objects*/
+
 const offer1 = new Offers(
   "1",
   "Código Penal Tapa Dura",
@@ -42,8 +49,11 @@ const offer3 = new Offers(
   "./details.html"
 );
 
+/*Arrays*/
+
 const arrayOfers = [offer1, offer2, offer3];
 
+/*Functions*/
 function createOffers(offer) {
   return `
     <a class = "product-card" href = "./details.html?id=${offer.id}" >  
@@ -60,15 +70,16 @@ function createOffers(offer) {
         </a>
   `;
 }
-function printOffers(arrayOffers, selector) {
-  let offersTemplate = "";
 
-  arrayOffers.forEach((offer) => {
-    offersTemplate += createOffers(offer);
-  });
-
-  const offersContainer = document.getElementById(selector);
-  offersContainer.innerHTML = offersTemplate;
+function printOffersContainer(array, creator) {
+  return `
+  <h2 class="content-subtitle">Ofertas de la semana</h2>
+  <div class="offers">
+       ${template(array, creator)}
+   </>
+  `;
 }
 
-printOffers(arrayOfers, "offers-container");
+/*Prints*/
+
+OffersContainer.innerHTML = printOffersContainer(arrayOfers, createOffers);
