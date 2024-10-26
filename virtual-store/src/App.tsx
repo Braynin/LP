@@ -21,8 +21,8 @@ function Home() {
   <a href="./index.html">
           <img className={styles["header-logo"]} src="./assets/logolp.webp" alt="Logo Lp" />
   </a>
-  <form className={styles[="header-search"]}>
-          <input className={styles["search-input"]} type="text" placeholder="Buscar" id="search" oninput="captureText(event)"/>
+  <form className={styles["header-search"]}>
+          <input className={styles["search-input"]} type="text" placeholder="Buscar" id="search" />
   </form>
   <ul className={styles["social-links"]}>
 <li id="Facebook" className={styles["header-li"]}><a href="https://www.facebook.com/lpderecho"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className={styles["icon icon-tabler icons-tabler-filled icon-tabler-brand-facebook"]}>
@@ -77,7 +77,7 @@ function Home() {
   <div className={styles["products"]}>
        
   <a className={styles["product-card"]} href="./details.html?id=1">  
-  <img className={styles["product-img"]} src="assets/CODIGO-PENAL.png" alt="Código Penal Tapa Dura">
+  <img className={styles["product-img"]} src="assets/CODIGO-PENAL.png" alt="Código Penal Tapa Dura"/>
       <div className={styles["product-info"]}>
         <span className={styles["product-title"]}>Código Penal Tapa Dura</span>
         <div className={styles["product-price-block"]}>
@@ -90,7 +90,7 @@ function Home() {
       </a>
 
   <a className={styles["product-card"]} href="./details.html?id=2">  
-  <img className={styles["product-img"]} src="assets/CP_TR3-removebg-preview.png" alt="Código Penal Tapa Rústica">
+  <img className={styles["product-img"]} src="assets/CP_TR3-removebg-preview.png" alt="Código Penal Tapa Rústica"/>
       <div className={styles["product-info"]}>
         <span className={styles["product-title"]}>Código Penal Tapa Rústica</span>
         <div className={styles["product-price-block"]}>
@@ -129,7 +129,7 @@ function Home() {
       </a>
 
   <a className={styles["product-card"]} href="./details.html?id=5">  
-  <img className={styles["product-img"]} src="assets/DETENCION-POLICIAL.png" alt="Detencion policial en flagrancia y proceso inmediato">
+  <img className={styles["product-img"]} src="assets/DETENCION-POLICIAL.png" alt="Detencion policial en flagrancia y proceso inmediato"/>
       <div className={styles["product-info"]}>
         <span className={styles["product-title"]}>Detencion policial en flagrancia y proceso inmediato</span>
         <div className={styles["product-price-block"]}>
@@ -168,7 +168,7 @@ function Home() {
       </a>
 
   <a className={styles["product-card"]} href="./details.html?id=8">  
-  <img className={styles["product-img"]} src="assets/LITIGACION ORAL CIVIL.webp" alt="Litigacion Oral Civil">
+  <img className={styles["product-img"]} src="assets/LITIGACION ORAL CIVIL.webp" alt="Litigacion Oral Civil"/>
       <div className={styles["product-info"]}>
         <span className={styles["product-title"]}>Litigacion Oral Civil</span>
         <div className={styles["product-price-block"]}>
@@ -285,7 +285,7 @@ function Home() {
       </a>
 
   <a className={styles["product-card"]} href="./details.html?id=17">  
-  <img className={styles["product-img"]} src="assets/CURSO DE REDACCION ADMINISTRATIVA.webp" alt="Curso de Redaccion Administrativa">
+  <img className={styles["product-img"]} src="assets/CURSO DE REDACCION ADMINISTRATIVA.webp" alt="Curso de Redaccion Administrativa"/>
       <div className={styles["product-info"]}>
         <span className={styles["product-title"]}>Curso de Redaccion Administrativa</span>
         <div className={styles["product-price-block"]}>
@@ -313,7 +313,7 @@ function Home() {
   <a className={styles["product-card"]} href="./details.html?id=19">  
   <img className={styles["product-img"]} src="assets/MI PRIMER JUICIO DE FAMILIA.webp" alt="Mi primer juicio de familia. ¿Qué le digo al juez?"/>
       <div className={styles["product-info"]}>
-        <span className={styles[="product-title"]}>Mi primer juicio de familia. ¿Qué le digo al juez?</span>
+        <span className={styles["product-title"]}>Mi primer juicio de familia. ¿Qué le digo al juez?</span>
         <div className={styles["product-price-block"]}>
           <span className={styles["product-price"]}>S/.100</span>
         </div>
@@ -356,7 +356,7 @@ function Home() {
   <div className={styles["offers"]}>
        
     <a className={styles["product-card"]} href="./details.html?id=1">  
-    <img className={styles["product-img"]} src="assets/CODIGO PENAL.webp" alt="Código Penal Tapa Dura">
+    <img className={styles["product-img"]} src="assets/CODIGO PENAL.webp" alt="Código Penal Tapa Dura"/>
       <div className={styles["product-info"]}>
         <span className={styles["product-title"]}>Código Penal Tapa Dura</span>
         <div className={styles["product-price-block"]}>
@@ -369,7 +369,7 @@ function Home() {
         </a>
   
     <a className={styles["product-card"]} href="./details.html?id=3">  
-    <img className={styles["product-img"]} src="assets/CODIGO CIVIL.webp" alt="Código Civil Tapa Dura">
+    <img className={styles["product-img"]} src="assets/CODIGO CIVIL.webp" alt="Código Civil Tapa Dura"/>
       <div className={styles["product-info"]}>
         <span className={styles["product-title"]}>Código Civil Tapa Dura</span>
         <div className={styles[="product-price-block"]}>
@@ -382,7 +382,7 @@ function Home() {
         </a>
   
     <a className={styles["product-card"]} href="./details.html?id=7">  
-    <img className={styles["product-img"]} src="assets/EL DEFENSOR 2 - VIVIENDO EL SUEÑO.webp" alt="El Defensor 2">
+    <img className={styles["product-img"]} src="assets/EL DEFENSOR 2 - VIVIENDO EL SUEÑO.webp" alt="El Defensor 2"/>
       <div className={styles["product-info"]}>
         <span className={styles["product-title"]}>El Defensor 2</span>
         <div className={styles["product-price-block"]}>
