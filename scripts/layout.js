@@ -333,4 +333,4 @@ document.querySelectorAll(".social-links").forEach((container) => {
 });
 navContainer.innerHTML = printNav(arrayNavOptions, createNavOption);
 
-// FILTER NAVfunction filterBySection(section) {
+// FILTER NAV
