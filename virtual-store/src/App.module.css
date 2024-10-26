@@ -17,6 +17,15 @@
   animation: scrollMessages 15s linear infinite;
 }
 
+@keyframes scrollMessages {
+  0% {
+    transform: translateX(200%); /* Comienza fuera a la derecha */
+  }
+  100% {
+    transform: translateX(-200%); /* Termina fuera a la izquierda */
+  }
+}
+
 .message {
   padding: 10px 20px;
   font-size: 16px;
@@ -72,35 +81,6 @@
 .header-li {
   list-style: none;
   margin-right: 10px;
-}
-
-/**Header-Nav**/
-
-.nav-container {
-  padding: 10px;
-  background-color: black;
-}
-.nav {
-  padding: 10px;
-  margin: 0 auto;
-  max-width: 70%;
-}
-.nav-options {
-  display: flex;
-  justify-content: space-between;
-}
-.nav-option {
-  list-style: none;
-  margin-right: 10px;
-}
-.nav-link {
-  color: white;
-  text-decoration: none;
-  font-size: 15px;
-}
-
-.nav-link:hover {
-  color: #f8f9fa;
 }
 
 /*Main*/

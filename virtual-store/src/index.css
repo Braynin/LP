@@ -26,15 +26,6 @@ a {
   text-decoration: none;
 }
 
-@keyframes scrollMessages {
-  0% {
-    transform: translateX(200%); /* Comienza fuera a la derecha */
-  }
-  100% {
-    transform: translateX(-200%); /* Termina fuera a la izquierda */
-  }
-}
-
 footer {
   width: 100%;
   background-color: black;

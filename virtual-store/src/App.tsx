@@ -1,3 +1,4 @@
+import NavBar from "./components/navBar";
 import styles from "./App.module.css";
 
 function Home() {
@@ -23,7 +24,7 @@ function Home() {
           <a href="./index.html">
             <img
               className={styles["header-logo"]}
-              src="./assets/logolp.webp"
+              src="./public/logolp.webp"
               alt="Logo Lp"
             />
           </a>
@@ -147,53 +148,7 @@ function Home() {
             </li>
           </ul>
         </div>
-        <div className={styles["nav-container"]}>
-          <nav className={styles["nav"]}>
-            <ul className={styles["nav-options"]}>
-              <li className={styles["nav-option"]}>
-                <a className={styles["nav-link"]} href="#" data-section="penal">
-                  Penal
-                </a>
-              </li>
-
-              <li className={styles["nav-option"]}>
-                <a className={styles["nav-link"]} href="#" data-section="civil">
-                  Civil
-                </a>
-              </li>
-
-              <li className={styles["nav-option"]}>
-                <a
-                  className={styles["nav-link"]}
-                  href="#"
-                  data-section="familia"
-                >
-                  Familia
-                </a>
-              </li>
-
-              <li className={styles["nav-option"]}>
-                <a
-                  className={styles["nav-link"]}
-                  href="#"
-                  data-section="administrativo"
-                >
-                  Administrativo
-                </a>
-              </li>
-
-              <li className={styles["nav-option"]}>
-                <a
-                  className={styles["nav-link"]}
-                  href="#"
-                  data-section="constitucional"
-                >
-                  Constitucional
-                </a>
-              </li>
-            </ul>
-          </nav>{" "}
-        </div>
+        <NavBar />
       </header>
       <main>
         <div className={styles["main-hero"]}></div>
@@ -203,7 +158,7 @@ function Home() {
             <a className={styles["product-card"]} href="./details.html?id=1">
               <img
                 className={styles["product-img"]}
-                src="assets/CODIGO-PENAL.png"
+                src="./public/CODIGO-PENAL.png"
                 alt="Código Penal Tapa Dura"
               />
               <div className={styles["product-info"]}>
@@ -222,7 +177,7 @@ function Home() {
             <a className={styles["product-card"]} href="./details.html?id=2">
               <img
                 className={styles["product-img"]}
-                src="assets/CP_TR3-removebg-preview.png"
+                src="./public/CP_TR3-removebg-preview.png"
                 alt="Código Penal Tapa Rústica"
               />
               <div className={styles["product-info"]}>
@@ -241,7 +196,7 @@ function Home() {
             <a className={styles["product-card"]} href="./details.html?id=3">
               <img
                 className={styles["product-img"]}
-                src="assets/CODIGO CIVIL.webp"
+                src="./public/CODIGO CIVIL.webp"
                 alt="Código Civil Tapa Dura"
               />
               <div className={styles["product-info"]}>
@@ -260,7 +215,7 @@ function Home() {
             <a className={styles["product-card"]} href="./details.html?id=4">
               <img
                 className={styles["product-img"]}
-                src="assets/CC_TR_3-removebg-preview.png"
+                src="./public/CC_TR_3-removebg-preview.png"
                 alt="Código Civil Tapa Rústica"
               />
               <div className={styles["product-info"]}>
@@ -279,7 +234,7 @@ function Home() {
             <a className={styles["product-card"]} href="./details.html?id=5">
               <img
                 className={styles["product-img"]}
-                src="assets/DETENCION-POLICIAL.png"
+                src="./public/DETENCION-POLICIAL.png"
                 alt="Detencion policial en flagrancia y proceso inmediato"
               />
               <div className={styles["product-info"]}>
@@ -298,7 +253,7 @@ function Home() {
             <a className={styles["product-card"]} href="./details.html?id=6">
               <img
                 className={styles["product-img"]}
-                src="assets/MINI CODIGO PENAL.webp"
+                src="./public/MINI CODIGO PENAL.webp"
                 alt="Mini Código penal"
               />
               <div className={styles["product-info"]}>
@@ -317,7 +272,7 @@ function Home() {
             <a className={styles["product-card"]} href="./details.html?id=7">
               <img
                 className={styles["product-img"]}
-                src="assets/EL DEFENSOR 2 - VIVIENDO EL SUEÑO.webp"
+                src="./public/EL DEFENSOR 2 - VIVIENDO EL SUEÑO.webp"
                 alt="El Defensor 2"
               />
               <div className={styles["product-info"]}>
@@ -334,7 +289,7 @@ function Home() {
             <a className={styles["product-card"]} href="./details.html?id=8">
               <img
                 className={styles["product-img"]}
-                src="assets/LITIGACION ORAL CIVIL.webp"
+                src="./public/LITIGACION ORAL CIVIL.webp"
                 alt="Litigacion Oral Civil"
               />
               <div className={styles["product-info"]}>
@@ -353,7 +308,7 @@ function Home() {
             <a className={styles["product-card"]} href="./details.html?id=9">
               <img
                 className={styles["product-img"]}
-                src="assets/COLECCION - COMO REDACTAR UN CONTRATO.webp"
+                src="./public/COLECCION - COMO REDACTAR UN CONTRATO.webp"
                 alt="Coleccion ¿Cómo redactar un contrato? Notas desde la práctica"
               />
               <div className={styles["product-info"]}>
@@ -372,7 +327,7 @@ function Home() {
             <a className={styles["product-card"]} href="./details.html?id=10">
               <img
                 className={styles["product-img"]}
-                src="assets/CULPABILIDAD Y NEUROCIENCIAS.webp"
+                src="./public/CULPABILIDAD Y NEUROCIENCIAS.webp"
                 alt="Culpabilidad y Neurociencias"
               />
               <div className={styles["product-info"]}>
@@ -391,7 +346,7 @@ function Home() {
             <a className={styles["product-card"]} href="./details.html?id=11">
               <img
                 className={styles["product-img"]}
-                src="assets/DERECHO DEL CONSUMIDOR.webp"
+                src="./public/DERECHO DEL CONSUMIDOR.webp"
                 alt="Derecho del Consumidor"
               />
               <div className={styles["product-info"]}>
@@ -410,7 +365,7 @@ function Home() {
             <a className={styles["product-card"]} href="./details.html?id=12">
               <img
                 className={styles["product-img"]}
-                src="assets/PAD PROCEDIMIENTO ADMINISTRATIVO DISCIPLINARIO.webp"
+                src="./public/PAD PROCEDIMIENTO ADMINISTRATIVO DISCIPLINARIO.webp"
                 alt="PAD"
               />
               <div className={styles["product-info"]}>
@@ -427,7 +382,7 @@ function Home() {
             <a className={styles["product-card"]} href="./details.html?id=13">
               <img
                 className={styles["product-img"]}
-                src="assets/LA CONSTITUCION EN LAS REDES.webp"
+                src="./public/LA CONSTITUCION EN LAS REDES.webp"
                 alt="La Constitucion en las redes"
               />
               <div className={styles["product-info"]}>
@@ -446,7 +401,7 @@ function Home() {
             <a className={styles["product-card"]} href="./details.html?id=14">
               <img
                 className={styles["product-img"]}
-                src="assets/COLECCION LITIGACION EN AUDIENCIAS PREVIAS.webp"
+                src="./public/COLECCION LITIGACION EN AUDIENCIAS PREVIAS.webp"
                 alt="Coleccion Litigacion Oral en audiencias previas - Con caja"
               />
               <div className={styles["product-info"]}>
@@ -465,7 +420,7 @@ function Home() {
             <a className={styles["product-card"]} href="./details.html?id=15">
               <img
                 className={styles["product-img"]}
-                src="assets/COLECCION LITIGACION EN AUDIENCIAS PREVIAS - SIN CAJA.webp"
+                src="./public/COLECCION LITIGACION EN AUDIENCIAS PREVIAS - SIN CAJA.webp"
                 alt="Coleccion Litigacion Oral en audiencias previas - Sin caja"
               />
               <div className={styles["product-info"]}>
@@ -484,7 +439,7 @@ function Home() {
             <a className={styles["product-card"]} href="./details.html?id=16">
               <img
                 className={styles["product-img"]}
-                src="assets/EL NUEVO CODIGO PROCESAL CONSTITUCIONAL.webp"
+                src="./public/EL NUEVO CODIGO PROCESAL CONSTITUCIONAL.webp"
                 alt="El Nuevo Código Procesal Constitucional"
               />
               <div className={styles["product-info"]}>
@@ -503,7 +458,7 @@ function Home() {
             <a className={styles["product-card"]} href="./details.html?id=17">
               <img
                 className={styles["product-img"]}
-                src="assets/CURSO DE REDACCION ADMINISTRATIVA.webp"
+                src="./public/CURSO DE REDACCION ADMINISTRATIVA.webp"
                 alt="Curso de Redaccion Administrativa"
               />
               <div className={styles["product-info"]}>
@@ -522,7 +477,7 @@ function Home() {
             <a className={styles["product-card"]} href="./details.html?id=18">
               <img
                 className={styles["product-img"]}
-                src="assets/DERECHO-PENAL-PARTE-GENERAL.png"
+                src="./public/DERECHO-PENAL-PARTE-GENERAL.png"
                 alt="Derecho penal: parte general"
               />
               <div className={styles["product-info"]}>
@@ -541,7 +496,7 @@ function Home() {
             <a className={styles["product-card"]} href="./details.html?id=19">
               <img
                 className={styles["product-img"]}
-                src="assets/MI PRIMER JUICIO DE FAMILIA.webp"
+                src="./public/MI PRIMER JUICIO DE FAMILIA.webp"
                 alt="Mi primer juicio de familia. ¿Qué le digo al juez?"
               />
               <div className={styles["product-info"]}>
@@ -560,7 +515,7 @@ function Home() {
             <a className={styles["product-card"]} href="./details.html?id=20">
               <img
                 className={styles["product-img"]}
-                src="assets/EL DEFENSOR.png"
+                src="./public/EL DEFENSOR.png"
                 alt="El Defensor"
               />
               <div className={styles["product-info"]}>
@@ -577,7 +532,7 @@ function Home() {
             <a className={styles["product-card"]} href="./details.html?id=21">
               <img
                 className={styles["product-img"]}
-                src="assets/EL DERECHO A LA PRUEBA EN LA INVESTIGACION.webp"
+                src="./public/EL DERECHO A LA PRUEBA EN LA INVESTIGACION.webp"
                 alt="El derecho a la prueba en la investigacion preparatoria"
               />
               <div className={styles["product-info"]}>
@@ -600,7 +555,7 @@ function Home() {
             <a className={styles["product-card"]} href="./details.html?id=1">
               <img
                 className={styles["product-img"]}
-                src="assets/CODIGO PENAL.webp"
+                src="./public/CODIGO PENAL.webp"
                 alt="Código Penal Tapa Dura"
               />
               <div className={styles["product-info"]}>
@@ -621,7 +576,7 @@ function Home() {
             <a className={styles["product-card"]} href="./details.html?id=3">
               <img
                 className={styles["product-img"]}
-                src="assets/CODIGO CIVIL.webp"
+                src="./public/CODIGO CIVIL.webp"
                 alt="Código Civil Tapa Dura"
               />
               <div className={styles["product-info"]}>
@@ -642,7 +597,7 @@ function Home() {
             <a className={styles["product-card"]} href="./details.html?id=7">
               <img
                 className={styles["product-img"]}
-                src="assets/EL DEFENSOR 2 - VIVIENDO EL SUEÑO.webp"
+                src="./public/EL DEFENSOR 2 - VIVIENDO EL SUEÑO.webp"
                 alt="El Defensor 2"
               />
               <div className={styles["product-info"]}>
