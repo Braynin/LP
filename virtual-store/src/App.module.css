@@ -1,7 +1,7 @@
 /*Header*/
 
 /**Header-messages**/
-#messages-container {
+.messages-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,7 +31,7 @@
 }
 
 /**Header-main**/
-#header-container {
+.header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -76,7 +76,7 @@
 
 /**Header-Nav**/
 
-#nav-container {
+.nav-container {
   padding: 10px;
   background-color: black;
 }
@@ -107,7 +107,7 @@
 
 /**Product-Offers Cards**/
 
-#products-container {
+.products-container {
   align-items: center;
   display: flex;
   justify-content: center;
@@ -193,7 +193,7 @@
 
 /* PRODUCT DETAILS */
 
-#details-container {
+.details-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -338,7 +338,7 @@
 
 /*Footer*/
 
-#footer-container {
+.footer-container {
   padding: 20px 0px;
   text-align: center;
   margin-top: 30px;
