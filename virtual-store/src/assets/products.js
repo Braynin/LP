@@ -235,21 +235,4 @@ const arrayProducts = [
   product21,
 ];
 
-/*Create Cards*/
-
-function createCard(product) {
-  return `
-  <a class = "product-card" href = "./details.html?id=${product.id}" >  
-  <img class="product-img" src="${product.imagen[0]}" alt="${product.nombre}" />
-      <div class="product-info">
-        <span class="product-title">${product.nombre}</span>
-        <div class="product-price-block">
-          <span class="product-price">S/.${product.precioMenor}</span>
-        </div>
-        <div class="product-impuesto">
-          <span class="product-igv">${product.igv}</span>
-        </div>
-      </div>
-      </a>
-`;
-}
+export default arrayProducts;
