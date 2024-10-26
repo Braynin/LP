@@ -1,6 +1,9 @@
 import "./App.module.css";
 
 function Home() {
+
+ 
+
   return (
     <>
       <body>
@@ -16,10 +19,10 @@ function Home() {
         </div></div>
       <div id="header-container">
   <a href="./index.html">
-          <img className="header-logo" src="./assets/logolp.webp" alt="Logo Lp">
+          <img className="header-logo" src="/public/logolp.webp" alt="Logo Lp"/>
   </a>
   <form className="header-search">
-          <input className="search-input" type="text" placeholder="Buscar" id="search" oninput="captureText(event)">
+          <input className="search-input" type="text" placeholder="Buscar" id="search" onInput={captureText}/>
   </form>
   <ul className="social-links">
 <li id="Facebook" className="header-li"><a href="https://www.facebook.com/lpderecho"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="icon icon-tabler icons-tabler-filled icon-tabler-brand-facebook">
