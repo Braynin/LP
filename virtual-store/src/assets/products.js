@@ -1,4 +1,4 @@
-/*Classes*/
+/*Class*/
 class Products {
   constructor(id, nombre, precioMenor, precioMayor, imagen, igv, description) {
     this.id = id;
@@ -209,7 +209,7 @@ const product21 = new Products(
   "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos."
 );
 
-/*Arrays*/
+/*Array*/
 
 const arrayProducts = [
   product1,

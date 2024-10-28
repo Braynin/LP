@@ -1,5 +1,8 @@
-import NavBar from "./components/navBar";
 import styles from "./App.module.css";
+
+/*Components*/
+
+import NavBar from "./components/NavBar";
 
 function Home() {
   return (
