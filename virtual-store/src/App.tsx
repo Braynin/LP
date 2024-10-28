@@ -1,8 +1,8 @@
-import NavBar from "./components/NavBar.tsx";
 import styles from "./App.module.css";
-import Header from "./components/Header.tsx";
-import Hero from "./components/Hero.tsx";
-import Card from "./components/Card.tsx";
+
+/*Components*/
+
+import NavBar from "./components/NavBar";
 
 function Home() {
 
