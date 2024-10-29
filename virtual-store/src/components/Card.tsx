@@ -1,5 +1,5 @@
-import styles from "./Card.module.css";
 import arrayProducts from "../assets/products.js";
+import styles from "./Card.module.css";
 function CreateCard(option: any) {
     return (
         <a className={styles["product-card"]} href="./details.html?id=1">
