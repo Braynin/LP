@@ -1,25 +1,22 @@
 import styles from "./App.module.css";
+
+/*Components*/
+
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Card from "./components/Card";
 
-/*Components*/
-
-import NavBar from "./components/NavBar";
 
 function Home() {
-
-
   return (
     <>
       <header>
         <Header />
-        <NavBar />
       </header>
       <main>
         <Hero />
         <Card />
-       
+
         <div className={styles["products-container"]}>
           <h2 className={styles["content-subtitle"]}>Libros</h2>
           <div className={styles.products}>

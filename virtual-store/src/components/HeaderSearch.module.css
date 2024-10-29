@@ -1,0 +1,38 @@
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 17px;
+  background-color: white;
+}
+.header-logo {
+  width: 10rem;
+  margin-right: 10px;
+}
+
+.header-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.search-input {
+  width: 200px;
+  height: 30px;
+  border-radius: 5px;
+  border: 2px solid gray;
+  padding-left: 10px;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #000;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
