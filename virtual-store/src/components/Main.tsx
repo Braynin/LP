@@ -1,15 +1,14 @@
 import Hero from "./Hero";
 import ProdutsCard from "./ProductsCard";
-import styles from "./Main.module.css";
 import Offers from "./Offers";
 
 function Main() {
-    return(
-    <main>
-        <Hero />
-        <ProdutsCard />
-        <Offers />
-    </main>
-    )
+  return (
+    <>
+      <Hero />
+      <ProdutsCard />
+      <Offers />
+    </>
+  );
 }
-export default Main
+export default Main;
