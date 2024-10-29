@@ -37,3 +37,7 @@
   justify-content: center;
   padding: 10px;
 }
+.footer-section ul li a {
+  text-decoration: none;
+  color: white;
+}

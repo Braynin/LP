@@ -2,12 +2,3 @@
   list-style: none;
   margin-right: 10px;
 }
-
-.header-container ul li a {
-  text-decoration: none;
-  color: black;
-}
-.footer-section ul li a {
-  text-decoration: none;
-  color: white;
-}
