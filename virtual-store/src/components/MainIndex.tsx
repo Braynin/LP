@@ -2,7 +2,7 @@ import Hero from "./Hero";
 import ProdutsCard from "./ProductsCard";
 import Offers from "./Offers";
 
-function Main() {
+function MainIndex() {
   return (
     <>
       <Hero />
@@ -11,4 +11,4 @@ function Main() {
     </>
   );
 }
-export default Main;
+export default MainIndex;

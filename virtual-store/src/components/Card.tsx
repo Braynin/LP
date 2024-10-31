@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 import arrayProducts from "../assets/ProductsOptions.js";
 import styles from "./Card.module.css";
 function CreateCard(option: any) {
   return (
-    <a className={styles["product-card"]} href="./details.html?id=1">
+    <Link className={styles["product-card"]} to={`./details?id=${option.id}`}>
       <img
         className={styles["product-img"]}
         src={option.imagen}
@@ -19,7 +20,7 @@ function CreateCard(option: any) {
           <span className={styles["product-igv"]}>IGV</span>
         </div>
       </div>
-    </a>
+    </Link>
   );
 }
 export default function Card() {

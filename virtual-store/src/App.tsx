@@ -1,30 +1,17 @@
-import styles from "./App.module.css";
+import { createBrowserRouter } from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
+
+import Details from "./views/Details.tsx";
+import Home from "./views/Home.tsx";
 
 /*Components*/
 
-import Header from "./components/Header";
-import Main from "./components/Main";
-import Footer from "./components/Footer";
-function Home() {
-  return (
-    <>
-      <header>
-        <Header />
-      </header>
-      <main>
-        <Main />
-      </main>
-      <footer>
-        <Footer />
-      </footer>
-      <script src="scripts/layout.js"></script>
-      <script src="scripts/products.js"></script>
-      <script src="scripts/index.js"></script>
-      <script src="scripts/ofertas.js"></script>
+function App() {
+  const browserRouter = createBrowserRouter([
+    { path: "/", element: <Home /> },
 
-      <script></script>
-    </>
-  );
+    { path: "/details", element: <Details /> },
+  ]);
+  return <RouterProvider router={browserRouter} />;
 }
-
-export default Home;
+export default App;

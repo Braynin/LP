@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import styles from "./HeaderSearch.module.css";
 import SocialLink from "./SocialLinks";
 
@@ -5,13 +7,13 @@ function HeaderSearch() {
   return (
     <>
       <div className={styles["header-container"]}>
-        <a href="./index.html">
+        <Link to="/">
           <img
             className={styles["header-logo"]}
             src="./public/logolp.webp"
             alt="Logo Lp"
           />
-        </a>
+        </Link>
         <form className={styles["header-search"]}>
           <input
             className={styles["search-input"]}
