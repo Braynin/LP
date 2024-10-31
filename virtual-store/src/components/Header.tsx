@@ -1,7 +1,12 @@
 import styles from "./Header.module.css";
+import SearchBar from "./SearchBar.tsx";
 
-function Header () {
-    return (
+
+function Header ({ setSearchText }) {
+  const handleSearch = (text) => {
+    setSearchText(text);
+};
+  return (
       <>
         <div className={styles["messages-container"]}>
           <div className={styles.messages}>
@@ -26,13 +31,8 @@ function Header () {
               alt="Logo Lp"
             />
           </a>
-          <form className={styles["header-search"]}>
-            <input
-              className={styles["search-input"]}
-              type="text"
-              placeholder="Buscar"
-            />
-          </form>
+          <SearchBar onSearch={handleSearch} />
+          
           <ul className={styles["social-links"]}>
             <li className={styles["header-li"]}>
               <a href="https://www.facebook.com/lpderecho">

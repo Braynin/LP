@@ -1,6 +1,6 @@
-import arrayProducts from "../assets/products.js";
+
 import styles from "./Card.module.css";
-function CreateCard(option: any) {
+function Card({option}) {
     return (
         <a className={styles["product-card"]} href="./details.html?id=1">
               <img
@@ -22,8 +22,6 @@ function CreateCard(option: any) {
             </a>
     )
 }
-export default function Card(){
-  return arrayProducts.map(CreateCard);
-}
+export default Card;
 
 

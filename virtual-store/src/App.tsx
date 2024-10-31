@@ -1,4 +1,7 @@
+import { useState } from "react";
 import styles from "./App.module.css";
+import arrayProducts from "./assets/products.js";
+import filterProducts from "./assets/FilterProducts.js";
 
 
 
@@ -9,16 +12,17 @@ import NavBar from "./components/NavBar";
 import Main from "./components/Main.tsx";
 
 function Home() {
-
+  const [searchText, setSearchText] = useState("");
+    const filteredProducts = filterProducts(arrayProducts, searchText);
 
   return (
     <>
       <header>
-        <Header />
+        <Header setSearchText={setSearchText}/>
         <NavBar />
       </header>
       <main>
-       <Main />
+       <Main  filteredProducts={filteredProducts}/>
       </main>
       <footer>
         <div className={styles["footer-container"]}>

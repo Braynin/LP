@@ -1,15 +1,21 @@
+
 import Hero from "./Hero";
-import ProdutsCard from "./ProductsCard";
+import ProductsCard from "./ProductsCard";
 import styles from "./Main.module.css";
 import Offers from "./Offers";
 
-function Main() {
+function Main({filteredProducts}) {
+    
+    
+    
     return(
-    <main>
-        <Hero />
-        <ProdutsCard />
-        <Offers />
-    </main>
+        <main className={styles.main}>
+    <Hero />
+    <ProductsCard filteredProducts={filteredProducts} />
+    <Offers />
+</main>
     )
+    
+   
 }
-export default Main
+export default Main;
