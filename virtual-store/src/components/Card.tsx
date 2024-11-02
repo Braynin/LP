@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import arrayProducts from "../assets/ProductsOptions.js";
+
 import styles from "./Card.module.css";
-function CreateCard(option: any) {
+function CreateCard({ option }) {
   return (
     <Link className={styles["product-card"]} to={`./details?id=${option.id}`}>
       <img
@@ -23,6 +23,9 @@ function CreateCard(option: any) {
     </Link>
   );
 }
-export default function Card() {
-  return arrayProducts.map(CreateCard);
+export default function Cards({ filteredProducts }: any) {
+  console.log(filteredProducts);
+  return filteredProducts.map((option: any) => (
+    <CreateCard key={option.id} option={option} />
+  ));
 }
