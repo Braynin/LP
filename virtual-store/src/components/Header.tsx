@@ -1,14 +1,14 @@
 /*Components*/
 
-import Messages from "./Messages";
+import Messages from "./Messages.tsx";
 import HeaderSearch from "./HeaderSearch.tsx";
-import NavBar from "./NavBar";
+import NavBar from "./NavBar.tsx";
 
-function Header() {
+function Header({ onSearch }) {
   return (
     <>
       <Messages />
-      <HeaderSearch />
+      <HeaderSearch onSearch={onSearch} />
       <NavBar />
     </>
   );

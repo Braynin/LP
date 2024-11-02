@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 
 import styles from "./HeaderSearch.module.css";
-import SocialLink from "./SocialLinks";
+import SocialLink from "./SocialLinks.tsx";
+import SearchBar from "./SearchBar.tsx";
 
-function HeaderSearch() {
+function HeaderSearch({ onSearch }) {
   return (
     <>
       <div className={styles["header-container"]}>
@@ -14,13 +15,7 @@ function HeaderSearch() {
             alt="Logo Lp"
           />
         </Link>
-        <form className={styles["header-search"]}>
-          <input
-            className={styles["search-input"]}
-            type="text"
-            placeholder="Buscar"
-          />
-        </form>
+        <SearchBar onSearch={onSearch} />
         <ul className={styles["social-links"]}>
           <SocialLink />
         </ul>

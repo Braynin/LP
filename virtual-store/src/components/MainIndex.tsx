@@ -1,12 +1,12 @@
-import Hero from "./Hero";
-import ProdutsCard from "./ProductsCard";
-import Offers from "./Offers";
+import Hero from "./Hero.tsx";
+import ProdutsCard from "./ProductsCard.tsx";
+import Offers from "./Offers.tsx";
 
-function MainIndex() {
+function MainIndex({ filteredProducts }) {
   return (
     <>
       <Hero />
-      <ProdutsCard />
+      <ProdutsCard filteredProducts={filteredProducts} />
       <Offers />
     </>
   );
