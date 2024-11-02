@@ -44,12 +44,12 @@
   justify-content: space-between;
   align-items: center;
 }
-.offer-price-block .offer-price {
+.offer-price {
   font-size: 20px;
   font-weight: 700;
   color: #428f13;
 }
-.offer-price-block .offer-discount {
+.offer-discount {
   font-size: 12px;
   font-weight: 700;
   color: #428f13;
