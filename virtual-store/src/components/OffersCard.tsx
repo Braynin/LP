@@ -9,7 +9,7 @@ function CreateOffersCard(offer: any) {
         alt={offer.nombre}
       />
       <div className={styles["offer-info"]}>
-        <span className={styles["offer-title"]}>${offer.nombre}</span>
+        <span className={styles["offer-title"]}>{offer.nombre}</span>
         <div className={styles["offer-price-block"]}>
           <span className={styles["offer-price"]}>S/. {offer.precio}</span>
         </div>
