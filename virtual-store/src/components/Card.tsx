@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styles from "./Card.module.css";
 function CreateCard({ option }) {
   return (
-    <Link className={styles["product-card"]} to={`./details?id=${option.id}`}>
+    <Link className={styles["product-card"]} to={`/details?id=${option.id}`}>
       <img
         className={styles["product-img"]}
         src={option.imagen}

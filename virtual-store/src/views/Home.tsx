@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Swal from "sweetalert2";
 import Header from "../components/Header";
 import MainIndex from "../components/MainIndex";
 import Footer from "../components/Footer";
@@ -20,7 +21,19 @@ function Home() {
             .toLowerCase()
         )
     );
-    setFilteredProducts(filtered); // Actualiza el estado con los productos filtrados
+
+    if (filtered.length === 0) {
+      Swal.fire({
+        icon: "warning",
+        title: "Producto no encontrado",
+        text: "No se encontraron productos con ese nombre. Intenta otra búsqueda.",
+        confirmButtonText: "Aceptar",
+        confirmButtonColor: "#3085d6",
+      });
+      setFilteredProducts([]); // Si no hay resultados, vacía el array de productos filtrados
+    } else {
+      setFilteredProducts(filtered);
+    } // Actualiza el estado con los productos filtrados
   };
 
   return (
