@@ -2,6 +2,7 @@ import Hero from "./Hero.tsx";
 import ProdutsCard from "./ProductsCard.tsx";
 import Offers from "./Offers.tsx";
 
+
 function MainIndex({ filteredProducts }) {
   return (
     <>

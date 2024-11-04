@@ -9,7 +9,7 @@ const Hero = () => {
     const images = [
         'VENTA-CODIGO-PENAL-LPDERECHO-1068x561.webp',
         'VENTA-OFICIAL-CODIGO-CIVIL-2024-LPDERECHO-1068x561.jpg',
-        '',
+        'LP-publica-libro-curso-de-redaccion-administrativa-1068x559.png',
     ];
 
     const settings = {
@@ -25,6 +25,7 @@ const Hero = () => {
     };
 
     return (
+        
         <div className={styles["hero-carousel"]}>
             <Slider {...settings}>
                 {images.map((image, index) => (
