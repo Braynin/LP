@@ -21,7 +21,7 @@ class Offers {
 const offer1 = new Offers(
   "1",
   "Código Penal Tapa Dura",
-  "S/. 75",
+  " 75",
   "Incluye IGV",
   "public/CODIGO PENAL.webp",
   "./details.html"
@@ -29,7 +29,7 @@ const offer1 = new Offers(
 const offer2 = new Offers(
   "3",
   "Código Civil Tapa Dura",
-  "S/. 75",
+  " 75",
   "Incluye IGV",
   "public/CODIGO CIVIL.webp",
   "./details.html"
@@ -38,7 +38,7 @@ const offer2 = new Offers(
 const offer3 = new Offers(
   "7",
   "El Defensor 2",
-  "S/. 60",
+  " 60",
   "Incluye IGV",
   "public/EL DEFENSOR 2 - VIVIENDO EL SUEÑO.webp",
   "./details.html"

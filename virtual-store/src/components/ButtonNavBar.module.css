@@ -1,13 +1,17 @@
-.nav-option {
-  list-style: none;
-  margin-right: 10px;
-}
-.nav-link {
+.search-button {
+  background-color: #4caf50; /* Verde */
   color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
   text-decoration: none;
-  font-size: 15px;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 5px;
+  cursor: pointer;
+  border-radius: 4px;
 }
 
-.nav-link:hover {
-  color: #f8f9fa;
+.search-button:hover {
+  background-color: #45a049;
 }

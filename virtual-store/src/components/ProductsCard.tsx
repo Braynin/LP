@@ -2,7 +2,7 @@ import styles from "./ProductsCards.module.css";
 
 import Cards from "./Card.tsx";
 
-function ProdutsCard({ filteredProducts }) {
+function ProductsCard({ filteredProducts }) {
   return (
     <div className={styles["products-container"]}>
       <h2 className={styles["content-subtitle"]}>Libros</h2>
@@ -13,4 +13,4 @@ function ProdutsCard({ filteredProducts }) {
   );
 }
 
-export default ProdutsCard;
+export default ProductsCard;
