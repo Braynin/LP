@@ -1,17 +1,9 @@
-.search-button {
-  background-color: #4caf50; /* Verde */
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin-left: 5px;
-  cursor: pointer;
-  border-radius: 4px;
+.nav-option {
+  margin-bottom: 10px;
+  font-size: 14px;
 }
-
-.search-button:hover {
-  background-color: #45a049;
+.nav-link {
+  list-style: none;
+  text-decoration: none;
+  color: white;
 }
