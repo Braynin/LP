@@ -23,9 +23,12 @@ function CreateCard({ option }) {
     </Link>
   );
 }
-export default function Cards({ filteredProducts }: any) {
-  console.log(filteredProducts);
-  return filteredProducts.map((option: any) => (
-    <CreateCard key={option.id} option={option} />
-  ));
+
+function Template({ array }: { array: any[] }) {
+  return array.map((option) => <CreateCard key={option.id} option={option} />);
 }
+function Cards({ array }: any) {
+  return <div className={styles["products"]}>{Template({ array })}</div>;
+}
+
+export { Cards, Template };
