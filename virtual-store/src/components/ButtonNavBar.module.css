@@ -1,17 +1,31 @@
-.search-button {
-  background-color: #4caf50; /* Verde */
-  color: white;
-  border: none;
+.nav-option {
   padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin-left: 5px;
   cursor: pointer;
-  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease,
+    border-radius 0.2s ease; /* Transiciones más rápidas */
+  border-radius: 10px; /* Bordes redondeados por defecto, siempre */
+  background-color: transparent; /* Fondo transparente por defecto */
 }
 
-.search-button:hover {
-  background-color: #45a049;
+/* Estilo para los enlaces dentro de las opciones */
+.nav-link {
+  text-decoration: none;
+  color: black; /* Letras negras por defecto */
+  font-weight: bold;
+  transition: color 0.2s ease; /* Transición más rápida para el color del texto */
+}
+
+/* Efecto hover para cambiar el fondo y el color del texto */
+.nav-option:hover {
+  background-color: red; /* Fondo rojo al hacer hover */
+  border-radius: 10px;
+}
+
+.nav-option:hover .nav-link {
+  color: white; /* Letras blancas al hacer hover */
+}
+
+/* Si quieres que las opciones tengan un fondo transparente por defecto */
+.nav-option {
+  background-color: transparent; /* Fondo transparente por defecto */
 }

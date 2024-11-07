@@ -1,49 +1,93 @@
+/* Eliminar el estilo inline y hacer que el contenedor ocupe todo el espacio horizontal disponible */
+ul,
+li {
+  list-style: none;
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block; /* Cambiar de inline a inline-block para que se comporten como bloques */
+}
+
+/* Imagen con ajuste completo al contenedor */
+img {
+  margin-top: -16px;
+  width: 100%; /* Aseguramos que las imágenes ocupen todo el ancho del li */
+  height: 100%; /* Hacemos que la imagen ocupe toda la altura disponible */
+  object-fit: cover; /* La imagen se recorta para llenar el contenedor sin perder la relación de aspecto */
+}
+
+/* Contenedor principal que ocupa todo el ancho de la pantalla */
 .hero-container {
-  min-height: 300px;
-  padding-top: 20px;
+  width: 100%; /* Hacer que el contenedor ocupe todo el ancho de la pantalla */
+  height: 550px; /* Aumentamos la altura para que la imagen se vea completa */
+  margin: 0 auto;
+  overflow: hidden; /* Ocultamos cualquier contenido fuera del contenedor */
+  position: relative; /* Necesario para posicionar las flechas y puntos */
 }
 
-.hero-carousel {
-  width: 100%;
-  height: 100%; /* Asegura que el slider ocupe todo el alto disponible */
-  overflow: visible;
-  margin: auto;
-  position: relative; /* Asegura que las flechas se ubiquen sobre el contenido */
+/* Contenedor del slider, que se adapta a la altura del hero-container */
+.slider-container {
+  position: relative;
+  height: 100%; /* Aseguramos que el contenedor ocupe el 100% de la altura del hero-container */
 }
 
-/* Estilo para las imágenes dentro del slider */
-.slide img {
-  width: 100%;
-  height: 100%; /* Asegura que la imagen ocupe todo el alto */
-  object-fit: cover; /* Ajusta la imagen sin distorsionarla */
-  border-radius: 10px;
+/* Contenedor de las imágenes, ajustamos la visualización de las imágenes */
+.container-images {
+  width: 100%; /* Aseguramos que el contenedor ocupe todo el ancho */
+  height: 100%; /* Aseguramos que el contenedor ocupe todo el alto */
+  transition: none;
+  overflow: hidden;
+  display: flex; /* Aseguramos que las imágenes estén en fila horizontal */
+  transition: transform 0.5s ease; /* Suavizamos la transición de deslizamiento */
 }
 
-/* Estilos para las flechas personalizadas dentro del slider */
-.slick-prev,
-.slick-next {
-  position: absolute;
-  top: 50%; /* Centra las flechas verticalmente */
-  transform: translateY(-50%); /* Ajuste fino para centrar */
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+/* Dots del carrusel, ahora los ponemos fuera de la imagen pero visibles */
+.dots-container {
+  display: flex;
+  justify-content: center;
+  position: absolute; /* Lo posicionamos absolutamente respecto al contenedor */
+  bottom: 20px; /* Lo posicionamos 20px desde la parte inferior */
+  width: 100%; /* Aseguramos que ocupe todo el ancho */
+  z-index: 2; /* Los puntos estarán por encima de las flechas */
+}
+
+.dot-container-item {
+  margin: 8px 3px;
+  cursor: pointer;
+  font-size: 18px; /* Hacemos que los puntos sean un poco más grandes */
+  text-align: center;
+  color: black; /* Blanco para hacerlos visibles en imágenes oscuras */
+}
+
+/* Estilo para los puntos activos */
+div.active {
+  background: #ccc;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
-  padding: 5px; /* Reducido para que sean más pequeñas */
-  z-index: 10; /* Asegura que las flechas estén por encima de las imágenes */
+  transition: background-color 0.3s ease; /* Suavizamos el cambio de color */
+}
+
+/* Flechas de navegación */
+.leftArrow,
+.rightArrow {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%); /* Centra las flechas verticalmente */
+  font-size: 50px;
+  font-weight: 700;
+  color: #fff;
+  z-index: 3; /* Las flechas están por encima de los puntos */
   cursor: pointer;
 }
 
-.slick-prev img,
-.slick-next img {
-  width: 16px; /* Tamaño pequeño de las flechas */
-  height: 16px;
-  object-fit: contain; /* Asegura que las imágenes de las flechas no se deformen */
+.leftArrow {
+  left: 32px; /* Ubica la flecha a la izquierda */
 }
 
-/* Posición de las flechas a la izquierda y derecha */
-.slick-prev {
-  left: 10px; /* Posición de la flecha izquierda */
-}
-
-.slick-next {
-  right: 10px; /* Posición de la flecha derecha */
+.rightArrow {
+  right: 32px; /* Ubica la flecha a la derecha */
 }
