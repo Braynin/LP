@@ -1,4 +1,4 @@
-import Hero from "./Hero.tsx";
+import {Hero} from "./Hero.js";
 import ProdutsCard from "./ProductsCard.tsx";
 import Offers from "./Offers.tsx";
 

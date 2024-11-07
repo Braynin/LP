@@ -1,15 +1,21 @@
-/**Header-Nav**/
-
+/* Estilo para el contenedor del nav */
 .nav-container {
   padding: 10px;
-  background-color: black;
+  background-color: white; /* Fondo blanco para el nav */
 }
+
+/* Estilo para el nav */
 .nav {
   padding: 10px;
   margin: 0 auto;
   max-width: 70%;
 }
+
+/* Estilo para las opciones del nav (listas) */
 .nav-options {
   display: flex;
   justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }

@@ -8,7 +8,7 @@
 .product-card {
   display: flex;
   flex-direction: column;
-  background-color: #ebeaea;
+  background-color: #fff;
   color: #272727;
   border-radius: 15px;
   width: 260px;
