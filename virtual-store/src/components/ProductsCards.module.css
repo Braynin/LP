@@ -1,8 +1,7 @@
 .products-container {
   padding: 20px;
   margin: auto;
-  width: 1200px;
-  background-color: #fffdfd;
+  max-width: 1200px;
 }
 
 .content-subtitle {
@@ -14,5 +13,5 @@
   max-width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
