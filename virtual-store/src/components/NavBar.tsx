@@ -6,9 +6,9 @@ function NavBar() {
     <>
       <div className={styles["nav-container"]}>
         <nav className={styles["nav"]}>
-          <ul className={styles["nav-options"]}>
+          
             <ButtonNavBar />
-          </ul>
+          
         </nav>
       </div>
     </>

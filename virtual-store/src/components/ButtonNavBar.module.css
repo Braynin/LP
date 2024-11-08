@@ -1,31 +1,47 @@
-.nav-option {
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: background-color 0.2s ease, color 0.2s ease,
-    border-radius 0.2s ease; /* Transiciones más rápidas */
-  border-radius: 10px; /* Bordes redondeados por defecto, siempre */
-  background-color: transparent; /* Fondo transparente por defecto */
+/* Estilo para las opciones de la barra de navegación (listas) */
+.nav-options {
+  display: flex; /* Aplica flexbox para alinear los elementos horizontalmente */
+  justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%; /* Asegura que ocupe todo el ancho disponible */
 }
 
-/* Estilo para los enlaces dentro de las opciones */
+/* Estilo para cada opción de navegación */
+.nav-option {
+  display: inline-flex; /* Para mantener el texto y el separador alineados */
+  align-items: center; /* Alinea el contenido del botón (texto) y el separador */
+  margin-right: 20px; /* Espacio entre los botones */
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease,
+    border-radius 0.2s ease;
+  border-radius: 10px;
+}
+
 .nav-link {
   text-decoration: none;
-  color: black; /* Letras negras por defecto */
+  color: black; /* Color del texto */
   font-weight: bold;
-  transition: color 0.2s ease; /* Transición más rápida para el color del texto */
+
+  padding: 10px 20px;
+  transition: color 0.2s ease; /* Transición suave para el color */
 }
 
 /* Efecto hover para cambiar el fondo y el color del texto */
 .nav-option:hover {
   background-color: red; /* Fondo rojo al hacer hover */
-  border-radius: 10px;
 }
 
 .nav-option:hover .nav-link {
   color: white; /* Letras blancas al hacer hover */
 }
 
-/* Si quieres que las opciones tengan un fondo transparente por defecto */
-.nav-option {
-  background-color: transparent; /* Fondo transparente por defecto */
+/* Separador (línea vertical) fuera del <li> */
+.separator {
+  display: inline-block;
+  width: 1px; /* Grosor de la línea */
+  height: 35px; /* Altura de la línea */
+  background-color: #222222; /* Color de la línea */
+  margin-left: 10px; /* Espacio entre el texto del botón y el separador */
 }
