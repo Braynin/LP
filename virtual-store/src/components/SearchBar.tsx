@@ -8,6 +8,11 @@ const SearchBar = ({ onSearch }) => {
   const handleSearch = () => {
     onSearch(searchText);
   };
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      handleSearch(); // Llama a la función de búsqueda si se presiona Enter
+    }
+  };
 
   return (
     <div className={styles["search-form"]}>
@@ -17,6 +22,7 @@ const SearchBar = ({ onSearch }) => {
         placeholder="Buscar"
         value={searchText}
         onChange={(e) => setSearchText(e.target.value)}
+        onKeyDown={handleKeyDown}
       />
       <SearchButton onClick={handleSearch} />
     </div>
