@@ -4,9 +4,10 @@ import Header from "../components/Header";
 import MainIndex from "../components/MainIndex";
 import Footer from "../components/Footer";
 import arrayProducts from "../assets/ProductsOptions.js";
+
 function Home() {
   const [filteredProducts, setFilteredProducts] = useState(arrayProducts); // Estado de productos filtrados
-
+  const [isFiltered, setIsFiltered] = useState(false);
   // Función de filtrado
   const handleSearch = (searchText) => {
     const filtered = arrayProducts.filter((product) =>
@@ -30,9 +31,13 @@ function Home() {
         confirmButtonText: "Aceptar",
         confirmButtonColor: "#3085d6",
       });
-      setFilteredProducts([]); // Si no hay resultados, vacía el array de productos filtrados
+      console.log(filtered);
+
+      setFilteredProducts([]);
+      setIsFiltered(filtered.length > 0);
     } else {
       setFilteredProducts(filtered);
+      setIsFiltered(filtered.length > 0);
     } // Actualiza el estado con los productos filtrados
   };
 
@@ -42,7 +47,10 @@ function Home() {
         <Header onSearch={handleSearch} /> {/* Pasa handleSearch a Header */}
       </header>
       <main>
-        <MainIndex filteredProducts={filteredProducts} />
+        <MainIndex
+          filteredProducts={filteredProducts}
+          isFiltered={isFiltered}
+        />
       </main>
       <footer>
         <Footer />

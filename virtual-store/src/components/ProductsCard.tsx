@@ -1,14 +1,23 @@
 import styles from "./ProductsCards.module.css";
 
-import Cards from "./Card.tsx";
+import { Cards } from "./Card.tsx";
+import CardsSection from "./Sectioncards.tsx";
+import arrayNavOptions from "../assets/NavOptions.js";
 
-function ProductsCard({ filteredProducts }) {
+function ProductsCard({ filteredProducts, isFiltered }) {
   return (
     <div className={styles["products-container"]}>
       <h2 className={styles["content-subtitle"]}>Libros</h2>
-      <div className={styles.products}>
-        <Cards filteredProducts={filteredProducts} />
-      </div>
+
+      {isFiltered ? (
+        filteredProducts.length > 0 ? (
+          <Cards array={filteredProducts} />
+        ) : (
+          <p>No se encontraron productos.</p>
+        )
+      ) : (
+        <CardsSection arrayNavOptions={arrayNavOptions} />
+      )}
     </div>
   );
 }

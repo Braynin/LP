@@ -1,14 +1,17 @@
 import { Link } from "react-router-dom";
-
 import styles from "./HeaderSearch.module.css";
 import SocialLink from "./SocialLinks.tsx";
 import SearchBar from "./SearchBar.tsx";
 
 function HeaderSearch({ onSearch }) {
+  const handleLogoClick = () => {
+    onSearch(null);
+    // Borra el texto de búsqueda
+  };
   return (
     <>
       <div className={styles["header-container"]}>
-        <Link to="/">
+        <Link to="/" onClick={handleLogoClick}>
           <img
             className={styles["header-logo"]}
             src="./public/logolp.webp"

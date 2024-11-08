@@ -2,23 +2,14 @@ import {Hero} from "./Hero.js";
 import ProdutsCard from "./ProductsCard.tsx";
 import Offers from "./Offers.tsx";
 
-
-function MainIndex({ filteredProducts }) {
-  if (filteredProducts.length === 0) {
-    return (
-      <>
-        <Hero />
-
-        <Offers />
-      </>
-    );
-  }
-
+function MainIndex({ filteredProducts, isFiltered }) {
   return (
     <>
       <Hero />
-
-      <ProdutsCard filteredProducts={filteredProducts} />
+      <ProdutsCard
+        filteredProducts={filteredProducts}
+        isFiltered={isFiltered}
+      />
       <Offers />
     </>
   );

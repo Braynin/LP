@@ -9,9 +9,3 @@
   padding: 30px;
   font-size: 40px;
 }
-.products {
-  max-width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}

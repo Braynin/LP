@@ -2,7 +2,7 @@ import DetailsCard from "./DetailsCard";
 import Offers from "./Offers";
 import ProdutsCard from "./ProductsCard";
 
-function MainDetails({ filteredProducts }) {
+function MainDetails({ filteredProducts, isFiltered }) {
   if (filteredProducts.length === 0) {
     return (
       <>
@@ -14,7 +14,10 @@ function MainDetails({ filteredProducts }) {
   }
   return (
     <>
-      <ProdutsCard filteredProducts={filteredProducts} />
+      <ProdutsCard
+        filteredProducts={filteredProducts}
+        isFiltered={isFiltered}
+      />
       <Offers />
     </>
   );

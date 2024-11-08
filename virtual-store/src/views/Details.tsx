@@ -10,6 +10,7 @@ import MainDetails from "../components/MainDetails.tsx";
 
 function Details() {
   const [filteredProducts, setFilteredProducts] = useState([]); // Estado de productos filtrados
+  const [isFiltered, setIsFiltered] = useState(false);
   const location = useLocation();
   // Función de filtrado
   const handleSearch = (searchText) => {
@@ -34,8 +35,10 @@ function Details() {
         confirmButtonColor: "#3085d6",
       });
       setFilteredProducts([]); // Si no hay resultados, vacía el array de productos filtrados
+      setIsFiltered(filtered.length > 0);
     } else {
       setFilteredProducts(filtered);
+      setIsFiltered(filtered.length > 0);
     }
   };
 
@@ -52,7 +55,10 @@ function Details() {
         <Header onSearch={handleSearch} />
       </header>
       <main>
-        <MainDetails filteredProducts={filteredProducts} />
+        <MainDetails
+          filteredProducts={filteredProducts}
+          isFiltered={isFiltered}
+        />
       </main>
       <footer>
         <Footer />
