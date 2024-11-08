@@ -1,27 +1,38 @@
-.products {
-  max-width: 100%;
+/* Contenedor principal del slider */
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* Ocultamos los productos fuera de la vista */
 }
 
-.card-section {
+.product-list-container {
   display: flex;
-  flex-direction: column;
-  color: #272727;
-  border-radius: 15px;
-  max-width: 100%;
-  margin: 50px 0px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: scroll 0.3s ease; /* Desplazamiento suave */
+  scroll-snap-type: x mandatory; /* Forzamos el desplazamiento en pasos */
 }
 
-.card-section-title {
-  font-size: 20px;
-  font-weight: 800;
-  margin-bottom: 10px;
+.product-item {
+  flex: 0 0 33.33%; /* Cada producto ocupa un 33.33% del contenedor */
+  padding: 10px;
+  scroll-snap-align: center; /* Alinea cada producto en el centro del contenedor */
 }
 
-.card-section-products {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
+/* Flechas de navegación */
+.leftArrow,
+.rightArrow {
+  position: absolute;
+  top: 50%;
+  font-size: 2rem;
+  color: black;
+  cursor: pointer;
+  z-index: 10;
+  transform: translateY(-50%); /* Centra las flechas verticalmente */
+}
+
+.leftArrow {
+  left: 10px;
+}
+
+.rightArrow {
+  right: 10px;
 }

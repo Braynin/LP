@@ -10,6 +10,9 @@
 .footer-options {
   list-style-type: none;
   margin: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 .footer-option {
   margin-bottom: 10px;

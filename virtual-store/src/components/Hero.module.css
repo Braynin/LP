@@ -54,23 +54,41 @@ img {
   z-index: 2; /* Los puntos estarán por encima de las flechas */
 }
 
+/* Estilo para los puntos */
 .dot-container-item {
   margin: 8px 3px;
   cursor: pointer;
-  font-size: 18px; /* Hacemos que los puntos sean un poco más grandes */
+  font-size: 18px;
   text-align: center;
-  color: black; /* Blanco para hacerlos visibles en imágenes oscuras */
+  color: black;
+  position: relative;
+  display: inline-block; /* Asegura que el contenedor se ajuste al contenido */
+}
+
+.dot-container-item::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centra la sombra en el punto */
+  width: 15px; /* Debe coincidir con el tamaño del punto */
+  height: 15px; /* Debe coincidir con el tamaño del punto */
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.4); /* El color de la sombra */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); /* Puedes agregar un pequeño difuminado */
+  opacity: 0; /* La sombra comienza invisible */
+  transition: opacity 0.3s ease; /* Suaviza el cambio de visibilidad */
 }
 
 /* Estilo para los puntos activos */
-div.active {
-  background: #ccc;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  transition: background-color 0.3s ease; /* Suavizamos el cambio de color */
+.dot-container-item.active::after {
+  opacity: 1; /* Muestra la sombra solo cuando el punto está activo */
 }
 
+/* Efecto hover */
+.dot-container-item:hover::after {
+  opacity: 0.6; /* Sombra más visible al hacer hover */
+}
 /* Flechas de navegación */
 .leftArrow,
 .rightArrow {

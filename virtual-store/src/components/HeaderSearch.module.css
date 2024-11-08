@@ -1,20 +1,22 @@
 .header-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 90px;
   padding: 17px;
   background-color: white;
 }
 .header-logo {
   width: 10rem;
-  margin-right: 10px;
+  margin-top: 3px;
 }
 
 .header-search {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  /* padding: 10px; */
+  padding: 0;
 }
 
 .search-input {
@@ -34,7 +36,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  padding: 0;
+  gap: 3px;
 }
 .header-container ul li a {
   text-decoration: none;
