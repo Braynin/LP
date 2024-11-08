@@ -1,7 +1,7 @@
 import styles from "./ProductsCards.module.css";
 
 import { Cards } from "./Card.tsx";
-import CardsSection from "./Sectioncards.tsx";
+import CardsSection from "./SectionCards.tsx";
 import arrayNavOptions from "../assets/NavOptions.js";
 
 function ProductsCard({ filteredProducts, isFiltered }) {

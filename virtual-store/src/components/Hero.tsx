@@ -1,5 +1,5 @@
 import Style from "./Hero.module.css";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { imagenes } from "../assets/Imagenes.js";
 
 interface Imagen {
