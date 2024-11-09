@@ -20,6 +20,11 @@ function Footer() {
           </ul>
         </div>
       </div>
+      <div className={styles["footer-ruc"]}>
+          <h2 className={styles["ruc"]}>
+            <span className={styles["ruc-text"]}> EDITORAL LP S.A.C R.U.C: 20612237264</span> | Todos los Derechos Reservados.
+          </h2>
+        </div>
     </>
   );
 }

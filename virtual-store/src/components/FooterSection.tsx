@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./FooterSection.module.css";
 import arrayFooterOptions from "../assets/FooterOptions";
 
@@ -6,24 +7,24 @@ const createFooterSection = (option: any) => (
     <h4 className={styles["footer-title"]}>{option.title}</h4>
     <ul className={styles["footer-options"]}>
       <li>
-        <a className={styles["footer-option"]} href={option.option1[1]}>
+        <Link className={styles["footer-option"]} to={option.option1[1]}>
           {option.option1[0]}
-        </a>
+        </Link>
       </li>
       <li>
-        <a className={styles["footer-option"]} href={option.option2[1]}>
+        <Link className={styles["footer-option"]} to={option.option2[1]}>
           {option.option2[0]}
-        </a>
+        </Link>
       </li>
       <li>
-        <a className={styles["footer-option"]} href={option.option3[1]}>
+        <Link className={styles["footer-option"]} to={option.option3[1]}>
           {option.option3[0]}
-        </a>
+        </Link>
       </li>
       <li>
-        <a className={styles["footer-option"]} href={option.option4[1]}>
+        <Link className={styles["footer-option"]} to={option.option4[1]}>
           {option.option4[0]}
-        </a>
+        </Link>
       </li>
     </ul>
   </div>

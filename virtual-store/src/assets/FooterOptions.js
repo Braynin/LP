@@ -2,33 +2,41 @@
 class footerOption {
   constructor(title, option1, option2, option3, option4) {
     this.title = title;
-    this.option1 = option1;
-    this.option2 = option2;
-    this.option3 = option3;
-    this.option4 = option4;
+    this.option1 = option1 || ["", "#"];
+    this.option2 = option2 || ["", "#"];
+    this.option3 = option3 || ["", "#"];
+    this.option4 = option4 || ["", "#"];
   }
 }
 
 /*Objects*/
-
 const footerOption1 = new footerOption(
-  "Servicio al cliente",
-  ["Opiniones de clientes", "#"],
-  ["Preguntas Frecuentes", "#"],
-  ["Cambios y Devoluciones", "#"],
-  ["Política de Privacidad", "#"]
+  "Sobre Nosotros",
+  ["Quienes Somos", "/quienes-somos"],
+  ["", "#"],
+  ["", "#"],
+  ["", "#"]
 );
-
 const footerOption2 = new footerOption(
-  "Libros Juridicos",
-  ["Libros de Civil", "#"],
-  ["Libros de Penal", "#"],
-  ["Packs", "#"],
-  ["", ""]
+  "Servicio al cliente",
+  ["Opiniones de clientes", "/opiniones-de-clientes"],
+  ["Preguntas Frecuentes", "/preguntas-frecuentes"],
+  ["Cambios y Devoluciones", "/cambios-y-devoluciones"]
+);
+const footerOption3 = new footerOption(
+  "Política",
+  ["Políticas de privacidad", "/politicas-de-privacidad"],
+  ["Políticas de Cookies", "/politicas-de-cookies"],
+  ["Términos y condiciones", "/terminos-y-condiciones"],
+  [
+    "Términos y condiciones Promocionales",
+    "/terminos-y-condiciones-promocionales",
+  ],
+  ["Recojo en tienda", "/recojo-en-tienda"]
 );
 
 /*Array*/
 
-const arrayFooterOptions = [footerOption1, footerOption2];
+const arrayFooterOptions = [footerOption1, footerOption2, footerOption3];
 
 export default arrayFooterOptions;

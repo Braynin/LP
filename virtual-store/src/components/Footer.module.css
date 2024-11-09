@@ -41,3 +41,20 @@
   text-decoration: none;
   color: white;
 }
+.footer-ruc {
+  width: 100%;
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 2px solid #ccc; /* Border top for footer ruc */
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.ruc {
+  font-size: 14px;
+  color: white;
+}
+
+.ruc-text {
+  font-weight: 800; /* Negrita para el texto RUC */
+}
