@@ -1,12 +1,19 @@
 import { Link } from "react-router-dom";
 
 import styles from "./Card.module.css";
-function CreateCard({ offer }) {
+function CreateCard({ offer, onSelectSection }) {
+  const handleClick = (section) => {
+    onSelectSection(section);
+  };
   return (
-    <Link className={styles["product-card"]} to={`/details?id=${offer.id}`}>
+    <Link
+      className={styles["product-card"]}
+      to={`/details?id=${offer.id}`}
+      onClick={() => handleClick(null)}
+    >
       <img
         className={styles["product-img"]}
-        src={offer.imagen} 
+        src={offer.imagen}
         alt={offer.nombre}
       />
       <div className={styles["product-info"]}>
@@ -24,11 +31,27 @@ function CreateCard({ offer }) {
   );
 }
 
-function Template({ array }: { array: any[] }) {
-  return array.map((option) => <CreateCard key={option.id} offer={option} />);
+function Template({
+  array,
+  onSelectSection,
+}: {
+  array: any[];
+  onSelectSection: string;
+}) {
+  return array.map((option) => (
+    <CreateCard
+      key={option.id}
+      offer={option}
+      onSelectSection={onSelectSection}
+    />
+  ));
 }
-function Cards({ array }: any) {
-  return <div className={styles["products"]}>{Template({ array })}</div>;
+function Cards({ array, onSelectSection }: any) {
+  return (
+    <div className={styles["products"]}>
+      {Template({ array, onSelectSection })}
+    </div>
+  );
 }
 
 export { Cards, Template };

@@ -11,6 +11,7 @@ import MainDetails from "../components/MainDetails.tsx";
 function Details() {
   const [filteredProducts, setFilteredProducts] = useState([]); // Estado de productos filtrados
   const [isFiltered, setIsFiltered] = useState(false);
+  const [selectedSection, setSelectedSection] = useState(null);
   const location = useLocation();
   // Función de filtrado
   const handleSearch = (searchText) => {
@@ -41,6 +42,10 @@ function Details() {
       setIsFiltered(filtered.length > 0);
     }
   };
+  const handleSelectSection = (section) => {
+    setSelectedSection(section);
+    setIsFiltered(false);
+  };
 
   // Restaura el array de productos filtrados cuando cambia la URL
   useEffect(() => {
@@ -52,12 +57,16 @@ function Details() {
   return (
     <>
       <header>
-        <Header onSearch={handleSearch} />
+        <Header
+          onSearch={handleSearch}
+          handleSelectSection={handleSelectSection}
+        />
       </header>
       <main>
         <MainDetails
           filteredProducts={filteredProducts}
           isFiltered={isFiltered}
+          selectedSection={selectedSection}
         />
       </main>
       <footer>

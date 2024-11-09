@@ -19,7 +19,7 @@ function ProductsforSection(section: string) {
   );
 }
 
-export default function CardsSection({ arrayNavOptions }) {
+export default function CardsSection({ arrayNavOptions, onSelectSection }) {
   // Utiliza un objeto para mantener el índice de inicio de cada sección
   const [startIndexes, setStartIndexes] = useState({});
 
@@ -73,6 +73,7 @@ export default function CardsSection({ arrayNavOptions }) {
                     startIndex,
                     startIndex + visibleProducts
                   )}
+                  onSelectSection={onSelectSection}
                 />
               </div>
               <div

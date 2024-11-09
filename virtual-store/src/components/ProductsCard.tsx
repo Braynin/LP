@@ -8,7 +8,10 @@ function ProductsCard({ filteredProducts, isFiltered, selectedSection }) {
   if (selectedSection) {
     return (
       <div className={styles["products-container"]}>
-        <CardsSection arrayNavOptions={[{ text: selectedSection }]} />
+        <CardsSection
+          arrayNavOptions={[{ text: selectedSection }]}
+          onSelectSection={selectedSection}
+        />
       </div>
     );
   }
@@ -21,7 +24,10 @@ function ProductsCard({ filteredProducts, isFiltered, selectedSection }) {
           <p>No se encontraron productos.</p>
         )
       ) : (
-        <CardsSection arrayNavOptions={arrayNavOptions} />
+        <CardsSection
+          arrayNavOptions={arrayNavOptions}
+          onSelectSection={selectedSection}
+        />
       )}
     </div>
   );
