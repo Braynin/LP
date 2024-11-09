@@ -1,19 +1,19 @@
 import { Link } from "react-router-dom";
 
 import styles from "./Card.module.css";
-function CreateCard({ option }) {
+function CreateCard({ offer }) {
   return (
-    <Link className={styles["product-card"]} to={`/details?id=${option.id}`}>
+    <Link className={styles["product-card"]} to={`/details?id=${offer.id}`}>
       <img
         className={styles["product-img"]}
-        src={option.imagen}
-        alt={option.nombre}
+        src={offer.imagen} 
+        alt={offer.nombre}
       />
       <div className={styles["product-info"]}>
-        <span className={styles["product-title"]}>{option.nombre}</span>
+        <span className={styles["product-title"]}>{offer.nombre}</span>
         <div className={styles["product-price-block"]}>
           <span className={styles["product-price"]}>
-            S/.{option.precioMenor}
+            S/.{offer.precioMenor}
           </span>
         </div>
         <div className={styles["product-impuesto"]}>
@@ -25,7 +25,7 @@ function CreateCard({ option }) {
 }
 
 function Template({ array }: { array: any[] }) {
-  return array.map((option) => <CreateCard key={option.id} option={option} />);
+  return array.map((option) => <CreateCard key={option.id} offer={option} />);
 }
 function Cards({ array }: any) {
   return <div className={styles["products"]}>{Template({ array })}</div>;
