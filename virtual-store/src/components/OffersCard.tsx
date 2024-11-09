@@ -1,8 +1,8 @@
-import arrayOffers from "../assets/OffersOptions.js";
+import { Link } from "react-router-dom";
 import styles from "./OffersCard.module.css";
-function CreateOffersCard(offer: any) {
+function CreateOffersCard({ offer }) {
   return (
-    <a className={styles["offer-card"]} href="./details.html?id=1">
+    <Link className={styles["offer-card"]} to={`/details?id=${offer.id}`}>
       <img
         className={styles["offer-img"]}
         src={offer.imagen}
@@ -17,9 +17,14 @@ function CreateOffersCard(offer: any) {
           <span className={styles["offer-discount"]}>IGV</span>
         </div>
       </div>
-    </a>
+    </Link>
   );
 }
-export default function OffersCard() {
-  return arrayOffers.map(CreateOffersCard);
+
+function TemplateOffer({ array }: { array: any[] }) {
+  return array.map((offer) => <CreateOffersCard key={offer.id} offer={offer} />);
 }
+function OffersCards({ array }: any) {
+  return <div className={styles["offers"]}>{TemplateOffer({ array })}</div>;
+}
+export { OffersCards, TemplateOffer };
