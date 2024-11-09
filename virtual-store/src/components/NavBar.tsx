@@ -1,14 +1,12 @@
 import styles from "./navBar.module.css";
 import ButtonNavBar from "./ButtonNavBar";
 
-function NavBar() {
+function NavBar({ handleSelectSection }) {
   return (
     <>
       <div className={styles["nav-container"]}>
         <nav className={styles["nav"]}>
-          
-            <ButtonNavBar />
-          
+          <ButtonNavBar onSelectSection={handleSelectSection} />
         </nav>
       </div>
     </>

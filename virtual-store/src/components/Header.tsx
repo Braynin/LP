@@ -4,12 +4,12 @@ import Messages from "./Messages.tsx";
 import HeaderSearch from "./HeaderSearch.tsx";
 import NavBar from "./NavBar.tsx";
 
-function Header({ onSearch }) {
+function Header({ onSearch, handleSelectSection }) {
   return (
     <>
       <Messages />
       <HeaderSearch onSearch={onSearch} />
-      <NavBar />
+      <NavBar handleSelectSection={handleSelectSection} />
     </>
   );
 }
