@@ -2,26 +2,28 @@ import styles from "./ButtonNavBar.module.css";
 import arrayNavOptions from "../assets/NavOptions";
 import React from "react";
 
+export default function ButtonNavBar({ onSelectSection }) {
+  const handleClick = (section) => {
+    onSelectSection(section);
+  };
 
-const createNavOption = (option: any, index: number) => (
-  <React.Fragment key={index}>
-    <li className={styles["nav-option"]}>
-      <a className={styles["nav-link"]} href={option.linkto}>
-        {option.text}
-      </a>
-    </li>
-
-    
-    {index < arrayNavOptions.length - 1 && (
-      <span className={styles["separator"]}></span>
-    )}
-  </React.Fragment>
-);
-
-export default function ButtonNavBar() {
   return (
     <ul className={styles["nav-options"]}>
-      {arrayNavOptions.map(createNavOption)}
+      {arrayNavOptions.map((option, index) => (
+        <React.Fragment key={index}>
+          <li className={styles["nav-option"]}>
+            <a
+              className={styles["nav-link"]}
+              onClick={() => handleClick(option.text)}
+            >
+              {option.text}
+            </a>
+          </li>
+          {index < arrayNavOptions.length - 1 && (
+            <span className={styles["separator"]}></span>
+          )}
+        </React.Fragment>
+      ))}
     </ul>
   );
 }

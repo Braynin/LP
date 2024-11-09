@@ -8,6 +8,7 @@ import arrayProducts from "../assets/ProductsOptions.js";
 function Home() {
   const [filteredProducts, setFilteredProducts] = useState(arrayProducts); // Estado de productos filtrados
   const [isFiltered, setIsFiltered] = useState(false);
+  const [selectedSection, setSelectedSection] = useState(null);
   // Función de filtrado
   const handleSearch = (searchText) => {
     const filtered = arrayProducts.filter((product) =>
@@ -41,15 +42,25 @@ function Home() {
     } // Actualiza el estado con los productos filtrados
   };
 
+  const handleSelectSection = (section) => {
+    setSelectedSection(section);
+    setIsFiltered(false);
+  };
+
   return (
     <>
       <header>
-        <Header onSearch={handleSearch} /> {/* Pasa handleSearch a Header */}
+        <Header
+          onSearch={handleSearch}
+          handleSelectSection={handleSelectSection}
+        />{" "}
+        {/* Pasa handleSearch a Header */}
       </header>
       <main>
         <MainIndex
           filteredProducts={filteredProducts}
           isFiltered={isFiltered}
+          selectedSection={selectedSection}
         />
       </main>
       <footer>
