@@ -5,16 +5,7 @@ import CardsSection from "./SectionCards.tsx";
 import arrayNavOptions from "../assets/NavOptions.js";
 
 function ProductsCard({ filteredProducts, isFiltered, selectedSection }) {
-  if (selectedSection) {
-    return (
-      <div className={styles["products-container"]}>
-        <CardsSection
-          arrayNavOptions={[{ text: selectedSection }]}
-          onSelectSection={selectedSection}
-        />
-      </div>
-    );
-  }
+
   return (
     <div className={styles["products-container"]}>
       {isFiltered ? (
