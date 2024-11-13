@@ -66,9 +66,8 @@ const QuienesSomos = () => {
         
       ):( <div className={styles["quienes-somos-container"]}>
         <h1>Quiénes Somos</h1>
-        <p>
-            Somos una empresa comprometida con la innovación y la satisfacción de nuestros clientes...
-        </p>
+        <div className={styles["imagen-footer"]}></div>
+        <div className={styles["imagen-footer"]}></div>
 
     </div> )}
 

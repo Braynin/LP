@@ -24,11 +24,11 @@ function App() {
     { path: "/details", element: <Details /> },
 
     // Rutas generadas a partir del nav
-    { path: "/penal", element: <Penal /> },
-    { path: "/civil", element: <Civil /> },
-    { path: "/familia", element: <Familia /> },
-    { path: "/administrativo", element: <Administrativo /> },
-    { path: "/constitucional", element: <Constitucional /> },
+    // { path: "/penal", element: <Penal /> },
+    // { path: "/civil", element: <Civil /> },
+    // { path: "/familia", element: <Familia /> },
+    // { path: "/administrativo", element: <Administrativo /> },
+    // { path: "/constitucional", element: <Constitucional /> },
     
 
     // Rutas generadas a partir de tu array

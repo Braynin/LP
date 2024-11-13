@@ -4,11 +4,13 @@ import styles from "./Opiniones.module.css";
 import arrayProducts from "../assets/ProductsOptions.js";
 import { useState } from "react";
 import Swal from "sweetalert2";
+import ProductsCard from "../components/ProductsCard.tsx";
 
 const Opiniones = () => {  
-    const [filteredProducts, setFilteredProducts] = useState(arrayProducts); // Estado de productos filtrados
+    const [selectedSection, setSelectedSection] = useState<string | null>(null);
+    const [searchText, setSearchText] = useState(""); // Para almacenar el texto de búsqueda
+    const [filteredProducts, setFilteredProducts] = useState(arrayProducts); // Productos iniciales sin filtro
     const [isFiltered, setIsFiltered] = useState(false); // Para saber si se ha realizado un filtro
-    const [selectedSection, setSelectedSection] = useState(null); // Para manejar la selección de secciones
 
     // Función de filtrado
     const handleSearch = (searchText: string) => {
@@ -25,6 +27,7 @@ const Opiniones = () => {
                 )
         );
 
+        // Si no se encuentran productos, mostramos un mensaje
         if (filtered.length === 0) {
             Swal.fire({
                 icon: "warning",
@@ -33,18 +36,16 @@ const Opiniones = () => {
                 confirmButtonText: "Aceptar",
                 confirmButtonColor: "#3085d6",
             });
-            console.log(filtered);
-
-            setFilteredProducts([]); // Mostrar lista vacía si no se encuentran productos
-            setIsFiltered(false); // No hay productos filtrados
-        } else {
-            setFilteredProducts(filtered); // Actualiza el estado con los productos filtrados
-            setIsFiltered(true); // Indica que hubo un filtro
         }
+
+        // Actualizamos el estado con los productos filtrados y el texto de búsqueda
+        setFilteredProducts(filtered);
+        setIsFiltered(filtered.length > 0); // Si hay productos filtrados, actualizamos el estado
+        setSearchText(searchText); // Guardamos el texto de búsqueda en el estado
     };
 
-    // Manejo de secciones
-    const handleSelectSection = (section: any) => {
+    // Manejo de secciones (esto lo dejo igual a tu código original)
+    const handleSelectSection = (section: string) => {
         setSelectedSection(section);
         setIsFiltered(false); // Limpiar filtro cuando se selecciona una nueva sección
     };
@@ -52,40 +53,31 @@ const Opiniones = () => {
     return (  
         <>  
             <Header 
-                onSearch={handleSearch} 
-                handleSelectSection={handleSelectSection} 
+                onSearch={handleSearch} handleSelectSection={handleSelectSection} 
             />  
-            {/* Pasa handleSearch a Header */}
 
             <main className={styles["opiniones-main"]}>
-                <div className={styles["opiniones-container"]}>
-                    <h1>Opiniones</h1>
-                    <p>
-                        Somos una empresa comprometida con la innovación y la satisfacción de nuestros clientes...
-                    </p>
+               
+                {isFiltered ? (<ProductsCard
+        filteredProducts={filteredProducts}
+        isFiltered={isFiltered}
+        selectedSection={selectedSection}
+      />
+        
+      ):( <div className={styles["opiniones-container"]}>
+        <h1>Opiniones</h1>
+        <div className={styles["imagen-footer"]}></div>
+        <div className={styles["imagen-footer"]}></div>
 
-                    {/* Aquí puedes agregar más contenido estático de "Quiénes Somos" */}
+    </div> )}
 
-                    <div className={styles["productos-section"]}>
-                        <h2>{isFiltered ? 'Productos Filtrados' : 'Nuestros Productos'}</h2>
-                        {filteredProducts.length === 0 ? (
-                            <p>No se encontraron productos.</p>  // Si no hay productos, mostrar mensaje
-                        ) : (
-                            <div className={styles["productos-list"]}>
-                                {filteredProducts.map((product) => (
-                                    <div key={product.id} className={styles["product-item"]}>
-                                        <img src={product.image} alt={product.nombre} />
-                                        <p>{product.nombre}</p>
-                                        <p>{product.precio}</p>
-                                    </div>
-                                ))}
-                            </div>
-                        )}
-                    </div>
-                </div>
+       
+      
             </main>
 
-            <Footer />  
+            <footer>
+        <Footer />
+      </footer>
         </>  
     );  
 };  
