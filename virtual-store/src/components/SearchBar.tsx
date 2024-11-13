@@ -7,9 +7,10 @@ import Swal from "sweetalert2";
 
 const SearchBar = () => {
   const [searchText, setSearchText] = useState("");
+
   const handleSearch = (searchText) => {
     const filtered = arrayProducts.filter((product) =>
-      normalizeText(product.name).includes(normalizeText(searchText))
+      normalizeText(product.nombre).includes(normalizeText(searchText))
     );
 
     if (filtered.length === 0) {
@@ -20,11 +21,16 @@ const SearchBar = () => {
         confirmButtonText: "Aceptar",
         confirmButtonColor: "#3085d6",
       });
+    } else {
+      // Construye la URL de búsqueda
+      const query = encodeURIComponent(searchText.trim());
+      window.location.href = `/search?q=${query}`;
     }
   };
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
+      e.preventDefault();
       handleSearch(searchText); // Llama a la función de búsqueda si se presiona Enter
     }
   };
@@ -39,7 +45,7 @@ const SearchBar = () => {
         onChange={(e) => setSearchText(e.target.value)}
         onKeyDown={handleKeyDown}
       />
-      <SearchButton onClick={handleSearch} />
+      <SearchButton onClick={() => handleSearch(searchText)} />
     </div>
   );
 };
