@@ -3,11 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // Importa tus vistas
 import Home from "./views/Home";
 import Details from "./views/Details.tsx";
-import Penal from "./views/Penal.tsx";
-import Civil from "./views/Civil.tsx";
-import Familia from "./views/Familia.tsx";
-import Administrativo from "./views/Administrativo.tsx";
-import Constitucional from "./views/Constitucional.tsx";
+import SectionView from "./views/SectionView.tsx";
 import QuienesSomos from "./views/QuienesSomos.tsx";
 import Opiniones from "./views/Opiniones.tsx";
 import PreguntasFrecuentes from "./views/PreguntasFrecuentes.tsx";
@@ -24,12 +20,11 @@ function App() {
     { path: "/details", element: <Details /> },
 
     // Rutas generadas a partir del nav
-    { path: "/penal", element: <Penal /> },
-    { path: "/civil", element: <Civil /> },
-    { path: "/familia", element: <Familia /> },
-    { path: "/administrativo", element: <Administrativo /> },
-    { path: "/constitucional", element: <Constitucional /> },
-    
+    { path: "/Penal", element: <SectionView /> },
+    { path: "/Civil", element: <SectionView /> },
+    { path: "/Familia", element: <SectionView /> },
+    { path: "/Administrativo", element: <SectionView /> },
+    { path: "/Constitucional", element: <SectionView /> },
 
     // Rutas generadas a partir de tu array
     { path: "/quienes-somos", element: <QuienesSomos /> },
@@ -40,7 +35,10 @@ function App() {
     { path: "/politicas-de-privacidad", element: <PoliticasDePrivacidad /> },
     { path: "/politicas-de-cookies", element: <PoliticasDeCookies /> },
     { path: "/terminos-y-condiciones", element: <TerminosYCondiciones /> },
-    { path: "/terminos-y-condiciones-promocionales", element: <TerminosYCondicionesPromocionales /> },
+    {
+      path: "/terminos-y-condiciones-promocionales",
+      element: <TerminosYCondicionesPromocionales />,
+    },
     { path: "/recojo-en-tienda", element: <RecojoEnTienda /> },
   ]);
 

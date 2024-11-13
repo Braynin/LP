@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import arrayProducts from "../assets/ProductsOptions.js";
 import styles from "./DetailsCard.module.css";

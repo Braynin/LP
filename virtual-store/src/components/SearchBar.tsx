@@ -1,16 +1,31 @@
 import { useState } from "react";
 import SearchButton from "./SearchButton";
 import styles from "./SearchBar.module.css";
+import normalizeText from "../assets/NormalizeText.js";
+import arrayProducts from "../assets/ProductsOptions.js";
+import Swal from "sweetalert2";
 
-const SearchBar = ({ onSearch }) => {
+const SearchBar = () => {
   const [searchText, setSearchText] = useState("");
+  const handleSearch = (searchText) => {
+    const filtered = arrayProducts.filter((product) =>
+      normalizeText(product.name).includes(normalizeText(searchText))
+    );
 
-  const handleSearch = () => {
-    onSearch(searchText);
+    if (filtered.length === 0) {
+      Swal.fire({
+        icon: "warning",
+        title: "Producto no encontrado",
+        text: "No se encontraron productos con ese nombre. Intenta otra búsqueda.",
+        confirmButtonText: "Aceptar",
+        confirmButtonColor: "#3085d6",
+      });
+    }
   };
+
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
-      handleSearch(); // Llama a la función de búsqueda si se presiona Enter
+      handleSearch(searchText); // Llama a la función de búsqueda si se presiona Enter
     }
   };
 

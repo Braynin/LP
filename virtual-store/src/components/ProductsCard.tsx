@@ -1,27 +1,28 @@
+import React from "react";
 import styles from "./ProductsCards.module.css";
-
-import { Cards } from "./Card.tsx";
-import CardsSection from "./SectionCards.tsx";
 import arrayNavOptions from "../assets/NavOptions.js";
+import CardsSection from "./SectionCards";
 
-function ProductsCard({ filteredProducts, isFiltered, selectedSection }) {
-
-  return (
-    <div className={styles["products-container"]}>
-      {isFiltered ? (
-        filteredProducts.length > 0 ? (
-          <Cards array={filteredProducts} />
-        ) : (
-          <p>No se encontraron productos.</p>
-        )
-      ) : (
-        <CardsSection
-          arrayNavOptions={arrayNavOptions}
-          onSelectSection={selectedSection}
-        />
-      )}
-    </div>
-  );
+interface ProductsCardProps {
+  section: string;
 }
+
+const ProductsCard: React.FC<ProductsCardProps> = ({ section }) => {
+  if (section === "") {
+    return (
+      <div className={styles["products-container"]}>
+        {arrayNavOptions.map((option) => (
+          <CardsSection key={option.text} section={option.text} />
+        ))}
+      </div>
+    );
+  } else {
+    return (
+      <div className={styles["products-container"]}>
+        <CardsSection section={section} />
+      </div>
+    );
+  }
+};
 
 export default ProductsCard;

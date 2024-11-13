@@ -2,20 +2,13 @@ import styles from "./ButtonNavBar.module.css";
 import arrayNavOptions from "../assets/NavOptions";
 import React from "react";
 
-export default function ButtonNavBar({ onSelectSection }) {
-  const handleClick = (section) => {
-    onSelectSection(section);
-  };
-
+export default function ButtonNavBar() {
   return (
     <ul className={styles["nav-options"]}>
       {arrayNavOptions.map((option, index) => (
         <React.Fragment key={index}>
           <li className={styles["nav-option"]}>
-            <a
-              className={styles["nav-link"]}
-              onClick={() => handleClick(option.text)}
-            >
+            <a className={styles["nav-link"]} href={option.linkto}>
               {option.text}
             </a>
           </li>
