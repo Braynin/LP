@@ -4,6 +4,7 @@ import styles from "./CambiosYDevoluciones.module.css";
 import arrayProducts from "../assets/ProductsOptions.js";
 import { useState } from "react";
 import Swal from "sweetalert2";
+import ProductsCard from "../components/ProductsCard.tsx";
 
 const CambiosYDevoluciones = () => {  
     const [selectedSection, setSelectedSection] = useState<string | null>(null);
@@ -52,42 +53,33 @@ const CambiosYDevoluciones = () => {
 
     return (  
         <>  
-            <Header 
-                onSearch={handleSearch} 
-                handleSelectSection={handleSelectSection} 
-            />  
-            {/* Pasa handleSearch a Header */}
+        <Header 
+            onSearch={handleSearch} handleSelectSection={handleSelectSection} 
+        />  
 
-            <main className={styles["cambiosYDevoluciones-main"]}>
-                <div className={styles["cambiosYDevoluciones-container"]}>
-                    <h1>Cambios y Devoluciones</h1>
-                    <p>
-                        Somos una empresa comprometida con la innovación y la satisfacción de nuestros clientes...
-                    </p>
+        <main className={styles["cambiosYDevoluciones-main"]}>
+           
+            {isFiltered ? (<ProductsCard
+    filteredProducts={filteredProducts}
+    isFiltered={isFiltered}
+    selectedSection={selectedSection}
+  />
+    
+  ):( <div className={styles["cambiosYDevoluciones-container"]}>
+    <h1>Cambios y Devoluciones</h1>
+    <div className={styles["imagen-footer"]}></div>
+    <div className={styles["imagen-footer"]}></div>
 
-                    {/* Aquí puedes agregar más contenido estático de "Quiénes Somos" */}
+</div> )}
 
-                    <div className={styles["productos-section"]}>
-                        <h2>{isFiltered ? 'Productos Filtrados' : 'Nuestros Productos'}</h2>
-                        {filteredProducts.length === 0 ? (
-                            <p>No se encontraron productos.</p>  // Si no hay productos, mostrar mensaje
-                        ) : (
-                            <div className={styles["productos-list"]}>
-                                {filteredProducts.map((product) => (
-                                    <div key={product.id} className={styles["product-item"]}>
-                                        <img src={product.image} alt={product.nombre} />
-                                        <p>{product.nombre}</p>
-                                        <p>{product.precio}</p>
-                                    </div>
-                                ))}
-                            </div>
-                        )}
-                    </div>
-                </div>
-            </main>
+   
+  
+        </main>
 
-            <Footer />  
-        </>  
+        <footer>
+    <Footer />
+  </footer>
+    </>
     );  
 };  
 

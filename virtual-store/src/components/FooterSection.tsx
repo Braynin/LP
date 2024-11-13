@@ -26,7 +26,14 @@ const createFooterSection = (option: any) => (
           {option.option4[0]}
         </Link>
       </li>
+      <li>
+        <Link className={styles["footer-option"]} to={option.option5[1]}>
+          {option.option5[0]}
+        </Link>
+      </li>
     </ul>
+   
+    
   </div>
 );
 

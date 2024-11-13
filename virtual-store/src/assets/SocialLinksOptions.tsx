@@ -6,6 +6,17 @@ interface SocialLink {
 }
 /*Objects*/
 const SocialLink1: SocialLink = {
+  name: "Maps",
+  linkto: "https://www.google.com/maps/place/LP+Pasi%C3%B3n+por+el+Derecho/@-12.0893411,-77.0609439,1102m/data=!3m2!1e3!4b1!4m6!3m5!1s0x9105c919e5e30659:0xbdd8f242a3f9a0ad!8m2!3d-12.0893464!4d-77.058369!16s%2Fg%2F11g8f8l6z8?entry=ttu&g_ep=EgoyMDI0MTEwNi4wIKXMDSoASAFQAw%3D%3D",
+  svg: (
+  <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  
+  className="icon icon-tabler icons-tabler-filled icon-tabler-map-pin"><path stroke="none" d="M0 0h24v24H0z" 
+  fill="none"/>
+  <path d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6z" />
+  </svg>
+)
+};
+const SocialLink2: SocialLink = {
   name: "Facebook",
   linkto: "https://www.facebook.com/lpderecho",
   svg: (
@@ -23,7 +34,7 @@ const SocialLink1: SocialLink = {
   ),
 };
 
-const SocialLink2: SocialLink = {
+const SocialLink3: SocialLink = {
   name: "WhatsApp",
   linkto: "https://wa.me/939613209",
   svg: (
@@ -46,7 +57,7 @@ const SocialLink2: SocialLink = {
   ),
 };
 
-const SocialLink3: SocialLink = {
+const SocialLink4: SocialLink = {
   name: "Instagram",
   linkto: "https://www.instagram.com/lpderecho",
   svg: (
@@ -70,7 +81,7 @@ const SocialLink3: SocialLink = {
   ),
 };
 
-const SocialLink4: SocialLink = {
+const SocialLink5: SocialLink = {
   name: "TikTok",
   linkto: "https://www.tiktok.com/@editorial.lp",
   svg: (
@@ -88,7 +99,7 @@ const SocialLink4: SocialLink = {
   ),
 };
 
-const SocialLink5: SocialLink = {
+const SocialLink6: SocialLink = {
   name: "YouTube",
   linkto: "#",
   svg: (
@@ -106,6 +117,7 @@ const SocialLink5: SocialLink = {
   ),
 };
 
+
 /*Array*/
 const arraySocialLinks = [
   SocialLink1,
@@ -113,6 +125,7 @@ const arraySocialLinks = [
   SocialLink3,
   SocialLink4,
   SocialLink5,
+  SocialLink6
 ];
 
 export default arraySocialLinks;

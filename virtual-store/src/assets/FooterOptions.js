@@ -1,11 +1,12 @@
 /*Class*/
 class footerOption {
-  constructor(title, option1, option2, option3, option4) {
+  constructor(title, option1, option2, option3, option4, option5) {
     this.title = title;
     this.option1 = option1 || ["", "#"];
     this.option2 = option2 || ["", "#"];
     this.option3 = option3 || ["", "#"];
     this.option4 = option4 || ["", "#"];
+    this.option5 = option5 || ["", "#"];
   }
 }
 
