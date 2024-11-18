@@ -1,12 +1,13 @@
 /*Class*/
 class footerOption {
-  constructor(title, option1, option2, option3, option4, option5) {
+  constructor(title, option1, option2, option3, option4, option5, option6) {
     this.title = title;
     this.option1 = option1 || ["", "#"];
     this.option2 = option2 || ["", "#"];
     this.option3 = option3 || ["", "#"];
     this.option4 = option4 || ["", "#"];
     this.option5 = option5 || ["", "#"];
+    this.option6 = option6 || ["", "#"];
   }
 }
 
@@ -33,7 +34,7 @@ const footerOption3 = new footerOption(
     "Términos y condiciones Promocionales",
     "/terminos-y-condiciones-promocionales",
   ],
-  ["Recojo en tienda", "/recojo-en-tienda"]
+  ["Política de entrega", "/politicas-de-entrega"]
 );
 
 /*Array*/

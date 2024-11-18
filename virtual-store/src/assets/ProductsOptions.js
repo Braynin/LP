@@ -7,8 +7,17 @@ class Products {
     precioMayor,
     imagen,
     igv,
-    description,
-    section
+    section,
+    sipnosis,
+    isbn,
+    autor,
+    editorial,
+    año,
+    paginas,
+    presentacion,
+    peso,
+    alto,
+    ancho
   ) {
     this.id = id;
     this.nombre = nombre;
@@ -16,8 +25,17 @@ class Products {
     this.precioMayor = precioMayor;
     this.imagen = imagen;
     this.igv = igv;
-    this.description = description;
     this.section = section;
+    this.sipnosis = sipnosis;
+    this.isbn = isbn;
+    this.autor = autor;
+    this.editorial = editorial;
+    this.año = año;
+    this.paginas = paginas;
+    this.presentacion = presentacion;
+    this.peso = peso;
+    this.alto = alto;
+    this.ancho = ancho;
   }
   get supplier() {
     return this._supplier;
@@ -36,8 +54,16 @@ const product1 = new Products(
   "",
   ["public/CODIGO PENAL.webp"],
   "Incluye IGV",
+  "Penal",
   "En un pequeño pueblo rodeado de montañas, la vid transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos.",
-  "Penal"
+  "978-61249574-6-8",
+  "LP",
+  "Editorial LP",
+  "2024",
+  "1004",
+  "1.4kg",
+  "16cm",
+  "21cm"
 );
 const product2 = new Products(
   "2",
@@ -46,8 +72,16 @@ const product2 = new Products(
   "",
   ["public/CODIGO PENAL TAPA RUSTICA.webp"],
   "Incluye IGV",
+  "Penal",
   "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos.",
-  "Penal"
+  "978-61249574-6-8",
+  "LP",
+  "Editorial LP",
+  "2024",
+  "1004",
+  "1.3kg",
+  "16cm",
+  "21cm"
 );
 const product3 = new Products(
   "3",
@@ -56,8 +90,16 @@ const product3 = new Products(
   "",
   ["public/CODIGO CIVIL.webp"],
   "Incluye IGV",
+  "Civil",
   "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos.",
-  "Civil"
+  "978-61249574-7-4",
+  "LP",
+  "Editorial LP",
+  "2024",
+  "1007",
+  "1.4kg",
+  "16cm",
+  "21cm"
 );
 const product4 = new Products(
   "4",
@@ -66,8 +108,16 @@ const product4 = new Products(
   "",
   ["public/CODIGO CIVIL TAPA RUSTICA.webp"],
   "Incluye IGV",
+  "Civil",
   "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos.",
-  "Civil"
+  "978-61249574-7-4",
+  "LP",
+  "Editorial LP",
+  "2024",
+  "1007",
+  "1.4kg",
+  "16cm",
+  "21cm"
 );
 const product5 = new Products(
   "5",
@@ -76,8 +126,8 @@ const product5 = new Products(
   "",
   ["public/DETENCION-POLICIAL.webp"],
   "Incluye IGV",
-  "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos.",
-  "Penal"
+  "Penal",
+  "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos."
 );
 const product6 = new Products(
   "6",
@@ -86,8 +136,16 @@ const product6 = new Products(
   "",
   ["public/MINI CODIGO PENAL.webp"],
   "Incluye IGV",
+  "Penal",
   "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos.",
-  "Penal"
+  "978-61249574-6-8",
+  "Giammpol Taboada Pilco",
+  "Editorial LP",
+  "2024",
+  "813",
+  "1.6kg",
+  "17cm",
+  "25cm"
 );
 const product7 = new Products(
   "7",
@@ -96,8 +154,16 @@ const product7 = new Products(
   "",
   ["public/EL DEFENSOR 2 - VIVIENDO EL SUEÑO.webp"],
   "Incluye IGV",
+  "Penal",
   "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos.",
-  "Penal"
+  "978-61249720-2-7",
+  "Jefferson Moreno Nieves",
+  "Editorial LP",
+  "2024",
+  "238",
+  "1kg",
+  "16cm",
+  "23cm"
 );
 const product8 = new Products(
   "8",
@@ -106,8 +172,16 @@ const product8 = new Products(
   "",
   ["public/LITIGACION ORAL CIVIL.webp"],
   "Incluye IGV",
+  "Civil",
   "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos.",
-  "Civil"
+  "978-61249574-5-1",
+  "Carlos E. Polanco Gutiérrez",
+  "Editorial LP",
+  "2024",
+  "383",
+  "0.50kg",
+  "16cm",
+  "24cm"
 );
 const product9 = new Products(
   "9",
@@ -116,8 +190,16 @@ const product9 = new Products(
   "",
   ["public/COLECCION - COMO REDACTAR UN CONTRATO.webp"],
   "Incluye IGV",
+  "Civil",
   "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos.",
-  "Civil"
+  "978-61249574-8-2",
+  "Jhoel Chipana Catalán",
+  "Editorial LP",
+  "2024",
+  "238",
+  "1kg",
+  "13cm",
+  "20cm"
 );
 const product10 = new Products(
   "10",
@@ -126,8 +208,16 @@ const product10 = new Products(
   "",
   ["public/CULPABILIDAD Y NEUROCIENCIAS.webp"],
   "Incluye IGV",
+  "Penal",
   "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos.",
-  "Civil"
+  "978-612-49490-2-9",
+  "Frank Alamanza Altamirano",
+  "San Bernardo Libros Jurídicos",
+  "2024",
+  "325",
+  "0.60kg",
+  "17cm",
+  "24cm"
 );
 const product11 = new Products(
   "11",
@@ -136,8 +226,16 @@ const product11 = new Products(
   "",
   ["public/DERECHO DEL CONSUMIDOR.webp"],
   "Incluye IGV",
+  "Aministrativo",
   "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos.",
-  "Civil"
+  "978-61249574-0-6",
+  "Julio Baltazar Durand Carrión, Pavel FLores Flores",
+  "Editorial LP",
+  "2024",
+  "285",
+  "0.40kg",
+  "15cm",
+  "23cm"
 );
 const product12 = new Products(
   "12",
@@ -146,8 +244,16 @@ const product12 = new Products(
   "",
   ["public/PAD PROCEDIMIENTO ADMINISTRATIVO DISCIPLINARIO.webp"],
   "Incluye IGV",
+  "Aministrativo",
   "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos.",
-  "Administrativo"
+  "978-61248993-0-0",
+  "Gustavo A. Rico Iberico",
+  "Escuela de Derecho LP",
+  "2022",
+  "285",
+  "0.40kg",
+  "15cm",
+  "23cm"
 );
 const product13 = new Products(
   "13",
@@ -156,8 +262,16 @@ const product13 = new Products(
   "",
   ["public/LA CONSTITUCION EN LAS REDES.webp"],
   "Incluye IGV",
+  "Constitucional",
   "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos.",
-  "Constitucional"
+  "978-61248993-3-1",
+  "Omar Sar",
+  "Escuela de Derecho LP",
+  "2023",
+  "542",
+  "0.80kg",
+  "15cm",
+  "23cm"
 );
 const product14 = new Products(
   "14",
@@ -166,8 +280,16 @@ const product14 = new Products(
   "",
   ["public/COLECCION LITIGACION EN AUDIENCIAS PREVIAS.webp"],
   "Incluye IGV",
+  "Penal",
   "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos.",
-  "Penal"
+  "978-61248993-7-9",
+  "Jefferson Moreno Nieves",
+  "Escuela de Derecho LP",
+  "2023",
+  "231",
+  "1kg",
+  "15cm",
+  "20cm"
 );
 const product15 = new Products(
   "15",
@@ -176,8 +298,16 @@ const product15 = new Products(
   "",
   ["public/COLECCION LITIGACION EN AUDIENCIAS PREVIAS - SIN CAJA.webp"],
   "Incluye IGV",
+  "Penal",
   "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos.",
-  "Penal"
+  "978-61248993-7-9",
+  "Jefferson Moreno Nieves",
+  "Escuela de Derecho LP",
+  "2023",
+  "231",
+  "1kg",
+  "15cm",
+  "20cm"
 );
 const product16 = new Products(
   "16",
@@ -186,8 +316,16 @@ const product16 = new Products(
   "",
   ["public/EL NUEVO CODIGO PROCESAL CONSTITUCIONAL.webp"],
   "Incluye IGV",
+  "Penal",
   "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos.",
-  "Penal"
+  "978-61249315-5-0",
+  "Luis Andrés Roel Alva",
+  "Escuela de Derecho LP",
+  "2023",
+  "446",
+  "0.6kg",
+  "16cm",
+  "24cm"
 );
 const product17 = new Products(
   "17",
@@ -196,8 +334,16 @@ const product17 = new Products(
   "",
   ["public/CURSO DE REDACCION ADMINISTRATIVA.webp"],
   "Incluye IGV",
+  "Administrativo",
   "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos.",
-  "Administrativo"
+  "978-61248993-2-4",
+  "José María Pacori Cari",
+  "Escuela de Derecho LP",
+  "2023",
+  "479",
+  "0.65kg",
+  "15cm",
+  "24cm"
 );
 const product18 = new Products(
   "18",
@@ -206,8 +352,16 @@ const product18 = new Products(
   "",
   ["public/DERECHO-PENAL-PARTE-GENERAL.webp"],
   "Incluye IGV",
+  "Penal",
   "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos.",
-  "Penal"
+  "978-61249315-0-5",
+  "Dino Carlos Caro Coria, Luis Miguel Reyna Alfaro",
+  "Escuela de Derecho LP",
+  "2023",
+  "718",
+  "1.15kg",
+  "17cm",
+  "24cm"
 );
 const product19 = new Products(
   "19",
@@ -216,8 +370,16 @@ const product19 = new Products(
   "",
   ["public/MI PRIMER JUICIO DE FAMILIA.webp"],
   "Incluye IGV",
+  "Familia",
   "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos.",
-  "Familia"
+  "978-61248993-9-3",
+  "Juan Carlos Del Aguila LLanos",
+  "Escuela de Derecho LP",
+  "2023",
+  "382",
+  "0.55kg",
+  "15cm",
+  "23cm"
 );
 const product20 = new Products(
   "20",
@@ -226,8 +388,16 @@ const product20 = new Products(
   "",
   ["public/EL DEFENSOR.webp"],
   "Incluye IGV",
+  "Penal",
   "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos.",
-  "Penal"
+  "978- 61248629-6-0",
+  "Jefferson Moreno Nieves",
+  "Editorial LP",
+  "2022",
+  "221",
+  "0.8kg",
+  "16cm",
+  "21cm"
 );
 const product21 = new Products(
   "21",
@@ -236,8 +406,16 @@ const product21 = new Products(
   "",
   ["public/EL DERECHO A LA PRUEBA EN LA INVESTIGACION.webp"],
   "Incluye IGV",
+  "Penal",
   "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos.",
-  "Penal"
+  "978-612-322-411-0",
+  "Jose Luis Castillo Alva",
+  "Instituto Pacífico",
+  "2023",
+  "608",
+  "1kg",
+  "17cm",
+  "24cm"
 );
 
 /*Array*/
