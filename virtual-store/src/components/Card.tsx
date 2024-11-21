@@ -27,7 +27,7 @@ function CreateCard({ option }) {
 function Template({ array }) {
   return array.map((option) => <CreateCard key={option.id} option={option} />);
 }
-function Cards(array) {
+function Cards({ array }) {
   return <div className={styles["products"]}>{Template({ array })}</div>;
 }
 

@@ -12,7 +12,8 @@ import PoliticasDePrivacidad from "./views/PoliticasDePrivacidad.tsx";
 import PoliticasDeCookies from "./views/PoliticasDeCookies.tsx";
 import TerminosYCondiciones from "./views/TerminosYCondiciones.tsx";
 import TerminosYCondicionesPromocionales from "./views/TerminosYCondicionesPromocionales.tsx";
-import PoliticasDeEntrega from "./views/PoliticasDeEntrega.tsx";
+import RecojoEnTienda from "./views/RecojoEnTienda.tsx";
+import SearchResults from "./views/SearchResults.tsx";
 
 function App() {
   const browserRouter = createBrowserRouter([
@@ -25,6 +26,9 @@ function App() {
     { path: "/Familia", element: <SectionView /> },
     { path: "/Administrativo", element: <SectionView /> },
     { path: "/Constitucional", element: <SectionView /> },
+
+    // Nueva ruta para la búsqueda
+    { path: "/search", element: <SearchResults /> },
 
     // Rutas generadas a partir de tu array
     { path: "/quienes-somos", element: <QuienesSomos /> },
