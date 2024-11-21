@@ -6,7 +6,7 @@ function CreateCard({ option }) {
     <Link className={styles["product-card"]} to={`/details?id=${option.id}`}>
       <img
         className={styles["product-img"]}
-        src={option.imagen}
+        src={option.imagen[0]}
         alt={option.nombre}
       />
       <div className={styles["product-info"]}>

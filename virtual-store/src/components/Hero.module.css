@@ -12,7 +12,7 @@ li {
 }
 
 /* Imagen con ajuste completo al contenedor */
-img {
+.container-images ul li img {
   margin-top: -16px;
   width: 100%; /* Aseguramos que las imágenes ocupen todo el ancho del li */
   height: 100%; /* Hacemos que la imagen ocupe toda la altura disponible */

@@ -35,7 +35,6 @@ function App() {
     { path: "/opiniones-de-clientes", element: <Opiniones /> },
     { path: "/preguntas-frecuentes", element: <PreguntasFrecuentes /> },
     { path: "/cambios-y-devoluciones", element: <CambiosYDevoluciones /> },
-
     { path: "/politicas-de-privacidad", element: <PoliticasDePrivacidad /> },
     { path: "/politicas-de-cookies", element: <PoliticasDeCookies /> },
     { path: "/terminos-y-condiciones", element: <TerminosYCondiciones /> },
