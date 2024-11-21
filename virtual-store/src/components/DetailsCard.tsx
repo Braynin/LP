@@ -11,7 +11,7 @@ function DetailsCard() {
   const product = arrayProducts.find((product) => product.id === id);
   useEffect(() => {
     if (product) {
-      setPrice(product.precioMenor);  
+      setPrice(product.precioMenor);
     }
   }, [product]);
   const changePrice = (event: React.ChangeEvent<HTMLInputElement>): void => {
@@ -32,36 +32,6 @@ function DetailsCard() {
             alt={product.nombre}
           />
         </section>
-        <div className={styles["product-information-block"]}>
-          <ul className={styles["product-title"]}>{product.nombre}</ul>
-          <li className={styles["product-description"]}>
-            <strong>ISBN: </strong> {product.isbn}
-          </li>
-          <li className={styles["product-description"]}>
-            <strong>Autor: </strong> {product.autor}
-          </li>
-          <li className={styles["product-description"]}>
-            <strong>Editorial: </strong> {product.editorial}
-          </li>
-          <li className={styles["product-description"]}>
-            <strong>Año: </strong> {product.año}
-          </li>
-          <li className={styles["product-description"]}>
-            <strong>Páginas: </strong> {product.paginas}
-          </li>
-          <li className={styles["product-description"]}>
-            <strong>Presentación: </strong> {product.presentacion}
-          </li>
-          <li className={styles["product-description"]}>
-            <strong>Peso: </strong> {product.peso}
-          </li>
-          <li className={styles["product-description"]}>
-            <strong>Alto: </strong> {product.alto}
-          </li>
-          <li className={styles["product-description"]}>
-            <strong>Ancho: </strong> {product.ancho}
-          </li>
-        </div>
         <div className={styles["product-checkout-block"]}>
           <div className={styles["checkout-container"]}>
             <span className={styles["checkout-total-label"]}>Total:</span>
@@ -118,9 +88,41 @@ function DetailsCard() {
       </div>
       <div className="product-sipnosis-block">
         <h2>Sipnosis:</h2>
-        <span className="product-sipnosis">
-          {product.sipnosis}
-        </span>
+        <span className="product-sipnosis">{product.sipnosis}</span>
+      </div>
+      <div className={styles["product-information-block"]}>
+        <ul className={styles["product-title"]}>
+          <li>Detalles de producto:</li>
+        </ul>
+        <ul className={styles["product-details"]}>
+          <li className={styles["product-description"]}>
+            <strong>ISBN: </strong> {product.isbn}
+          </li>
+          <li className={styles["product-description"]}>
+            <strong>Autor: </strong> {product.autor}
+          </li>
+          <li className={styles["product-description"]}>
+            <strong>Editorial: </strong> {product.editorial}
+          </li>
+          <li className={styles["product-description"]}>
+            <strong>Año: </strong> {product.año}
+          </li>
+          <li className={styles["product-description"]}>
+            <strong>Páginas: </strong> {product.paginas}
+          </li>
+          <li className={styles["product-description"]}>
+            <strong>Presentación: </strong> {product.presentacion}
+          </li>
+          <li className={styles["product-description"]}>
+            <strong>Peso: </strong> {product.peso}
+          </li>
+          <li className={styles["product-description"]}>
+            <strong>Alto: </strong> {product.alto}
+          </li>
+          <li className={styles["product-description"]}>
+            <strong>Ancho: </strong> {product.ancho}
+          </li>
+        </ul>
       </div>
     </>
   );
