@@ -12,8 +12,8 @@ import PoliticasDePrivacidad from "./views/PoliticasDePrivacidad.tsx";
 import PoliticasDeCookies from "./views/PoliticasDeCookies.tsx";
 import TerminosYCondiciones from "./views/TerminosYCondiciones.tsx";
 import TerminosYCondicionesPromocionales from "./views/TerminosYCondicionesPromocionales.tsx";
-import RecojoEnTienda from "./views/RecojoEnTienda.tsx";
 import SearchResults from "./views/SearchResults.tsx";
+import PoliticasDeEntrega from "./views/PoliticasDeEntrega.tsx";
 
 function App() {
   const browserRouter = createBrowserRouter([
@@ -42,7 +42,7 @@ function App() {
       path: "/terminos-y-condiciones-promocionales",
       element: <TerminosYCondicionesPromocionales />,
     },
-    { path: "/recojo-en-tienda", element: <RecojoEnTienda /> },
+    { path: "/politicas-de-entrega", element: <PoliticasDeEntrega/> },
   ]);
 
   return <RouterProvider router={browserRouter} />;

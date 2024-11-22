@@ -5,6 +5,7 @@ function MainDetails() {
   return (
     <>
       <DetailsCard />
+
       <Offers />
     </>
   );

@@ -1,5 +1,5 @@
-import Layout from "../components/Layout";
 import styles from "./CambiosYDevoluciones.module.css";
+import Layout from "../components/Layout.tsx";
 
 const CambiosYDevoluciones = () => {
   return (
