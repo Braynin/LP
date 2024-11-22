@@ -27,7 +27,9 @@ function DetailsCard() {
     }
   };
 
-  const changeMini = (event: React.MouseEvent<HTMLImageElement, MouseEvent>) => {
+  const changeMini = (
+    event: React.MouseEvent<HTMLImageElement, MouseEvent>
+  ) => {
     const selectedSrc = (event.target as HTMLImageElement).src;
     const bigSelector = document.querySelector<HTMLImageElement>("#big-img");
     if (bigSelector) {
@@ -36,7 +38,8 @@ function DetailsCard() {
   };
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
+    const { left, top, width, height } =
+      e.currentTarget.getBoundingClientRect();
     const offsetX = e.clientX - left; // Coordenadas relativas al contenedor
     const offsetY = e.clientY - top;
 
@@ -62,7 +65,9 @@ function DetailsCard() {
   return (
     <div className={styles["details-container"]}>
       <section className={styles["product-images-block"]}>
-        <div className={styles["product-images"]}>{renderMiniImages(product)}</div>
+        <div className={styles["product-images"]}>
+          {renderMiniImages(product)}
+        </div>
 
         <div
           className={`${styles["big-img-container"]} ${
@@ -87,60 +92,55 @@ function DetailsCard() {
           />
         </div>
       </section>
-<div className={styles["product-checkout-block"]}>
-          <div className={styles["checkout-container"]}>
-            <span className={styles["checkout-total-label"]}>Total:</span>
-            <h2 id="price" className={styles["checkout-total-price"]}>
-              S/.{price}
-            </h2>
-            <p className={styles["checkout-description"]}></p>
-            <ul className={styles["checkout-policy-list"]}>
-              <li>
-                <a className={styles["policy-icon"]} href="#">
-                  <img
-                    className={styles["img-icon"]}
-                    src="../public/iconPDF.webp"
-                    alt="Plane"
-                  />
-                </a>
-
-                <span className={styles["policy-desc"]}>
-                  Descarga el índice
-                </span>
-              </li>
-              <li>
-                <a className={styles["policy-icon"]} href="#">
-                  <img
-                    className={styles["img-icon"]}
-                    src="../public/delivery.webp"
-                    alt="Plane"
-                  />
-                </a>
-                <span className={styles["policy-desc"]}>
-                  Recibe aproximadamente entre 3 a 5 días hábiles tu pedido.
-                </span>
-              </li>
-            </ul>
-            <div className={styles["checkout-process"]}>
-              <div className={styles["top"]}>
-                <input
-                  id="quantity"
-                  type="number"
-                  min="1"
-                  value={quantity}
-                  onChange={changePrice}
+      <div className={styles["product-checkout-block"]}>
+        <div className={styles["checkout-container"]}>
+          <span className={styles["checkout-total-label"]}>Total:</span>
+          <h2 id="price" className={styles["checkout-total-price"]}>
+            S/.{price}
+          </h2>
+          <p className={styles["checkout-description"]}></p>
+          <ul className={styles["checkout-policy-list"]}>
+            <li>
+              <a className={styles["policy-icon"]} href="#">
+                <img
+                  className={styles["img-icon"]}
+                  src="../public/iconPDF.webp"
+                  alt="Plane"
                 />
-                <a
-                  href="https://wa.me/939613209"
-                  className={styles["cart-btn"]}
-                >
-                  Compra aquí
-                </a>
-              </div>
+              </a>
+
+              <span className={styles["policy-desc"]}>Descarga el índice</span>
+            </li>
+            <li>
+              <a className={styles["policy-icon"]} href="#">
+                <img
+                  className={styles["img-icon"]}
+                  src="../public/delivery.webp"
+                  alt="Plane"
+                />
+              </a>
+              <span className={styles["policy-desc"]}>
+                Recibe aproximadamente entre 3 a 5 días hábiles tu pedido.
+              </span>
+            </li>
+          </ul>
+          <div className={styles["checkout-process"]}>
+            <div className={styles["top"]}>
+              <input
+                id="quantity"
+                type="number"
+                min="1"
+                value={quantity}
+                onChange={changePrice}
+              />
+              <a href="https://wa.me/939613209" className={styles["cart-btn"]}>
+                Compra aquí
+              </a>
             </div>
           </div>
         </div>
       </div>
+
       <div className="product-sipnosis-block">
         <h2>Sipnosis:</h2>
         <span className="product-sipnosis">{product.sipnosis}</span>
@@ -179,7 +179,7 @@ function DetailsCard() {
           </li>
         </ul>
       </div>
-    </>
+    </div>
   );
 }
 export default DetailsCard;
