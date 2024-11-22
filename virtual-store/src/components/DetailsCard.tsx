@@ -16,6 +16,7 @@ function DetailsCard() {
   useEffect(() => {
     if (product) {
       setPrice(product.precioMenor);
+      setPrice(product.precioMenor);
     }
   }, [product]);
 

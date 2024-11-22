@@ -66,9 +66,10 @@ const product1 = new Products(
   "Editorial LP",
   "2024",
   "1004",
+  "Tapa Dura",
   "1.4kg",
-  "16cm",
-  "21cm"
+  "21cm",
+  "16cm"
 );
 const product2 = new Products(
   "2",
@@ -84,9 +85,10 @@ const product2 = new Products(
   "Editorial LP",
   "2024",
   "1004",
+  "Tapa Rústica",
   "1.3kg",
-  "16cm",
-  "21cm"
+  "21cm",
+  "16cm"
 );
 const product3 = new Products(
   "3",
@@ -102,9 +104,10 @@ const product3 = new Products(
   "Editorial LP",
   "2024",
   "1007",
+  "Tapa Dura",
   "1.4kg",
-  "16cm",
-  "21cm"
+  "21cm",
+  "16cm"
 );
 const product4 = new Products(
   "4",
@@ -120,9 +123,10 @@ const product4 = new Products(
   "Editorial LP",
   "2024",
   "1007",
+  "Tapa Rústica",
   "1.4kg",
-  "16cm",
-  "21cm"
+  "21cm",
+  "16cm"
 );
 const product5 = new Products(
   "5",
@@ -132,7 +136,16 @@ const product5 = new Products(
   ["public/DETENCION-POLICIAL.webp"],
   "Incluye IGV",
   "Penal",
-  "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos."
+  "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos.",
+  "978-61249574-6-8",
+  "Giammpol Taboada Pilco",
+  "Editorial LP",
+  "2024",
+  "813",
+  "Tapa Dura",
+  "1.6kg",
+  "25cm",
+  "17cm"
 );
 const product6 = new Products(
   "6",
@@ -144,13 +157,14 @@ const product6 = new Products(
   "Penal",
   "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos.",
   "978-61249574-6-8",
-  "Giammpol Taboada Pilco",
+  "LP",
   "Editorial LP",
   "2024",
-  "813",
-  "1.6kg",
-  "17cm",
-  "25cm"
+  "591",
+  "Tapa Dura",
+  "0.8kg",
+  "18cm",
+  "11cm"
 );
 const product7 = new Products(
   "7",
@@ -166,9 +180,10 @@ const product7 = new Products(
   "Editorial LP",
   "2024",
   "238",
+  "Tapa Rustica",
   "1kg",
-  "16cm",
-  "23cm"
+  "23cm",
+  "16cm"
 );
 const product8 = new Products(
   "8",
@@ -184,9 +199,10 @@ const product8 = new Products(
   "Editorial LP",
   "2024",
   "383",
+  "Tapa Rustica",
   "0.50kg",
-  "16cm",
-  "24cm"
+  "24cm",
+  "16cm"
 );
 const product9 = new Products(
   "9",
@@ -202,9 +218,10 @@ const product9 = new Products(
   "Editorial LP",
   "2024",
   "238",
+  "Tapa Rustica",
   "1kg",
-  "13cm",
-  "20cm"
+  "20cm",
+  "13cm"
 );
 const product10 = new Products(
   "10",
@@ -220,9 +237,10 @@ const product10 = new Products(
   "San Bernardo Libros Jurídicos",
   "2024",
   "325",
+  "Tapa Rustica",
   "0.60kg",
-  "17cm",
-  "24cm"
+  "24cm",
+  "17cm"
 );
 const product11 = new Products(
   "11",
@@ -238,9 +256,10 @@ const product11 = new Products(
   "Editorial LP",
   "2024",
   "285",
+  "Tapa Rustica",
   "0.40kg",
-  "15cm",
-  "23cm"
+  "23cm",
+  "15cm"
 );
 const product12 = new Products(
   "12",
@@ -256,9 +275,10 @@ const product12 = new Products(
   "Escuela de Derecho LP",
   "2022",
   "285",
+  "Tapa Rustica",
   "0.40kg",
-  "15cm",
-  "23cm"
+  "23cm",
+  "15cm"
 );
 const product13 = new Products(
   "13",
@@ -274,9 +294,10 @@ const product13 = new Products(
   "Escuela de Derecho LP",
   "2023",
   "542",
+  "Tapa Rustica",
   "0.80kg",
-  "15cm",
-  "23cm"
+  "23cm",
+  "15cm"
 );
 const product14 = new Products(
   "14",
@@ -292,9 +313,10 @@ const product14 = new Products(
   "Escuela de Derecho LP",
   "2023",
   "231",
+  "Tapa Rustica",
   "1kg",
-  "15cm",
-  "20cm"
+  "20cm",
+  "15cm"
 );
 const product15 = new Products(
   "15",
@@ -310,9 +332,10 @@ const product15 = new Products(
   "Escuela de Derecho LP",
   "2023",
   "231",
+  "Tapa Rustica",
   "1kg",
-  "15cm",
-  "20cm"
+  "20cm",
+  "15cm"
 );
 const product16 = new Products(
   "16",
@@ -328,9 +351,10 @@ const product16 = new Products(
   "Escuela de Derecho LP",
   "2023",
   "446",
+  "Tapa Rustica",
   "0.6kg",
-  "16cm",
-  "24cm"
+  "24cm",
+  "16cm"
 );
 const product17 = new Products(
   "17",
@@ -346,9 +370,10 @@ const product17 = new Products(
   "Escuela de Derecho LP",
   "2023",
   "479",
+  "Tapa Rustica",
   "0.65kg",
-  "15cm",
-  "24cm"
+  "24cm",
+  "15cm"
 );
 const product18 = new Products(
   "18",
@@ -364,9 +389,10 @@ const product18 = new Products(
   "Escuela de Derecho LP",
   "2023",
   "718",
+  "Tapa Dura",
   "1.15kg",
-  "17cm",
-  "24cm"
+  "24cm",
+  "17cm"
 );
 const product19 = new Products(
   "19",
@@ -382,9 +408,10 @@ const product19 = new Products(
   "Escuela de Derecho LP",
   "2023",
   "382",
+  "Tapa Rustica",
   "0.55kg",
-  "15cm",
-  "23cm"
+  "23cm",
+  "15cm"
 );
 const product20 = new Products(
   "20",
@@ -400,9 +427,10 @@ const product20 = new Products(
   "Editorial LP",
   "2022",
   "221",
+  "Tapa Rustica",
   "0.8kg",
-  "16cm",
-  "21cm"
+  "21cm",
+  "16cm"
 );
 const product21 = new Products(
   "21",
@@ -418,9 +446,10 @@ const product21 = new Products(
   "Instituto Pacífico",
   "2023",
   "608",
+  "Tapa Dura",
   "1kg",
-  "17cm",
-  "24cm"
+  "24cm",
+  "17cm"
 );
 
 /*Array*/
