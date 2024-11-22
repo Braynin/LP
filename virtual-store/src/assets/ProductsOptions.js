@@ -76,7 +76,12 @@ const product2 = new Products(
   "Código Penal Tapa Rústica",
   "50",
   "",
-  ["public/CODIGO PENAL TAPA RUSTICA.webp"],
+  [
+    "public/CÓDIGO PENAL/TAPA RUSTICA/CODIGO-PENAL-CENITAL-RUSTICA.png",
+    "public/CÓDIGO PENAL/TAPA RUSTICA/CODIGO-PENAL-BACK-IZQUIERDA-RUSTICA.png",
+    "public/CÓDIGO PENAL/TAPA RUSTICA/CODIGO-PENAL-FRONT-DERECHA-RUSTICA.png",
+    "public/CÓDIGO PENAL/TAPA RUSTICA/CODIGO-PENAL-FRONT-IZQUIERDA-RUSTICA.png",
+  ],
   "Incluye IGV",
   "Penal",
   "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos.",
@@ -95,7 +100,12 @@ const product3 = new Products(
   "Código Civil Tapa Dura",
   "75",
   "",
-  ["public/CODIGO CIVIL.webp"],
+  [
+    "public/CÓDIGO CIVIL/TAPA DURA/CODIGO-CIVIL-CENITAL-DURA.png",
+    "public/CÓDIGO CIVIL/TAPA DURA/CODIGO-CIVIL-BACK-IZQUIERDA-DURA.png",
+    "public/CÓDIGO CIVIL/TAPA DURA/CODIGO-CIVIL-FRONT-DERECHA-DURA.png",
+    "public/CÓDIGO CIVIL/TAPA DURA/CODIGO-CIVIL-FRONT-DURA.png",
+  ],
   "Incluye IGV",
   "Civil",
   "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos.",
@@ -114,7 +124,12 @@ const product4 = new Products(
   "Código Civil Tapa Rústica",
   "75",
   "",
-  ["public/CODIGO CIVIL TAPA RUSTICA.webp"],
+  [
+    "public/CÓDIGO CIVIL/TAPA RUSTICA/CODIGO-CIVIL-CENITAL-RUSTICA.png",
+    "public/CÓDIGO CIVIL/TAPA RUSTICA/CODIGO-CIVIL-BACK-DERECHA-RUSTICA.png",
+    "public/CÓDIGO CIVIL/TAPA RUSTICA/CODIGO-CIVIL-FRONT-DERECHA-RUSTICA.png",
+    "public/CÓDIGO CIVIL/TAPA RUSTICA/CODIGO-CIVIL-FRONT-IZQUIERDA-RUSTICA.png",
+  ],
   "Incluye IGV",
   "Civil",
   "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos.",
@@ -190,7 +205,12 @@ const product8 = new Products(
   "Litigacion Oral Civil",
   "100",
   "",
-  ["public/LITIGACION ORAL CIVIL.webp"],
+  [
+    "public/LITIGACIÓN ORAL CIVIL/LITIGACIÓN-ORAL-CIVIL_CENITAL.png",
+    "public/LITIGACIÓN ORAL CIVIL/LITIGACIÓN-ORAL-CIVIL_BACK.png",
+    "public/LITIGACIÓN ORAL CIVIL/LITIGACIÓN-ORAL-CIVIL_FRONT-DERECHA.png",
+    "public/LITIGACIÓN ORAL CIVIL/LITIGACIÓN-ORAL-CIVIL_FRONT-IZQUIERDA.png",
+  ],
   "Incluye IGV",
   "Civil",
   "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos.",
@@ -451,6 +471,30 @@ const product21 = new Products(
   "24cm",
   "17cm"
 );
+const product22 = new Products(
+  "22",
+  "La fe se da no se vende",
+  "130",
+  "",
+  [
+    "public/LA FE SE DA NO SE VENDE/LA-FE-SE-DA-NO-SE-VENDE_CENITAL.png",
+    "public/LA FE SE DA NO SE VENDE/LA-FE-SE-DA-NO-SE-VENDE_BACK.png",
+    "public/LA FE SE DA NO SE VENDE/LA-FE-SE-DA-NO-SE-VENDE_FRONT-DERECHA.png",
+    "public/LA FE SE DA NO SE VENDE/LA-FE-SE-DA-NO-SE-VENDE_FRONT-IZQUIERDA.png",
+  ],
+  "Incluye IGV",
+  "Penal",
+  "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos.",
+  "978-612-49720-5-8",
+  "Víctor Raúl Tinageros Loza",
+  "Editorial LP",
+  "2024",
+  "608",
+  "Tapa Rústica",
+  "0.2kg",
+  "20cm",
+  "14cm"
+);
 
 /*Array*/
 
@@ -476,6 +520,7 @@ const arrayProducts = [
   product19,
   product20,
   product21,
+  product22,
 ];
 
 export default arrayProducts;

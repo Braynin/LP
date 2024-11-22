@@ -1,7 +1,7 @@
 .offer-card {
   display: flex;
   flex-direction: column;
-  background-color: #ebeaea;
+
   color: #272727;
   border-radius: 15px;
   width: 260px;

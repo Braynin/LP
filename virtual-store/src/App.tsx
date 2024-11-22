@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 // Importa tus vistas
+
 import Home from "./views/Home";
 import Details from "./views/Details.tsx";
 import SectionView from "./views/SectionView.tsx";
@@ -42,7 +43,7 @@ function App() {
       path: "/terminos-y-condiciones-promocionales",
       element: <TerminosYCondicionesPromocionales />,
     },
-    { path: "/politicas-de-entrega", element: <PoliticasDeEntrega/> },
+    { path: "/politicas-de-entrega", element: <PoliticasDeEntrega /> },
   ]);
 
   return <RouterProvider router={browserRouter} />;
