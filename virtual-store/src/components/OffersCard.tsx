@@ -5,13 +5,13 @@ function CreateOffersCard({ offer }) {
     <Link className={styles["offer-card"]} to={`/details?id=${offer.id}`}>
       <img
         className={styles["offer-img"]}
-        src={offer.imagen}
+        src={offer.imagen[0]}
         alt={offer.nombre}
       />
       <div className={styles["offer-info"]}>
         <span className={styles["offer-title"]}>{offer.nombre}</span>
         <div className={styles["offer-price-block"]}>
-          <span className={styles["offer-price"]}>S/. {offer.precio}</span>
+          <span className={styles["offer-price"]}>S/. {offer.precioMenor}</span>
         </div>
         <div className={styles["offer-tax-policy"]}>
           <span className={styles["offer-discount"]}>IGV</span>
@@ -22,7 +22,9 @@ function CreateOffersCard({ offer }) {
 }
 
 function TemplateOffer({ array }: { array: any[] }) {
-  return array.map((offer) => <CreateOffersCard key={offer.id} offer={offer} />);
+  return array.map((offer) => (
+    <CreateOffersCard key={offer.id} offer={offer} />
+  ));
 }
 function OffersCards({ array }: any) {
   return <div className={styles["offers"]}>{TemplateOffer({ array })}</div>;
