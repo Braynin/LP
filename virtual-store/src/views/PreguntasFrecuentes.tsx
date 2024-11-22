@@ -1,5 +1,5 @@
-import Layout from "../components/Layout";
-import Layout from "../components/Layout";
+import Layout from "../components/Layout.tsx";
+
 import styles from "./PreguntasFrecuentes.module.css";
 
 const PreguntasFrecuentes = () => {

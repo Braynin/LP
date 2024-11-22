@@ -39,14 +39,16 @@ function DetailsCard() {
   };
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    const { left, top, width, height } =
-      e.currentTarget.getBoundingClientRect();
-    const offsetX = e.clientX - left; // Coordenadas relativas al contenedor
+    const container = e.currentTarget;
+    const { left, top, width, height } = container.getBoundingClientRect();
+
+    // Coordenadas relativas al contenedor
+    const offsetX = e.clientX - left;
     const offsetY = e.clientY - top;
 
-    // Convertir coordenadas en porcentaje y limitar entre 0 y 100
-    const x = Math.min(Math.max((offsetX / width) * 100, 0), 100);
-    const y = Math.min(Math.max((offsetY / height) * 100, 0), 100);
+    // Convertir las coordenadas relativas en porcentajes
+    const x = (offsetX / width) * 100;
+    const y = (offsetY / height) * 100;
 
     setZoomPosition({ x, y });
   };
@@ -87,6 +89,7 @@ function DetailsCard() {
               isZoomed
                 ? {
                     transform: `scale(2) translate(-${zoomPosition.x}%, -${zoomPosition.y}%)`,
+                    transformOrigin: `${zoomPosition.x}% ${zoomPosition.y}%`, // Centra el zoom según el cursor
                   }
                 : undefined
             }
