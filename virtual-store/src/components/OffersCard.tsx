@@ -11,10 +11,12 @@ function CreateOffersCard({ offer }) {
       <div className={styles["offer-info"]}>
         <span className={styles["offer-title"]}>{offer.nombre}</span>
         <div className={styles["offer-price-block"]}>
-          <span className={styles["offer-price"]}>S/. {offer.precioMenor}</span>
-        </div>
-        <div className={styles["offer-tax-policy"]}>
-          <span className={styles["offer-discount"]}>IGV</span>
+          <span className={styles["offer-price-base"]}>
+            S/. {offer.precioBase}
+          </span>
+          <span className={styles["offer-price"]}>
+            Ahora: S/. {offer.precioOffer}
+          </span>
         </div>
       </div>
     </Link>

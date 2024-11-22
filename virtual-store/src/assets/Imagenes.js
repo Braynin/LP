@@ -1,7 +1,8 @@
 export const imagenes = [
   {
     id: 1,
-    imgUrl: "/bnd_home_bp-cyber_04-11.jpg",
+    imgUrl:
+      "../public/BANNERS/LP-publica-libro-curso-de-redaccion-administrativa-1068x559.png",
   },
   {
     id: 2,
