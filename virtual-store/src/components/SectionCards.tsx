@@ -56,7 +56,8 @@ const CardsSection: React.FC<CardsSectionProps> = ({ section }) => {
   const startIndex = startIndexes[section] || 0;
   return (
     <div className={styles["card-section"]}>
-      <h3 className={styles["card-section-title"]}>{section}</h3>
+      <img src="public/SEPARADORES/SEPARADOR-WEB-OFERTAS.jpg" alt="adm" />
+
       <div className={styles["slider-container"]}>
         <div
           className={styles["leftArrow"]}
