@@ -1,31 +1,86 @@
-/* Contenedor principal dentro de <main> */
-.politicasDeCookies-main {
-  display: flex; /* Usamos flexbox para organizar los elementos */
-  justify-content: center; /* Centra los elementos horizontalmente */
-
-  flex-wrap: wrap; /* Permite que los divs se acomoden en nuevas filas si no hay suficiente espacio */
-  gap: 20px; /* Espacio entre los divs */
-  padding: 20px; /* Espacio alrededor */
-}
-.politicasDeCookies-container {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  align-items: center;
-  text-align: center; /* Centra el texto dentro de los divs */
-  padding-bottom: 30px;
-}
-/* Estilo para los divs con la clase imagen-footer */
-.imagen-footer {
-  width: 900px; /* Establece el ancho del div */
-  height: 500px; /* Establece la altura del div */
-  border-radius: 8px; /* Bordes redondeados */
-  background-color: #ccc; /* Color por defecto en caso de que no haya color aleatorio */
-  display: inline-block; /* Asegura que los divs se comporten como bloques en línea */
+/* Contenedor principal */
+.politicasDePrivacidad-container {
+  width: 100%;
+  max-width: 960px; /* Controla el ancho máximo */
+  margin: 0 auto;
+  padding: 20px; /* Espaciado para que no se toque con los bordes */
+  box-sizing: border-box; /* Asegura que el padding no se desborde */
+  text-align: justify; /* Centra el texto dentro del contenedor */
 }
 
-/* Título dentro del <main> */
-.politicasDeCookies-main h1 {
-  width: 100%; /* Toma el ancho completo */
-  margin-bottom: 20px; /* Espacio entre el título y los divs */
+
+/* Contenedor para el título */
+.title-containerPoliticas {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Título principal - h1 */
+.title-politicas {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor de los textos */
+.text-containerPoliticas {
+  width: 100%;
+  max-width: 1000px;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+/* Texto general de las políticas */
+.text-politicas {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+/* Títulos de segundo nivel (h3) */
+.tit-txt-politicas {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #222;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+/* Listas */
+.list-politicas {
+  
+  list-style-type: none; /* Eliminar los puntos */
+  padding-left: 0; /* Eliminar el padding */
+  margin-top: 1rem; /* Espaciado entre listas */  
+  
+}
+
+/* Elementos de la lista */
+.li-politicas {
+  display: list-item;
+  text-align: justify;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  white-space: wrap ;
+  
+}
+
+/* Estilo de negrita */
+.bold {
+  font-weight: bold;
+}
+/* Asegúrate de que los enlaces no tengan subrayado ni estilo al pasar el ratón o recibir foco */
+.link-politicas { 
+  text-decoration: none;  /* Elimina el subrayado */
+  color: black;         /* Mantiene el color del texto */
+}
+
+.link-politicas:hover,
+.link-politicas:focus {
+  text-decoration: none;  /* Asegura que no haya subrayado al hacer hover o focus */
+  color: inherit;         /* Mantiene el color del texto en hover/focus */
 }

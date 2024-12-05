@@ -17,7 +17,8 @@ class Products {
     presentacion,
     peso,
     alto,
-    ancho
+    ancho, 
+    
   ) {
     this.id = id;
     this.nombre = nombre;
@@ -36,6 +37,7 @@ class Products {
     this.peso = peso;
     this.alto = alto;
     this.ancho = ancho;
+   
   }
   get supplier() {
     return this._supplier;
@@ -49,7 +51,7 @@ class Products {
 
 const product1 = new Products(
   "1",
-  "Código Penal Tapa Dura",
+  "Código Penal",
   "75",
   "",
   [
@@ -69,11 +71,12 @@ const product1 = new Products(
   "Tapa Dura",
   "1.4kg",
   "21cm",
-  "16cm"
+  "16cm",
+  
 );
 const product2 = new Products(
   "2",
-  "Código Penal Tapa Rústica",
+  "Código Penal",
   "50",
   "",
   [
@@ -93,11 +96,12 @@ const product2 = new Products(
   "Tapa Rústica",
   "1.3kg",
   "21cm",
-  "16cm"
+  "16cm",
+  
 );
 const product3 = new Products(
   "3",
-  "Código Civil Tapa Dura",
+  "Código Civil",
   "75",
   "",
   [
@@ -117,11 +121,12 @@ const product3 = new Products(
   "Tapa Dura",
   "1.4kg",
   "21cm",
-  "16cm"
+  "16cm",
+  
 );
 const product4 = new Products(
   "4",
-  "Código Civil Tapa Rústica",
+  "Código Civil ",
   "75",
   "",
   [
@@ -141,7 +146,8 @@ const product4 = new Products(
   "Tapa Rústica",
   "1.4kg",
   "21cm",
-  "16cm"
+  "16cm",
+ 
 );
 const product5 = new Products(
   "5",
@@ -160,7 +166,8 @@ const product5 = new Products(
   "Tapa Dura",
   "1.6kg",
   "25cm",
-  "17cm"
+  "17cm",
+  
 );
 const product6 = new Products(
   "6",
@@ -179,7 +186,8 @@ const product6 = new Products(
   "Tapa Dura",
   "0.8kg",
   "18cm",
-  "11cm"
+  "11cm",
+  
 );
 const product7 = new Products(
   "7",
@@ -202,7 +210,8 @@ const product7 = new Products(
   "Tapa Rustica",
   "1kg",
   "23cm",
-  "16cm"
+  "16cm",
+  "Tapa Rustica"
 );
 const product8 = new Products(
   "8",
@@ -341,7 +350,7 @@ const product13 = new Products(
 );
 const product14 = new Products(
   "14",
-  "Coleccion Litigacion Oral en audiencias previas - Con caja",
+  "Coleccion Litigacion Oral en audiencias previas",
   "150",
   "",
   ["public/COLECCION LITIGACION EN AUDIENCIAS PREVIAS.webp"],
@@ -353,14 +362,14 @@ const product14 = new Products(
   "Escuela de Derecho LP",
   "2023",
   "231",
-  "Tapa Rustica",
+  "Con caja",
   "1kg",
   "20cm",
   "15cm"
 );
 const product15 = new Products(
   "15",
-  "Coleccion Litigacion Oral en audiencias previas - Sin caja",
+  "Coleccion Litigacion Oral en audiencias previas",
   "140",
   "",
   ["public/COLECCION LITIGACION EN AUDIENCIAS PREVIAS - SIN CAJA.webp"],
@@ -372,7 +381,7 @@ const product15 = new Products(
   "Escuela de Derecho LP",
   "2023",
   "231",
-  "Tapa Rustica",
+  "Sin caja",
   "1kg",
   "20cm",
   "15cm"

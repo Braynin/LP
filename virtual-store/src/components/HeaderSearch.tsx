@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import styles from "./HeaderSearch.module.css";
 import SocialLink from "./SocialLinks.tsx";
 import SearchBar from "./SearchBar.tsx";
+import NavBar from "./NavBar.tsx";
 
 function HeaderSearch() {
   return (
@@ -14,9 +15,10 @@ function HeaderSearch() {
             alt="Logo Lp"
           />
         </Link>
+        <NavBar/>
         <SearchBar />
         <ul className={styles["social-links"]}>
-          <SocialLink />
+          {/* <SocialLink /> */}
         </ul>
       </div>
     </>

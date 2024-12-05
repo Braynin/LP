@@ -1,47 +1,32 @@
 /* Estilo para las opciones de la barra de navegación (listas) */
 .nav-options {
   display: flex; /* Aplica flexbox para alinear los elementos horizontalmente */
-  justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+  justify-content: flex-start; /* Alinea las opciones hacia el inicio */
   padding: 0;
   margin: 0;
   list-style: none;
-  width: 100%; /* Asegura que ocupe todo el ancho disponible */
 }
 
 /* Estilo para cada opción de navegación */
 .nav-option {
-  display: inline-flex; /* Para mantener el texto y el separador alineados */
-  align-items: center; /* Alinea el contenido del botón (texto) y el separador */
-  margin-right: 20px; /* Espacio entre los botones */
+  display: flex; /* Flex para mantener el texto alineado */
+  align-items: center; /* Alinea el contenido del botón (texto) */
   cursor: pointer;
-  transition: background-color 0.2s ease, color 0.2s ease,
-    border-radius 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, border-radius 0.2s ease;
   border-radius: 10px;
+  margin-right: 10px; /* Espacio entre las opciones */
 }
 
+/* Estilo para los enlaces dentro de cada opción */
 .nav-link {
   text-decoration: none;
   color: black; /* Color del texto */
   font-weight: bold;
-
-  padding: 10px 20px;
+  padding: 10px 15px; /* Añade algo de espacio alrededor del texto */
   transition: color 0.2s ease; /* Transición suave para el color */
 }
 
-/* Efecto hover para cambiar el fondo y el color del texto */
-.nav-option:hover {
-  background-color: red; /* Fondo rojo al hacer hover */
-}
 
 .nav-option:hover .nav-link {
-  color: white; /* Letras blancas al hacer hover */
-}
-
-/* Separador (línea vertical) fuera del <li> */
-.separator {
-  display: inline-block;
-  width: 1px; /* Grosor de la línea */
-  height: 35px; /* Altura de la línea */
-  background-color: #222222; /* Color de la línea */
-  margin-left: 10px; /* Espacio entre el texto del botón y el separador */
+  color: red; /* Letras blancas al hacer hover */
 }

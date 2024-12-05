@@ -9,7 +9,7 @@ function Header() {
     <>
       <Messages />
       <HeaderSearch />
-      <NavBar />
+      {/* <NavBar /> */}
     </>
   );
 }

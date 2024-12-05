@@ -6,11 +6,11 @@ class navOption {
   }
 }
 /*Objects*/
-const navOption1 = new navOption("PENAL", "/Penal");
-const navOption2 = new navOption("CIVIL", "/Civil");
-const navOption3 = new navOption("FAMILIA", "/Familia");
-const navOption4 = new navOption("ADMINISTRATIVO", "/Administrativo");
-const navOption5 = new navOption("CONSTITUCIONAL", "/Constitucional");
+const navOption1 = new navOption("Penal", "/Penal");
+const navOption2 = new navOption("Civil", "/Civil");
+const navOption3 = new navOption("Familia", "/Familia");
+const navOption4 = new navOption("Administrativo", "/Administrativo");
+const navOption5 = new navOption("Constitucional", "/Constitucional");
 
 /*Array*/
 const arrayNavOptions = [

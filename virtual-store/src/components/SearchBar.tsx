@@ -40,10 +40,11 @@ const SearchBar = () => {
       <input
         className={styles["search-input"]}
         type="text"
-        placeholder="Buscar"
+        placeholder="Buscar productos"
         value={searchText}
         onChange={(e) => setSearchText(e.target.value)}
         onKeyDown={handleKeyDown}
+        
       />
       <SearchButton onClick={() => handleSearch(searchText)} />
     </div>
