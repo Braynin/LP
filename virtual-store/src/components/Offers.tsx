@@ -2,6 +2,7 @@ import { useState } from "react";
 import arrayOffers from "../assets/OffersOptions.js"; // Aquí está el array de tus productos (ofertas)
 import styles from "./Offers.module.css"; // Estilos del componente
 import { TemplateOffer } from "./OffersCard.tsx"; // Plantilla de producto (oferta)
+import arraySeparators from "../assets/SeparatorsOptions";
 
 export default function Offers() {
   // Estado para mantener el índice de inicio de los productos
@@ -41,40 +42,67 @@ export default function Offers() {
   const startIndex = startIndexes["all"] || 0;
 
   // Aseguramos que el número de productos visibles nunca se pase de la cantidad total
-  const productsToDisplay = sectionProducts.slice(startIndex, startIndex + visibleProducts);
-  
+  const productsToDisplay = sectionProducts.slice(
+    startIndex,
+    startIndex + visibleProducts
+  );
+
+  if (arrayOffers.length <= visibleProducts) {
+    return (
+      <div className={styles["offers-container"]}>
+        {arraySeparators.find((separator) => separator.section === "Ofertas")
+          ?.img && (
+          <img
+            src={
+              arraySeparators.find(
+                (separator) => separator.section === "Ofertas"
+              )?.img
+            }
+            alt="Ofertas"
+            className={styles["separator"]}
+          />
+        )}
+        <div className={styles["card-section"]}>
+          <div className={styles["slider"]}>
+            <TemplateOffer array={productsToDisplay} />
+          </div>
+        </div>
+      </div>
+    );
+  }
   return (
     <div className={styles["offers-container"]}>
-      <div className={styles["offers"]}>
-        <div className={styles["card-section"]}>
-          <div className={styles["title-container"]}>
-            <div className={styles["icon"]}></div>
-          <h3 className={styles["card-section-title"]}>OFERTAS</h3> {/* Título genérico */}
-          </div> 
-          <div className={styles["line"]}></div>
-          <div className={styles["slider-container"]}>
-            {/* Flecha izquierda */}
-            <div
-              className={styles["leftArrow"]}
-              onClick={() => scrollTo("prev", "all")}
-              aria-label="Anterior"
-            >
-              &#8249;
-            </div>
+      {arraySeparators.find((separator) => separator.section === "Ofertas")
+        ?.img && (
+        <img
+          src={
+            arraySeparators.find((separator) => separator.section === "Ofertas")
+              ?.img
+          }
+          alt="Ofertas"
+          className={styles["separator"]}
+        />
+      )}
+      <div className={styles["card-section"]}>
+        <div className={styles["slider-container"]}>
+          <div
+            className={styles["leftArrow"]}
+            onClick={() => scrollTo("prev", "all")}
+            aria-label="Anterior"
+          >
+            &#8249;
+          </div>
 
-            {/* Contenedor de los productos */}
-            <div className={styles["slider"]}>
-              <TemplateOffer array={productsToDisplay} />
-            </div>
+          <div className={styles["slider"]}>
+            <TemplateOffer array={productsToDisplay} />
+          </div>
 
-            {/* Flecha derecha */}
-            <div
-              className={styles["rightArrow"]}
-              onClick={() => scrollTo("next", "all")}
-              aria-label="Siguiente"
-            >
-              &#8250;
-            </div>
+          <div
+            className={styles["rightArrow"]}
+            onClick={() => scrollTo("next", "all")}
+            aria-label="Siguiente"
+          >
+            &#8250;
           </div>
         </div>
       </div>

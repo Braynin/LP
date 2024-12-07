@@ -3,7 +3,7 @@ import arrayProducts from "../assets/ProductsOptions.js";
 import styles from "./Sectioncards.module.css";
 import { Template } from "./Card.tsx";
 import normalizeText from "../assets/NormalizeText";
-
+import arraySeparators from "../assets/SeparatorsOptions";
 // Definir los tipos de las propiedades
 interface CardsSectionProps {
   section: string; // section debería ser un string
@@ -54,9 +54,17 @@ const CardsSection: React.FC<CardsSectionProps> = ({ section }) => {
     }));
   };
   const startIndex = startIndexes[section] || 0;
+  const separator = arraySeparators.find(
+    (separator) => separator.section === section
+  );
+
   return (
     <div className={styles["card-section"]}>
-      <img src="public/SEPARADORES/SEPARADOR-WEB-OFERTAS.jpg" alt="adm" />
+      <img
+        className={styles["separator"]}
+        src={separator.img}
+        alt={separator.section}
+      />
 
       <div className={styles["slider-container"]}>
         <div

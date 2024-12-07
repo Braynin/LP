@@ -12,7 +12,7 @@ const ProductsCard: React.FC<ProductsCardProps> = ({ section }) => {
     return (
       <div className={styles["products-container"]}>
         {arrayNavOptions.map((option) => (
-          <CardsSection key={option.text} section={option.text} />
+          <CardsSection section={option.text} />
         ))}
       </div>
     );
