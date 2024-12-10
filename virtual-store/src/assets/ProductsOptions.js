@@ -17,8 +17,7 @@ class Products {
     presentacion,
     peso,
     alto,
-    ancho, 
-    
+    ancho
   ) {
     this.id = id;
     this.nombre = nombre;
@@ -37,7 +36,6 @@ class Products {
     this.peso = peso;
     this.alto = alto;
     this.ancho = ancho;
-   
   }
   get supplier() {
     return this._supplier;
@@ -71,8 +69,7 @@ const product1 = new Products(
   "Tapa Dura",
   "1.4kg",
   "21cm",
-  "16cm",
-  
+  "16cm"
 );
 const product2 = new Products(
   "2",
@@ -96,8 +93,7 @@ const product2 = new Products(
   "Tapa Rústica",
   "1.3kg",
   "21cm",
-  "16cm",
-  
+  "16cm"
 );
 const product3 = new Products(
   "3",
@@ -121,8 +117,7 @@ const product3 = new Products(
   "Tapa Dura",
   "1.4kg",
   "21cm",
-  "16cm",
-  
+  "16cm"
 );
 const product4 = new Products(
   "4",
@@ -146,15 +141,19 @@ const product4 = new Products(
   "Tapa Rústica",
   "1.4kg",
   "21cm",
-  "16cm",
- 
+  "16cm"
 );
 const product5 = new Products(
   "5",
   "Detencion policial en flagrancia y proceso inmediato",
   "130",
   "",
-  ["public/DETENCION-POLICIAL.webp"],
+  [
+    "public/DETENCIÓN POLICIAL EN FLAGRANCIA Y PROCESO INMEDIATO/DETENCIÓN-POLICIAL-EN-FLAGRANCIA-Y-PROCESO-INMEDIATO.png",
+    "public/DETENCIÓN POLICIAL EN FLAGRANCIA Y PROCESO INMEDIATO/DETENCIÓN-POLICIAL-EN-FLAGRANCIA-Y-PROCESO-INMEDIATO-BACK-IZQUIERDA.png",
+    "public/DETENCIÓN POLICIAL EN FLAGRANCIA Y PROCESO INMEDIATO/DETENCIÓN-POLICIAL-EN-FLAGRANCIA-Y-PROCESO-INMEDIATO-FRONT-DERECHA.png",
+    "public/DETENCIÓN POLICIAL EN FLAGRANCIA Y PROCESO INMEDIATO/DETENCIÓN-POLICIAL-EN-FLAGRANCIA-Y-PROCESO-INMEDIATO-FRONT-IZQUIERDA.png",
+  ],
   "Incluye IGV",
   "Penal",
   "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos.",
@@ -166,15 +165,18 @@ const product5 = new Products(
   "Tapa Dura",
   "1.6kg",
   "25cm",
-  "17cm",
-  
+  "17cm"
 );
 const product6 = new Products(
   "6",
   "Mini Código penal",
   "35",
   "",
-  ["public/MINI CODIGO PENAL.webp"],
+  [
+    "public/MINICODIGO PENAL/CODIGO-PENAL-MINI_CENITAL.png",
+    "public/MINICODIGO PENAL/CODIGO-PENAL-MINI-FRONT-DERECHA.png",
+    "public/MINICODIGO PENAL/CODIGO-PENAL-MINI-BACK-IZQUIERDA.png",
+  ],
   "Incluye IGV",
   "Penal",
   "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos.",
@@ -186,8 +188,7 @@ const product6 = new Products(
   "Tapa Dura",
   "0.8kg",
   "18cm",
-  "11cm",
-  
+  "11cm"
 );
 const product7 = new Products(
   "7",
@@ -310,9 +311,15 @@ const product12 = new Products(
   "PAD",
   "120",
   "",
-  ["public/PAD PROCEDIMIENTO ADMINISTRATIVO DISCIPLINARIO.webp"],
+  [
+    "public/PAD/PAD-PROCEDIMIENTO-ADMINISTRATIVO-DISCIPLINARIO-EN-LA-LEY-DEL-SERVICIO-CIVIL_CENITAL.png",
+    "public/PAD/PAD-PROCEDIMIENTO-ADMINISTRATIVO-DISCIPLINARIO-EN-LA-LEY-DEL-SERVICIO-CIVIL_BACK-IZQUIERDA.png",
+
+    "public/PAD/PAD-PROCEDIMIENTO-ADMINISTRATIVO-DISCIPLINARIO-EN-LA-LEY-DEL-SERVICIO-CIVIL_FRONT-DERECHA.png",
+    "public/PAD/PAD-PROCEDIMIENTO-ADMINISTRATIVO-DISCIPLINARIO-EN-LA-LEY-DEL-SERVICIO-CIVIL_FRONT-IZQUIERDA.png",
+  ],
   "Incluye IGV",
-  "Aministrativo",
+  "Administrativo",
   "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos.",
   "978-61248993-0-0",
   "Gustavo A. Rico Iberico",
@@ -353,7 +360,17 @@ const product14 = new Products(
   "Coleccion Litigacion Oral en audiencias previas",
   "150",
   "",
-  ["public/COLECCION LITIGACION EN AUDIENCIAS PREVIAS.webp"],
+  [
+    "public/LITIGACIÓN ORAL DE AUDIENCIAS PREVIAS/CAJA NARANJA/LITIGACIÓN-ORAL-DE-AUDIENCIAS-PREVIAS-DE-JEFFERSON-MORENO_FRONT-DERECHA.png",
+    "public/LITIGACIÓN ORAL DE AUDIENCIAS PREVIAS/CAJA NARANJA/LITIGACIÓN-ORAL-DE-AUDIENCIAS-PREVIAS-DE-JEFFERSON-MORENO_FRONT.png",
+    "public/LITIGACIÓN ORAL DE AUDIENCIAS PREVIAS/CAJA NARANJA/LITIGACIÓN-ORAL-DE-AUDIENCIAS-PREVIAS-DE-JEFFERSON-MORENO_BACK-IZQUIERDA.png",
+
+    "public/LITIGACIÓN ORAL DE AUDIENCIAS PREVIAS/CAJA NARANJA/LITIGACIÓN-ORAL-DE-AUDIENCIAS-PREVIAS-DE-JEFFERSON-MORENO_FRONT-IZQUIERDA.png",
+    "public/LITIGACIÓN ORAL DE AUDIENCIAS PREVIAS/LIBRO AMARILLO/LITIGACIÓN-ORAL-DE-AUDIENCIAS-PREVIAS-DE-JEFFERSON-MORENO_AMARILLO-CENITAL.png",
+    "public/LITIGACIÓN ORAL DE AUDIENCIAS PREVIAS/LIBRO NARANJA/LITIGACIÓN-ORAL-DE-AUDIENCIAS-PREVIAS-DE-JEFFERSON-MORENO_NARANJA-CENITAL.png",
+    "public/LITIGACIÓN ORAL DE AUDIENCIAS PREVIAS/LIBRO ROJO/LITIGACIÓN-ORAL-DE-AUDIENCIAS-PREVIAS-DE-JEFFERSON-MORENO_ROJO-CENITAL.png",
+    "public/LITIGACIÓN ORAL DE AUDIENCIAS PREVIAS/LIBRO VERDE/LITIGACIÓN-ORAL-DE-AUDIENCIAS-PREVIAS-DE-JEFFERSON-MORENO_VERDE_CENITAL.png",
+  ],
   "Incluye IGV",
   "Penal",
   "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos.",
@@ -372,7 +389,13 @@ const product15 = new Products(
   "Coleccion Litigacion Oral en audiencias previas",
   "140",
   "",
-  ["public/COLECCION LITIGACION EN AUDIENCIAS PREVIAS - SIN CAJA.webp"],
+  [
+    "public/LITIGACIÓN ORAL DE AUDIENCIAS PREVIAS/CONJUNTO DE LIBROS/LITIGACIÓN-ORAL-DE-AUDIENCIAS-PREVIAS-DE-JEFFERSON-MORENO_CONJUNTO-DE-LIBROS.png",
+    "public/LITIGACIÓN ORAL DE AUDIENCIAS PREVIAS/LIBRO AMARILLO/LITIGACIÓN-ORAL-DE-AUDIENCIAS-PREVIAS-DE-JEFFERSON-MORENO_AMARILLO-CENITAL.png",
+    "public/LITIGACIÓN ORAL DE AUDIENCIAS PREVIAS/LIBRO NARANJA/LITIGACIÓN-ORAL-DE-AUDIENCIAS-PREVIAS-DE-JEFFERSON-MORENO_NARANJA-CENITAL.png",
+    "public/LITIGACIÓN ORAL DE AUDIENCIAS PREVIAS/LIBRO ROJO/LITIGACIÓN-ORAL-DE-AUDIENCIAS-PREVIAS-DE-JEFFERSON-MORENO_ROJO-CENITAL.png",
+    "public/LITIGACIÓN ORAL DE AUDIENCIAS PREVIAS/LIBRO VERDE/LITIGACIÓN-ORAL-DE-AUDIENCIAS-PREVIAS-DE-JEFFERSON-MORENO_VERDE_CENITAL.png",
+  ],
   "Incluye IGV",
   "Penal",
   "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos.",
@@ -510,7 +533,13 @@ const product21 = new Products(
   "El derecho a la prueba en la investigacion preparatoria",
   "130",
   "",
-  ["public/EL DERECHO A LA PRUEBA EN LA INVESTIGACION.webp"],
+  [
+    "public/EL DERECHO A LA PRUEBA EN LA INVESTIGACIÓN PREPARATORIA/EL-DERECHO-A-LA-PRUEBA-EN-LA-INVESTIGACIÓN-PREPARATORIA_CENITAL.png",
+    "public/EL DERECHO A LA PRUEBA EN LA INVESTIGACIÓN PREPARATORIA/EL-DERECHO-A-LA-PRUEBA-EN-LA-INVESTIGACIÓN-PREPARATORIA_BACK.png",
+    "public/EL DERECHO A LA PRUEBA EN LA INVESTIGACIÓN PREPARATORIA/EL-DERECHO-A-LA-PRUEBA-EN-LA-INVESTIGACIÓN-PREPARATORIA_BACK-IZQUIERDA.png",
+    "public/EL DERECHO A LA PRUEBA EN LA INVESTIGACIÓN PREPARATORIA/EL-DERECHO-A-LA-PRUEBA-EN-LA-INVESTIGACIÓN-PREPARATORIA_FRONT-IZQUIERDA.png",
+    "public/EL DERECHO A LA PRUEBA EN LA INVESTIGACIÓN PREPARATORIA/EL-DERECHO-A-LA-PRUEBA-EN-LA-INVESTIGACIÓN-PREPARATORIA_FRONT-DERECHA.png",
+  ],
   "Incluye IGV",
   "Penal",
   "En un pequeño pueblo rodeado de montañas, la vida transcurría con la serenidad de un río que fluye lentamente. Los habitantes, con rostros amigables y sonrisas sinceras, se reunían cada tarde en la plaza principal, donde los niños jugaban y los ancianos compartían historias de tiempos pasados. Las flores de colores vibrantes adornaban cada esquina, mientras el aroma del pan recién horneado se mezclaba con el canto de los pájaros. Era un lugar donde el tiempo parecía detenerse, invitando a todos a disfrutar de la simplicidad de la vida y a encontrar belleza en los pequeños momentos.",

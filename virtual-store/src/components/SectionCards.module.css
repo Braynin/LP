@@ -8,7 +8,9 @@
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
-
+.separator {
+  border-radius: 25px;
+}
 .card-section-title {
   font-size: 20px;
   font-weight: 800;
