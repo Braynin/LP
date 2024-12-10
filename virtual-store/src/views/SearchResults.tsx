@@ -21,11 +21,13 @@ const SearchResults = () => {
         <h1 className={styles["Sresults-title"]}>
           Resultados de la búsqueda: "{query}"
         </h1>
+        <div className={styles["container-result"]}>
         {filteredProducts.length > 0 ? (
           <Cards array={filteredProducts} />
         ) : (
           <p>No se encontraron productos con ese nombre.</p>
         )}
+        </div>
       </Layout>
     </>
   );

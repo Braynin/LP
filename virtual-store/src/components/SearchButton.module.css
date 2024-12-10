@@ -1,14 +1,21 @@
 .search-button {
-  padding: 8px 16px;
-  font-size: 16px;
-  background-color: #007bff; /* Color del botón */
-  color: white; /* Color del texto */
+  background: none;
   border: none;
-  border-radius: 4px;
-  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-  transition: background-color 0.3s; /* Efecto de transición */
+  cursor: pointer;
+   display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
 }
 
 .search-button:hover {
-  background-color: #0056b3; /* Color del botón al pasar el mouse */
+  background-color: rgba(0, 0, 0, 0.1); /* Fondo claro */
+}
+
+.search-icon {
+  width: 1.5rem; /* Tamaño del ícono */
+  height: 1.5rem;
+  color: #333; /* Color del ícono */
 }

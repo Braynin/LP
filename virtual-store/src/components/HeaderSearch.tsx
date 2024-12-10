@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import styles from "./HeaderSearch.module.css";
-import SocialLink from "./SocialLinks.tsx";
 import SearchBar from "./SearchBar.tsx";
 import NavBar from "./NavBar.tsx";
 

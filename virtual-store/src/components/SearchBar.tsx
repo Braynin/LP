@@ -37,6 +37,7 @@ const SearchBar = () => {
 
   return (
     <div className={styles["search-form"]}>
+      
       <input
         className={styles["search-input"]}
         type="text"
