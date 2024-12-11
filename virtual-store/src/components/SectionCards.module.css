@@ -10,6 +10,12 @@
 }
 .separator {
   border-radius: 25px;
+  margin-bottom: 50px;
+}
+.banner-section {
+  border-radius: 15px;
+  max-width: 100%;
+  margin: -50px 0px 50px 0px;
 }
 .card-section-title {
   font-size: 20px;

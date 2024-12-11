@@ -31,8 +31,8 @@ export const Hero = () => {
   // Evitar scroll no deseado cuando se cambia de imagen automáticamente
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % heroOptions.length); // Cambia la imagen cada 3 segundos
-    }, 5000); // 3000ms = 3 segundos
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % heroOptions.length);
+    }, 5000);
 
     // Limpiar el intervalo cuando el componente se desmonte
     return () => clearInterval(interval);
