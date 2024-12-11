@@ -240,7 +240,7 @@ const product8 = new Products(
 );
 const product9 = new Products(
   "9",
-  "Coleccion ¿Cómo redactar un contrato? Notas desde la práctica",
+  "Colección ¿Cómo redactar un contrato? Notas desde la práctica",
   "140",
   "",
   ["public/COLECCION - COMO REDACTAR UN CONTRATO.webp"],

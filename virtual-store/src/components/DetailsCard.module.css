@@ -10,10 +10,11 @@
 /* IMAGES */
 .product-images-block {
   display: flex;
+  
 }
 
 .product-images {
-  width: 44px;
+  width: 60px;
   margin: 3px;
   cursor: pointer;
   display: flex;
@@ -37,8 +38,8 @@
 .big-img-container {
   position: relative;
   overflow: hidden;
-  width: 400px; /* Ajusta según tu diseño */
-  height: 400px;
+  width: 500px; /* Ajusta según tu diseño */
+  height: 500px;
   cursor: zoom-in;
 }
 
@@ -54,30 +55,40 @@
 }
 
 .product-images-block {
-  width: 340px;
+  
   padding: 10px;
-  margin: 10px;
+  margin: 10px 50px;
 }
 
 /* CHECKOUT */
 .product-checkout-block {
   flex-direction: column;
+  
 }
 
 .checkout-container {
-  background-color: #ebebeb;
-  padding: 33px;
-  border-radius: 2px;
+ 
+  margin: 60px 50px;
+ 
+  
+  
 }
 
 .checkout-total-label {
-  color: #ff3b3c;
+  color: #2e2e2e;
+  font-weight:  bold;
+}
+.checkout-autor{
+  padding: 12px 0px;
+  border-bottom: 1px solid #c2bbbb;
+  color: #aaaaaa;
 }
 
 .checkout-total-price {
+  color: #002d85;
   font-size: 28px;
   font-weight: 700;
-  margin-top: 10px;
+  margin: 20px 0px;
 }
 
 .checkout-description {
@@ -98,53 +109,58 @@
 
 .checkout-policy-list li .policy-icon {
   margin-right: 15px;
-}
-
-.img-icon {
-  width: 30px;
-  margin-right: 15px;
-  margin-bottom: 5px;
+  color: black;
 }
 
 .policy-desc {
-  color: #ff3b3c;
-  font-weight: 700;
+  color: black;
+  font-size: 16px;
 }
 
 .checkout-process {
-  row-gap: 20px;
+  /* row-gap: 20px; */
+  display: flex;
+  flex-direction: row; 
+  align-items: flex-start;
+  margin: 10px 0px;
+
 }
 
 .checkout-process .top {
   display: flex;
-  margin-bottom: 10px;
+  padding: 4px 0px;
 }
 
 .checkout-process .top input {
-  height: 40px;
+  height: 45px;
   border-radius: 10px;
-  border: none;
+  border: 1px solid black;
   width: 62px;
   margin-right: 10px;
   padding: 0 10px 0 20px;
   box-sizing: border-box;
 }
 
+
+
 .cart-btn {
   display: inline-block;
   text-align: center;
-  margin: 0 auto;
-  padding: 10px 20px;
-  background: #ff3b3c;
+  align-content: center;
+  margin: 0 5px;
+  padding: 10px 40px;
+  background: #CC3333;
   color: white;
   font-weight: bold;
-  border: none;
+  
   height: 30px;
   border-radius: 10px;
 }
 
 .cart-btn:hover {
-  background: #ff5151;
+  background: #d42e2e;
+  color: white;
+  border: none;
 }
 .container-sipnosis-information {
   margin: 0 350px;
@@ -168,6 +184,7 @@
   margin-bottom: 20px;
   list-style-type: none; /* Elimina los puntos de la lista */
   padding: 0;
+  color: #2e2e2e ;
 }
 
 .product-details {

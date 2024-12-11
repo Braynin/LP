@@ -1,0 +1,52 @@
+.share-container {
+    position: absolute; /* Necesario para posicionar el menú en relación a este contenedor */
+    display: flex;
+    align-items: center; 
+    
+  }
+  
+  .share-button-wrapper {
+    display: flex;
+    
+    align-items: center; /* Alinea el botón y el texto en una fila */
+  }
+  
+  .policy-icon {
+    margin-right: 15px;
+    color: black;
+  }
+  
+  .policy-desc {
+    margin-right: 2px; /* Deja algo de espacio entre el texto y el menú */
+  }
+  
+  .share-menu {
+    border: 0.5px solid #c2bbbb;
+    position: absolute;
+    left: 100%; /* Coloca el menú a la derecha del texto */
+    display: flex;
+    flex-direction: row; /* Alinea los elementos en una fila */
+    gap: 10px; /* Espacio entre los iconos de las redes sociales */
+    background-color: white; /* Fondo blanco */
+    padding: 5px;
+    margin-left:1px ;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    border-radius: 5px; /* Bordes redondeados */
+  }
+  
+  .share-menu li {
+    margin: 5px 0;
+  }
+  
+  .share-menu a {
+    align-items: center;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .share-menu a img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
