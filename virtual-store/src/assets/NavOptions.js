@@ -11,6 +11,7 @@ const navOption2 = new navOption("Civil", "/Civil");
 const navOption3 = new navOption("Familia", "/Familia");
 const navOption4 = new navOption("Administrativo", "/Administrativo");
 const navOption5 = new navOption("Constitucional", "/Constitucional");
+const navOption6 = new navOption("Ofertas", "/Ofertas");  
 
 /*Array*/
 const arrayNavOptions = [
@@ -19,6 +20,7 @@ const arrayNavOptions = [
   navOption3,
   navOption4,
   navOption5,
+  navOption6
 ];
 
 export default arrayNavOptions;

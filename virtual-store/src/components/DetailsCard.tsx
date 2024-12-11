@@ -155,7 +155,7 @@ function DetailsCard() {
 
       <section className={styles["container-sipnosis-information"]}>
         <div className={styles["product-sipnosis-block"]}>
-          <h2 className={styles["product-title"]}>Sipnosis:</h2>
+          <h2 className={styles["product-title"]}>Sinopsis:</h2>
           <span className={styles["product-sipnosis"]}>{product.sipnosis}</span>
         </div>
 

@@ -41,7 +41,7 @@ const SearchBar = () => {
       <input
         className={styles["search-input"]}
         type="text"
-        placeholder="Buscar productos"
+        placeholder="Buscar libros"
         value={searchText}
         onChange={(e) => setSearchText(e.target.value)}
         onKeyDown={handleKeyDown}
