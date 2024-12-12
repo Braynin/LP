@@ -1,21 +1,20 @@
 /* Eliminar el estilo inline y hacer que el contenedor ocupe todo el espacio horizontal disponible */
-ul,
-li {
-  list-style: none;
-  white-space: nowrap;
-  margin: 0;
-  padding: 0;
+
+/* Las imágenes dentro del contenedor */
+.container-images ul {
+  display: flex; /* Colocamos las imágenes en fila */
+  transition: transform 0.5s ease; /* Suavizamos la transición de deslizamiento */
 }
 
-li {
-  display: inline-block; /* Cambiar de inline a inline-block para que se comporten como bloques */
+.container-images ul li {
+  flex: 0 0 100%; /* Cada imagen ocupará el 100% del contenedor */
+  transition: transform 0.5s ease; /* Aseguramos que cada imagen tenga una transición suave */
 }
 
 /* Imagen con ajuste completo al contenedor */
 .container-images ul li img {
   margin-top: -16px;
   width: 100%; /* Aseguramos que las imágenes ocupen todo el ancho del li */
-  height: 100%; /* Hacemos que la imagen ocupe toda la altura disponible */
   object-fit: cover; /* La imagen se recorta para llenar el contenedor sin perder la relación de aspecto */
 }
 
@@ -38,7 +37,6 @@ li {
 .container-images {
   width: 100%; /* Aseguramos que el contenedor ocupe todo el ancho */
   height: 100%; /* Aseguramos que el contenedor ocupe todo el alto */
-  transition: none;
   overflow: hidden;
   display: flex; /* Aseguramos que las imágenes estén en fila horizontal */
   transition: transform 0.5s ease; /* Suavizamos la transición de deslizamiento */
@@ -68,7 +66,7 @@ li {
 .dot-container-item::after {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%); /* Centra la sombra en el punto */
   width: 15px; /* Debe coincidir con el tamaño del punto */
@@ -95,13 +93,18 @@ li {
   position: absolute;
   top: 50%;
   transform: translate(0, -50%); /* Centra las flechas verticalmente */
-  font-size: 50px;
+  font-size: 60px;
   font-weight: 700;
   color: #fff;
   z-index: 3; /* Las flechas están por encima de los puntos */
   cursor: pointer;
+  opacity: 0.2; /* La transparencia inicial */
+  user-select: none; /* Evita que se seleccione el texto */
 }
-
+.leftArrow:hover,
+.rightArrow:hover {
+  opacity: 1;
+}
 .leftArrow {
   left: 32px; /* Ubica la flecha a la izquierda */
 }
