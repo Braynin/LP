@@ -62,7 +62,7 @@
 .product-price-block .current-price {
   font-size: 22px;
   font-weight: bold;
-  color: #60ad5e;
+  color: #002d85;
 }
 
 .product-price-block .old-price {
@@ -76,7 +76,7 @@
   align-self: flex-end;
   margin-top: 10px;
   font-size: 18px;
-  color: #333;
+  color: #D4AF37;
 }
 .brand {
   font-size: 12px;

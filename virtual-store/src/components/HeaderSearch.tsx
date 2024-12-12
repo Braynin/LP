@@ -10,7 +10,7 @@ function HeaderSearch() {
         <Link to="/">
           <img
             className={styles["header-logo"]}
-            src="./public/logolp.webp"
+            src="/public/LOGO EDITORIAL - ROJO.png"
             alt="Logo Lp"
           />
         </Link>

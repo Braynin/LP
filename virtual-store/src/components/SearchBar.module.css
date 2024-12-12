@@ -17,7 +17,7 @@
 
 .search-input {
   width: 100%;
-  padding: 8px 12px 8px 40px; /* Espaciado para dejar espacio al icono */
+  padding: 8px 12px 8px 20px; /* Espaciado para dejar espacio al icono */
   font-size: 16px;
   border: none; /* Sin borde en el input */
   background-color: transparent; /* Fondo transparente */
