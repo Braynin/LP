@@ -1,19 +1,34 @@
 import React, { useState } from "react";
-import SocialLinks from "./SocialLinks";
 import styles from "./ShareButton.module.css";
+import { 
+  IconBrandWhatsapp,
+  IconBrandFacebook,
+  IconBrandTwitter,
+  IconBrandLinkedin,
+} from "@tabler/icons-react";
 
 const ShareButton: React.FC = () => {
   const [showMenu, setShowMenu] = useState(false);
 
-  // Muestra el menú cuando el cursor entra en el área del contenedor
-  const handleMouseEnter = () => {
-    setShowMenu(true);
+  // URL actual de la página
+  const currentUrl = window.location.href;
+
+  // Función para copiar la URL al portapapeles
+  const handleCopyUrl = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault(); // Evita la navegación del enlace
+    navigator.clipboard
+      .writeText(currentUrl)
+      .then(() => {
+        alert("¡Enlace copiado al portapapeles!");
+      })
+      .catch(() => {
+        alert("No se pudo copiar el enlace.");
+      });
   };
 
-  // Oculta el menú cuando el cursor sale completamente del área
-  const handleMouseLeave = () => {
-    setShowMenu(false);
-  };
+  // Mostrar y ocultar menú
+  const handleMouseEnter = () => setShowMenu(true);
+  const handleMouseLeave = () => setShowMenu(false);
 
   return (
     <li
@@ -23,10 +38,10 @@ const ShareButton: React.FC = () => {
     >
       <div
         className={styles["share-button-wrapper"]}
-        onMouseEnter={handleMouseEnter} // El menú permanecerá visible si el cursor está en esta área
-        onMouseLeave={handleMouseLeave} // Oculta el menú cuando el cursor sale de todo el contenedor
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
-        <a className={styles["policy-icon"]} href="#">
+        <a  href="#" onClick={handleCopyUrl} className={styles["policy-icon"]} >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -47,11 +62,43 @@ const ShareButton: React.FC = () => {
             <path d="M8.7 13.3l6.6 3.4" />
           </svg>
         </a>
-        <p className={styles["policy-desc"]}>Compartir</p>
 
+        {/* Texto "Compartir" que copia el enlace */}
+        <a href="#" onClick={handleCopyUrl}>
+          <p className={styles["policy-desc"]}>Compartir</p>
+        </a>
+
+        {/* Menú desplegable de iconos */}
         {showMenu && (
           <div className={styles["share-menu"]}>
-            <SocialLinks />
+            <a
+              href={`https://wa.me/?text=Miren esto: ${currentUrl}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <IconBrandWhatsapp size={24} stroke={2} className={styles.whatsappIcon} />
+            </a>
+            <a
+              href={`https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <IconBrandFacebook size={24} stroke={2} className={styles.facebookIcon} />
+            </a>
+            <a
+              href={`https://twitter.com/intent/tweet?text=Miren esto: ${currentUrl}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <IconBrandTwitter size={24} stroke={2} className={styles.twitterIcon} />
+            </a>
+            <a
+              href={`https://www.linkedin.com/shareArticle?url=${currentUrl}&text=Miren esto`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <IconBrandLinkedin size={24} stroke={2} className={styles.linkedinIcon} />
+            </a>
           </div>
         )}
       </div>

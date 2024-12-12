@@ -69,8 +69,7 @@ export default function Offers() {
         </div>
       </div>
     );
-  }
-  return (
+  }else{return (
     <div className={styles["offers-container"]}>
       {arraySeparators.find((separator) => separator.section === "Ofertas")
         ?.img && (
@@ -107,5 +106,6 @@ export default function Offers() {
         </div>
       </div>
     </div>
-  );
+  );}
+  
 }

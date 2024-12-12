@@ -15,6 +15,7 @@ import TerminosYCondiciones from "./views/TerminosYCondiciones.tsx";
 import TerminosYCondicionesPromocionales from "./views/TerminosYCondicionesPromocionales.tsx";
 import SearchResults from "./views/SearchResults.tsx";
 import PoliticasDeEntrega from "./views/PoliticasDeEntrega.tsx";
+import OffersView from "./views/OffersView.tsx";
 
 function App() {
   const browserRouter = createBrowserRouter([
@@ -27,7 +28,7 @@ function App() {
     { path: "/Familia", element: <SectionView /> },
     { path: "/Administrativo", element: <SectionView /> },
     { path: "/Constitucional", element: <SectionView /> },
-
+    { path: "/Ofertas", element: <OffersView /> },
     // Nueva ruta para la búsqueda
     { path: "/search", element: <SearchResults /> },
 

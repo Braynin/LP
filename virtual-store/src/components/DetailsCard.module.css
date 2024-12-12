@@ -105,11 +105,11 @@
 
 .checkout-policy-list li {
   display: flex;
-  margin: 15px 0;
+  margin: 20px 0;
 }
 
 .checkout-policy-list li .policy-icon {
-  margin-right: 15px;
+  margin-right: 8px;
   color: black;
 }
 
