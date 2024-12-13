@@ -1,6 +1,6 @@
 import { useState } from "react";
 import arrayProducts from "../assets/ProductsOptions.js";
-import styles from "./Sectioncards.module.css";
+import styles from "./SectionCards.module.css";
 import { Template } from "./Card.tsx";
 import normalizeText from "../assets/NormalizeText";
 import arraySeparators from "../assets/SeparatorsOptions";
