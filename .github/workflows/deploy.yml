@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # O la rama que uses para el despliegue
+      - main # Cambia si usas otra rama para el despliegue
 
 jobs:
   build-deploy:
@@ -11,12 +11,12 @@ jobs:
 
     steps:
       - name: Checkout the repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
-      - name: Install Node.js
-        uses: actions/setup-node@v1
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: '14'  # Puedes especificar la versión de Node.js que uses
+          node-version: "20" # Ajusta la versión según tus necesidades
 
       - name: Install dependencies and build
         run: |
@@ -27,4 +27,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./dist # Cambia si tu build genera los archivos en otro directorio
