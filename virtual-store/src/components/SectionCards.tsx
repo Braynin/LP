@@ -6,6 +6,8 @@ import normalizeText from "../assets/NormalizeText";
 import arraySeparators from "../assets/SeparatorsOptions";
 import { useLocation } from "react-router-dom";
 import arrayBannerSections from "../assets/BannerSectionOption";
+import arrayNavOptions from "../assets/NavOptions";  // Asegúrate de importar este array
+
 // Definir los tipos de las propiedades
 interface CardsSectionProps {
   section: string; // section debería ser un string
@@ -25,6 +27,11 @@ const CardsSection: React.FC<CardsSectionProps> = ({ section }) => {
 
   // Función para filtrar los productos por sección
   const sectionProducts = (array: Product[], section: string): Product[] => {
+    // Si la sección es "Ofertas", no se deben mostrar los productos
+    if (normalizeText(section) === "ofertas") {
+      console.log("Sección 'Ofertas' detectada, no se muestran productos.");
+      return [];
+    }
     return array.filter((product) =>
       normalizeText(product.section).includes(normalizeText(section))
     );
@@ -32,6 +39,7 @@ const CardsSection: React.FC<CardsSectionProps> = ({ section }) => {
 
   const visibleProducts = 4; // Número de productos visibles a la vez
   const filteredProducts = sectionProducts(arrayProducts, section);
+
   // Función para manejar el desplazamiento
   const scrollTo = (direction: string, section: string) => {
     const currentStartIndex = startIndexes[section] || 0;
@@ -55,12 +63,27 @@ const CardsSection: React.FC<CardsSectionProps> = ({ section }) => {
       [section]: newStartIndex,
     }));
   };
+
   const startIndex = startIndexes[section] || 0;
+
+  // Busca el separador asociado con la sección actual
   const separator = arraySeparators.find(
-    (separator) => separator.section === section
+    (separator) => normalizeText(separator.section) === normalizeText(section)
   );
+
+  // Verifica la URL actual para determinar el estado de la navegación
   const location = useLocation();
   const verify = location.pathname.replace(/^\/|\/$/g, "");
+
+  // Verifica si la sección en la barra de navegación es "Ofertas"
+  const navOption = arrayNavOptions.find(
+    (nav) => normalizeText(nav.text) === "ofertas"
+  );
+
+  // Si la sección es "Ofertas", no se debe mostrar el banner ni los productos
+  if (normalizeText(section) === "ofertas") {
+    return null; // Aquí retornamos null para no renderizar nada si la sección es "Ofertas"
+  }
 
   if (verify === "") {
     if (filteredProducts.length <= 4) {
@@ -68,8 +91,8 @@ const CardsSection: React.FC<CardsSectionProps> = ({ section }) => {
         <div className={styles["card-section"]}>
           <img
             className={styles["separator"]}
-            src={separator.img}
-            alt={separator.section}
+            src={separator?.img}
+            alt={separator?.section}
           />
           <div className={styles["slider-container"]}>
             <div className={styles["slider"]}>
@@ -83,10 +106,9 @@ const CardsSection: React.FC<CardsSectionProps> = ({ section }) => {
         <div className={styles["card-section"]}>
           <img
             className={styles["separator"]}
-            src={separator.img}
-            alt={separator.section}
+            src={separator?.img}
+            alt={separator?.section}
           />
-
           <div className={styles["slider-container"]}>
             <div
               className={styles["leftArrow"]}
@@ -95,7 +117,6 @@ const CardsSection: React.FC<CardsSectionProps> = ({ section }) => {
             >
               &#8249;
             </div>
-
             <div className={styles["slider"]}>
               <Template
                 array={sectionProducts(arrayProducts, section).slice(
@@ -117,15 +138,16 @@ const CardsSection: React.FC<CardsSectionProps> = ({ section }) => {
     }
   } else {
     const bannerSection = arrayBannerSections.find(
-      (bannerSection) => bannerSection.section === section
+      (banner) => normalizeText(banner.section) === normalizeText(section)
     );
+
     if (filteredProducts.length <= 4) {
       return (
         <div className={styles["card-section"]}>
           <img
             className={styles["banner-section"]}
-            src={bannerSection.img}
-            alt={bannerSection.section}
+            src={bannerSection?.img}
+            alt={bannerSection?.section}
           />
           <div className={styles["slider-container"]}>
             <div className={styles["slider"]}>
@@ -139,10 +161,9 @@ const CardsSection: React.FC<CardsSectionProps> = ({ section }) => {
         <div className={styles["card-section"]}>
           <img
             className={styles["banner-section"]}
-            src={bannerSection.img}
-            alt={bannerSection.section}
+            src={bannerSection?.img}
+            alt={bannerSection?.section}
           />
-
           <div className={styles["slider-container"]}>
             <div
               className={styles["leftArrow"]}
@@ -151,7 +172,6 @@ const CardsSection: React.FC<CardsSectionProps> = ({ section }) => {
             >
               &#8249;
             </div>
-
             <div className={styles["slider"]}>
               <Template
                 array={sectionProducts(arrayProducts, section).slice(
